@@ -53,6 +53,44 @@ th { background:#f1f5f9; }
   z-index:20;
 }
 .tt:hover::after { opacity:1; transform:translateY(0); }
+@media (max-width: 1024px) {
+  .page { padding:16px; }
+  .cover { padding:28px 22px; border-radius:14px; }
+  .cover h1 { font-size:28px; }
+  table { font-size:20px; }
+  .decktype-icon { width:34px; height:34px; flex:0 0 34px; }
+}
+@media (max-width: 768px) {
+  .page { padding:10px; }
+  .cover { padding:18px 14px; border-radius:12px; }
+  .cover h1 { font-size:22px; line-height:1.25; }
+  .cover p { font-size:13px; }
+  .toc { padding:12px 14px; }
+  .toc a { font-size:14px; }
+  .kpi-grid { grid-template-columns:1fr; gap:8px; }
+  .kpi { padding:10px 12px; }
+  .kpi .label { font-size:11px; }
+  .kpi .value { font-size:20px; }
+  section { border-radius:12px; }
+  section h2 { font-size:16px; padding:10px 12px; }
+  .content { padding:10px 10px 12px; }
+  h3 { font-size:14px; margin:8px 0; }
+  table { font-size:14px; }
+  th, td { padding:7px 8px; }
+  .decktype-icon { width:28px; height:28px; flex:0 0 28px; }
+  .muted { font-size:11px; }
+  .info-line { font-size:12px; }
+  .tt { width:16px; height:16px; font-size:11px; margin-left:4px; }
+  .tt::after {
+    left:auto; right:0;
+    min-width:260px; max-width:92vw;
+    font-size:11px; line-height:1.4;
+  }
+  .matchup-table { font-size:10px; min-width:760px; }
+  .matchup-table th, .matchup-table td { padding:4px 4px; }
+  .matchup-table th:first-child, .matchup-table td:first-child { min-width:120px; }
+  .n-badge { font-size:9px; padding:1px 4px; margin-left:2px; }
+}
 @media print {
   body { background:#fff; }
   .page { max-width:none; padding:0; }
