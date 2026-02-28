@@ -8,6 +8,13 @@ body { margin:0; font-family:"Yu Gothic UI","Meiryo",sans-serif; background:var(
 .cover { background:linear-gradient(135deg,var(--c1),var(--c3)); color:#fff; padding:44px 36px; border-radius:18px; }
 .cover h1 { margin:0 0 6px 0; font-size:34px; }
 .cover p { margin:4px 0; opacity:.95; }
+.report-nav { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+.report-nav a {
+  display:inline-block; padding:6px 10px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.6); color:#fff; text-decoration:none; font-size:13px;
+  background:rgba(255,255,255,.12);
+}
+.report-nav a:hover { background:rgba(255,255,255,.22); }
 .toc { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin-top:16px; }
 .toc a { display:block; color:#0f172a; text-decoration:none; padding:4px 0; }
 .kpi-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:18px 0 4px; }
@@ -75,6 +82,7 @@ th { background:#f1f5f9; }
   .cover { padding:18px 14px; border-radius:12px; }
   .cover h1 { font-size:22px; line-height:1.25; }
   .cover p { font-size:13px; }
+  .report-nav a { font-size:12px; padding:5px 9px; }
   .toc { padding:12px 14px; }
   .toc a { font-size:14px; }
   .kpi-grid { grid-template-columns:1fr; gap:8px; }
