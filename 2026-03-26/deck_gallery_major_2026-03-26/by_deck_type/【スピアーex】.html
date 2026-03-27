@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【スピアーex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【スピアーex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">27</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">27</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">27</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-03-26.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952712</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">cDKcG8-ErCelK-8cDcca</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cDKcG8-ErCelK-8cDcca.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cDKcG8-ErCelK-8cDcca.png" alt="【スピアーex】 cDKcG8-ErCelK-8cDcca">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cDKcG8-ErCelK-8cDcca" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cDKcG8-ErCelK-8cDcca/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952771</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">DxDDG8-fwmjHD-caYxcK</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/DxDDG8-fwmjHD-caYxcK.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/DxDDG8-fwmjHD-caYxcK.png" alt="【スピアーex】 DxDDG8-fwmjHD-caYxcK">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=DxDDG8-fwmjHD-caYxcK" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/DxDDG8-fwmjHD-caYxcK/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952772</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">FdkVVf-2LTmAj-VbwvwF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FdkVVf-2LTmAj-VbwvwF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FdkVVf-2LTmAj-VbwvwF.png" alt="【スピアーex】 FdkVVf-2LTmAj-VbwvwF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FdkVVf-2LTmAj-VbwvwF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FdkVVf-2LTmAj-VbwvwF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952772</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">XMUpSR-kKpcd7-RyMMUX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XMUpSR-kKpcd7-RyMMUX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XMUpSR-kKpcd7-RyMMUX.png" alt="【スピアーex】 XMUpSR-kKpcd7-RyMMUX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XMUpSR-kKpcd7-RyMMUX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XMUpSR-kKpcd7-RyMMUX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952772</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">wdVfVV-hGkub3-F5Fkbk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/wdVfVV-hGkub3-F5Fkbk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/wdVfVV-hGkub3-F5Fkbk.png" alt="【スピアーex】 wdVfVV-hGkub3-F5Fkbk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=wdVfVV-hGkub3-F5Fkbk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/wdVfVV-hGkub3-F5Fkbk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952964</div>
+                <div class="sub">静岡県 / ブックオフプラス浜北店</div>
+                <div class="code">XRp3MS-SPNRy6-EypRpy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XRp3MS-SPNRy6-EypRpy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XRp3MS-SPNRy6-EypRpy.png" alt="【スピアーex】 XRp3MS-SPNRy6-EypRpy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XRp3MS-SPNRy6-EypRpy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XRp3MS-SPNRy6-EypRpy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952964</div>
+                <div class="sub">静岡県 / ブックオフプラス浜北店</div>
+                <div class="code">c8cGK8-NrYFA1-xcDx4G</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c8cGK8-NrYFA1-xcDx4G.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c8cGK8-NrYFA1-xcDx4G.png" alt="【スピアーex】 c8cGK8-NrYFA1-xcDx4G">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c8cGK8-NrYFA1-xcDx4G" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c8cGK8-NrYFA1-xcDx4G/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952669</div>
+                <div class="sub">北海道 / ブックオフ　札幌南2条店</div>
+                <div class="code">gngNgH-d7vPHW-Lnn9Ni</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gngNgH-d7vPHW-Lnn9Ni.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gngNgH-d7vPHW-Lnn9Ni.png" alt="【スピアーex】 gngNgH-d7vPHW-Lnn9Ni">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gngNgH-d7vPHW-Lnn9Ni" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gngNgH-d7vPHW-Lnn9Ni/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952680</div>
+                <div class="sub">福島県 / Wonder GOO　いわき鹿島店</div>
+                <div class="code">bkF5ff-I8iEPz-fkv5Vf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bkF5ff-I8iEPz-fkv5Vf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bkF5ff-I8iEPz-fkv5Vf.png" alt="【スピアーex】 bkF5ff-I8iEPz-fkv5Vf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bkF5ff-I8iEPz-fkv5Vf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bkF5ff-I8iEPz-fkv5Vf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952775</div>
+                <div class="sub">千葉県 / 蔦屋書店　茂原店</div>
+                <div class="code">KG8c88-wThy2p-YDacx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/KG8c88-wThy2p-YDacx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/KG8c88-wThy2p-YDacx8.png" alt="【スピアーex】 KG8c88-wThy2p-YDacx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=KG8c88-wThy2p-YDacx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/KG8c88-wThy2p-YDacx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952776</div>
+                <div class="sub">千葉県 / フルコンプ千葉店</div>
+                <div class="code">i9Nngn-5eEr7x-gnNgHN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/i9Nngn-5eEr7x-gnNgHN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/i9Nngn-5eEr7x-gnNgHN.png" alt="【スピアーex】 i9Nngn-5eEr7x-gnNgHN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=i9Nngn-5eEr7x-gnNgHN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/i9Nngn-5eEr7x-gnNgHN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952776</div>
+                <div class="sub">千葉県 / フルコンプ千葉店</div>
+                <div class="code">k5FwFk-3yqwhG-wbVVf5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k5FwFk-3yqwhG-wbVVf5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k5FwFk-3yqwhG-wbVVf5.png" alt="【スピアーex】 k5FwFk-3yqwhG-wbVVf5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k5FwFk-3yqwhG-wbVVf5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k5FwFk-3yqwhG-wbVVf5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952778</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">LNLgn9-2BvOdg-QNingH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LNLgn9-2BvOdg-QNingH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LNLgn9-2BvOdg-QNingH.png" alt="【スピアーex】 LNLgn9-2BvOdg-QNingH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LNLgn9-2BvOdg-QNingH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LNLgn9-2BvOdg-QNingH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952778</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">bFfVvk-1G18Uu-kFVdfk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bFfVvk-1G18Uu-kFVdfk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bFfVvk-1G18Uu-kFVdfk.png" alt="【スピアーex】 bFfVvk-1G18Uu-kFVdfk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bFfVvk-1G18Uu-kFVdfk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bFfVvk-1G18Uu-kFVdfk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952778</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">cDD8cx-96XdUi-8xGDJc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cDD8cx-96XdUi-8xGDJc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cDD8cx-96XdUi-8xGDJc.png" alt="【スピアーex】 cDD8cx-96XdUi-8xGDJc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cDD8cx-96XdUi-8xGDJc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cDD8cx-96XdUi-8xGDJc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952778</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">ccDcxD-B6Ax2j-cG8888</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ccDcxD-B6Ax2j-cG8888.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ccDcxD-B6Ax2j-cG8888.png" alt="【スピアーex】 ccDcxD-B6Ax2j-cG8888">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ccDcxD-B6Ax2j-cG8888" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ccDcxD-B6Ax2j-cG8888/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952973</div>
+                <div class="sub">岐阜県 / カードショップ　海賊船-starch-</div>
+                <div class="code">c8Y88c-AQJ6x5-Y8xDG8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c8Y88c-AQJ6x5-Y8xDG8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c8Y88c-AQJ6x5-Y8xDG8.png" alt="【スピアーex】 c8Y88c-AQJ6x5-Y8xDG8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c8Y88c-AQJ6x5-Y8xDG8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c8Y88c-AQJ6x5-Y8xDG8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952717</div>
+                <div class="sub">栃木県 / Wonder GOO　足利店</div>
+                <div class="code">SyyypM-fpqOXp-MpRRXR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/SyyypM-fpqOXp-MpRRXR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/SyyypM-fpqOXp-MpRRXR.png" alt="【スピアーex】 SyyypM-fpqOXp-MpRRXR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=SyyypM-fpqOXp-MpRRXR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/SyyypM-fpqOXp-MpRRXR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952718</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">XyMyyR-poZlua-pMSRyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XyMyyR-poZlua-pMSRyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XyMyyR-poZlua-pMSRyp.png" alt="【スピアーex】 XyMyyR-poZlua-pMSRyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XyMyyR-poZlua-pMSRyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XyMyyR-poZlua-pMSRyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952721</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">N9ggHn-Yebd5O-6gngnn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/N9ggHn-Yebd5O-6gngnn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/N9ggHn-Yebd5O-6gngnn.png" alt="【スピアーex】 N9ggHn-Yebd5O-6gngnn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=N9ggHn-Yebd5O-6gngnn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/N9ggHn-Yebd5O-6gngnn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952721</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">yRpXyp-eKVxpX-ypMpyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yRpXyp-eKVxpX-ypMpyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yRpXyp-eKVxpX-ypMpyy.png" alt="【スピアーex】 yRpXyp-eKVxpX-ypMpyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yRpXyp-eKVxpX-ypMpyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yRpXyp-eKVxpX-ypMpyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952977</div>
+                <div class="sub">静岡県 / TSUTAYA三島店</div>
+                <div class="code">ngNNLn-y5Jqwk-gH9nQ9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngNNLn-y5Jqwk-gH9nQ9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngNNLn-y5Jqwk-gH9nQ9.png" alt="【スピアーex】 ngNNLn-y5Jqwk-gH9nQ9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngNNLn-y5Jqwk-gH9nQ9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngNNLn-y5Jqwk-gH9nQ9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952979</div>
+                <div class="sub">岡山県 / BOOKOFF 250号東岡山店</div>
+                <div class="code">XyyMEM-2D6ip1-ypXy3R</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XyyMEM-2D6ip1-ypXy3R.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XyyMEM-2D6ip1-ypXy3R.png" alt="【スピアーex】 XyyMEM-2D6ip1-ypXy3R">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XyyMEM-2D6ip1-ypXy3R" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XyyMEM-2D6ip1-ypXy3R/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952979</div>
+                <div class="sub">岡山県 / BOOKOFF 250号東岡山店</div>
+                <div class="code">8Y8cDJ-DfBDTw-Kc8c8G</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8Y8cDJ-DfBDTw-Kc8c8G.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8Y8cDJ-DfBDTw-Kc8c8G.png" alt="【スピアーex】 8Y8cDJ-DfBDTw-Kc8c8G">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8Y8cDJ-DfBDTw-Kc8c8G" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8Y8cDJ-DfBDTw-Kc8c8G/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952980</div>
+                <div class="sub">兵庫県 / トレカショップ竜のしっぽ　姫路店</div>
+                <div class="code">XRUppy-AiIgMx-pySpyE</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XRUppy-AiIgMx-pySpyE.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XRUppy-AiIgMx-pySpyE.png" alt="【スピアーex】 XRUppy-AiIgMx-pySpyE">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XRUppy-AiIgMx-pySpyE" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XRUppy-AiIgMx-pySpyE/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953266</div>
+                <div class="sub">広島県 / 【CARDBOX】カードボックス　福山店</div>
+                <div class="code">ngnNnn-gXMenE-9ngnN9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngnNnn-gXMenE-9ngnN9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngnNnn-gXMenE-9ngnN9.png" alt="【スピアーex】 ngnNnn-gXMenE-9ngnN9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngnNnn-gXMenE-9ngnN9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngnNnn-gXMenE-9ngnN9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【スピアーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952681</div>
+                <div class="sub">宮城県 / ポケ堂　仙台店</div>
+                <div class="code">S2ppSX-Kf4FQC-pyRXRy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/S2ppSX-Kf4FQC-pyRXRy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/S2ppSX-Kf4FQC-pyRXRy.png" alt="【スピアーex】 S2ppSX-Kf4FQC-pyRXRy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=S2ppSX-Kf4FQC-pyRXRy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/S2ppSX-Kf4FQC-pyRXRy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>

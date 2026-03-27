@@ -62,6 +62,44 @@ a { color: var(--accent); }
   padding: 6px 12px;
   font-size: 13px;
 }
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
 .section {
   margin-top: 24px;
   padding: 18px;
@@ -92,6 +130,7 @@ a { color: var(--accent); }
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
 }
+.card.hidden { display: none; }
 .card .meta {
   padding: 12px 14px 10px;
   border-bottom: 1px solid var(--line);

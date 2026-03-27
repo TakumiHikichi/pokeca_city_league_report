@@ -1,0 +1,2079 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【メガルカリオex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【メガルカリオex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">97</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">96</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">97</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-03-26.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952713</div>
+                <div class="sub">茨城県 / ブックエースTSUTAYA　勝田東石川店</div>
+                <div class="code">LLn9Hn-n9lPlX-6LngNg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LLn9Hn-n9lPlX-6LngNg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LLn9Hn-n9lPlX-6LngNg.png" alt="【メガルカリオex】 LLn9Hn-n9lPlX-6LngNg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LLn9Hn-n9lPlX-6LngNg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LLn9Hn-n9lPlX-6LngNg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952713</div>
+                <div class="sub">茨城県 / ブックエースTSUTAYA　勝田東石川店</div>
+                <div class="code">8G8D84-41y6I3-ccYccG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8G8D84-41y6I3-ccYccG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8G8D84-41y6I3-ccYccG.png" alt="【メガルカリオex】 8G8D84-41y6I3-ccYccG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8G8D84-41y6I3-ccYccG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8G8D84-41y6I3-ccYccG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952770</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">vfkbFw-y4vbvM-VwkFFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vfkbFw-y4vbvM-VwkFFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vfkbFw-y4vbvM-VwkFFF.png" alt="【メガルカリオex】 vfkbFw-y4vbvM-VwkFFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vfkbFw-y4vbvM-VwkFFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vfkbFw-y4vbvM-VwkFFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952770</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">vkVVbw-3cQq5A-5k5Fvf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vkVVbw-3cQq5A-5k5Fvf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vkVVbw-3cQq5A-5k5Fvf.png" alt="【メガルカリオex】 vkVVbw-3cQq5A-5k5Fvf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vkVVbw-3cQq5A-5k5Fvf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vkVVbw-3cQq5A-5k5Fvf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952771</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">dffwkb-VllbaF-vwkVVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/dffwkb-VllbaF-vwkVVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/dffwkb-VllbaF-vwkVVF.png" alt="【メガルカリオex】 dffwkb-VllbaF-vwkVVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=dffwkb-VllbaF-vwkVVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/dffwkb-VllbaF-vwkVVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952772</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">RppyMy-50dipt-pXUSpS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RppyMy-50dipt-pXUSpS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RppyMy-50dipt-pXUSpS.png" alt="【メガルカリオex】 RppyMy-50dipt-pXUSpS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RppyMy-50dipt-pXUSpS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RppyMy-50dipt-pXUSpS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952773</div>
+                <div class="sub">東京都 / フルコンプ　PLAYERS CENTER　八王子本店</div>
+                <div class="code">RXpMyE-7wgi4V-M3pXyX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RXpMyE-7wgi4V-M3pXyX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RXpMyE-7wgi4V-M3pXyX.png" alt="【メガルカリオex】 RXpMyE-7wgi4V-M3pXyX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RXpMyE-7wgi4V-M3pXyX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RXpMyE-7wgi4V-M3pXyX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952774</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">8cccaD-MQ4nPQ-DGJD8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8cccaD-MQ4nPQ-DGJD8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8cccaD-MQ4nPQ-DGJD8c.png" alt="【メガルカリオex】 8cccaD-MQ4nPQ-DGJD8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8cccaD-MQ4nPQ-DGJD8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8cccaD-MQ4nPQ-DGJD8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952774</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">XSpyXR-vAY63v-MpXMRS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XSpyXR-vAY63v-MpXMRS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XSpyXR-vAY63v-MpXMRS.png" alt="【メガルカリオex】 XSpyXR-vAY63v-MpXMRS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XSpyXR-vAY63v-MpXMRS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XSpyXR-vAY63v-MpXMRS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952867</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">x8DDcx-PcHvjg-YK8Gcc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/x8DDcx-PcHvjg-YK8Gcc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/x8DDcx-PcHvjg-YK8Gcc.png" alt="【メガルカリオex】 x8DDcx-PcHvjg-YK8Gcc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=x8DDcx-PcHvjg-YK8Gcc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/x8DDcx-PcHvjg-YK8Gcc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952867</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">nQngLn-A5uaqF-L9gPg6</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nQngLn-A5uaqF-L9gPg6.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nQngLn-A5uaqF-L9gPg6.png" alt="【メガルカリオex】 nQngLn-A5uaqF-L9gPg6">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nQngLn-A5uaqF-L9gPg6" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nQngLn-A5uaqF-L9gPg6/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952960</div>
+                <div class="sub">岐阜県 / 宝島　可児店</div>
+                <div class="code">ypyU33-Haxn0q-yRXSXM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ypyU33-Haxn0q-yRXSXM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ypyU33-Haxn0q-yRXSXM.png" alt="【メガルカリオex】 ypyU33-Haxn0q-yRXSXM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ypyU33-Haxn0q-yRXSXM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ypyU33-Haxn0q-yRXSXM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952961</div>
+                <div class="sub">愛知県 / ブックオフ　西尾下町店</div>
+                <div class="code">PNngL6-qjKzW5-9LigQn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/PNngL6-qjKzW5-9LigQn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/PNngL6-qjKzW5-9LigQn.png" alt="【メガルカリオex】 PNngL6-qjKzW5-9LigQn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=PNngL6-qjKzW5-9LigQn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/PNngL6-qjKzW5-9LigQn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952962</div>
+                <div class="sub">愛媛県 / TCG桜華</div>
+                <div class="code">96Q66L-riVLf6-gnnnNN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/96Q66L-riVLf6-gnnnNN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/96Q66L-riVLf6-gnnnNN.png" alt="【メガルカリオex】 96Q66L-riVLf6-gnnnNN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=96Q66L-riVLf6-gnnnNN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/96Q66L-riVLf6-gnnnNN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952963</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">5Fw5kV-f5kkOo-kbVfkb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5Fw5kV-f5kkOo-kbVfkb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5Fw5kV-f5kkOo-kbVfkb.png" alt="【メガルカリオex】 5Fw5kV-f5kkOo-kbVfkb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5Fw5kV-f5kkOo-kbVfkb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5Fw5kV-f5kkOo-kbVfkb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952963</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">gigNNH-98CgXX-nHnng9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gigNNH-98CgXX-nHnng9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gigNNH-98CgXX-nHnng9.png" alt="【メガルカリオex】 gigNNH-98CgXX-nHnng9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gigNNH-98CgXX-nHnng9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gigNNH-98CgXX-nHnng9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952964</div>
+                <div class="sub">静岡県 / ブックオフプラス浜北店</div>
+                <div class="code">xDxcKD-L3GcIp-8cGK88</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xDxcKD-L3GcIp-8cGK88.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xDxcKD-L3GcIp-8cGK88.png" alt="【メガルカリオex】 xDxcKD-L3GcIp-8cGK88">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xDxcKD-L3GcIp-8cGK88" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xDxcKD-L3GcIp-8cGK88/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952965</div>
+                <div class="sub">大阪府 / トイコンプ　住道店</div>
+                <div class="code">bFVFVf-8QVQ8c-5kFFkf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bFVFVf-8QVQ8c-5kFFkf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bFVFVf-8QVQ8c-5kFFkf.png" alt="【メガルカリオex】 bFVFVf-8QVQ8c-5kFFkf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bFVFVf-8QVQ8c-5kFFkf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bFVFVf-8QVQ8c-5kFFkf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952965</div>
+                <div class="sub">大阪府 / トイコンプ　住道店</div>
+                <div class="code">nHL6Lg-NpcZDT-LH9NPn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nHL6Lg-NpcZDT-LH9NPn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nHL6Lg-NpcZDT-LH9NPn.png" alt="【メガルカリオex】 nHL6Lg-NpcZDT-LH9NPn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nHL6Lg-NpcZDT-LH9NPn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nHL6Lg-NpcZDT-LH9NPn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952968</div>
+                <div class="sub">高知県 / TSUTAYA土佐道路店</div>
+                <div class="code">VFkbFf-r7Lltf-bVkbFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VFkbFf-r7Lltf-bVkbFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VFkbFf-r7Lltf-bVkbFk.png" alt="【メガルカリオex】 VFkbFf-r7Lltf-bVkbFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VFkbFf-r7Lltf-bVkbFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VFkbFf-r7Lltf-bVkbFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952968</div>
+                <div class="sub">高知県 / TSUTAYA土佐道路店</div>
+                <div class="code">ypXpU2-UHvHpZ-pyRMpU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ypXpU2-UHvHpZ-pyRMpU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ypXpU2-UHvHpZ-pyRMpU.png" alt="【メガルカリオex】 ypXpU2-UHvHpZ-pyRMpU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ypXpU2-UHvHpZ-pyRMpU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ypXpU2-UHvHpZ-pyRMpU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952970</div>
+                <div class="sub">愛知県 / 竜星の嵐　名古屋店</div>
+                <div class="code">1vVkdb-pFVt4t-fFkvVV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/1vVkdb-pFVt4t-fFkvVV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/1vVkdb-pFVt4t-fFkvVV.png" alt="【メガルカリオex】 1vVkdb-pFVt4t-fFkvVV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=1vVkdb-pFVt4t-fFkvVV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/1vVkdb-pFVt4t-fFkvVV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952970</div>
+                <div class="sub">愛知県 / 竜星の嵐　名古屋店</div>
+                <div class="code">Y8xcaG-TE3QB8-Kc8aDD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Y8xcaG-TE3QB8-Kc8aDD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Y8xcaG-TE3QB8-Kc8aDD.png" alt="【メガルカリオex】 Y8xcaG-TE3QB8-Kc8aDD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Y8xcaG-TE3QB8-Kc8aDD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Y8xcaG-TE3QB8-Kc8aDD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 953121</div>
+                <div class="sub">大分県 / TSUTAYA光吉店</div>
+                <div class="code">FFFkkk-WGVCo9-f5Fbkb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FFFkkk-WGVCo9-f5Fbkb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FFFkkk-WGVCo9-f5Fbkb.png" alt="【メガルカリオex】 FFFkkk-WGVCo9-f5Fbkb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FFFkkk-WGVCo9-f5Fbkb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FFFkkk-WGVCo9-f5Fbkb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 953121</div>
+                <div class="sub">大分県 / TSUTAYA光吉店</div>
+                <div class="code">ppMyXR-XD4JS9-X3p2yM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppMyXR-XD4JS9-X3p2yM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppMyXR-XD4JS9-X3p2yM.png" alt="【メガルカリオex】 ppMyXR-XD4JS9-X3p2yM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppMyXR-XD4JS9-X3p2yM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppMyXR-XD4JS9-X3p2yM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952669</div>
+                <div class="sub">北海道 / ブックオフ　札幌南2条店</div>
+                <div class="code">UyXypp-aESdwP-pyppRy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/UyXypp-aESdwP-pyppRy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/UyXypp-aESdwP-pyppRy.png" alt="【メガルカリオex】 UyXypp-aESdwP-pyppRy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=UyXypp-aESdwP-pyppRy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/UyXypp-aESdwP-pyppRy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952669</div>
+                <div class="sub">北海道 / ブックオフ　札幌南2条店</div>
+                <div class="code">caxc4G-fDdFbZ-D88a88</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/caxc4G-fDdFbZ-D88a88.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/caxc4G-fDdFbZ-D88a88.png" alt="【メガルカリオex】 caxc4G-fDdFbZ-D88a88">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=caxc4G-fDdFbZ-D88a88" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/caxc4G-fDdFbZ-D88a88/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952714</div>
+                <div class="sub">埼玉県 / Wonder GOO　入間店</div>
+                <div class="code">8cxx8G-IBj4QY-cDJ4aK</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8cxx8G-IBj4QY-cDJ4aK.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8cxx8G-IBj4QY-cDJ4aK.png" alt="【メガルカリオex】 8cxx8G-IBj4QY-cDJ4aK">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8cxx8G-IBj4QY-cDJ4aK" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8cxx8G-IBj4QY-cDJ4aK/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952714</div>
+                <div class="sub">埼玉県 / Wonder GOO　入間店</div>
+                <div class="code">9Lgngn-cdffPt-9HNnni</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9Lgngn-cdffPt-9HNnni.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9Lgngn-cdffPt-9HNnni.png" alt="【メガルカリオex】 9Lgngn-cdffPt-9HNnni">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9Lgngn-cdffPt-9HNnni" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9Lgngn-cdffPt-9HNnni/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952714</div>
+                <div class="sub">埼玉県 / Wonder GOO　入間店</div>
+                <div class="code">H99Lnn-NI8lry-nggN6L</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/H99Lnn-NI8lry-nggN6L.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/H99Lnn-NI8lry-nggN6L.png" alt="【メガルカリオex】 H99Lnn-NI8lry-nggN6L">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=H99Lnn-NI8lry-nggN6L" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/H99Lnn-NI8lry-nggN6L/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952714</div>
+                <div class="sub">埼玉県 / Wonder GOO　入間店</div>
+                <div class="code">URXpyp-0D3pmC-MMyyMM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/URXpyp-0D3pmC-MMyyMM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/URXpyp-0D3pmC-MMyyMM.png" alt="【メガルカリオex】 URXpyp-0D3pmC-MMyyMM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=URXpyp-0D3pmC-MMyyMM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/URXpyp-0D3pmC-MMyyMM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952715</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">bkFfbF-NG8u7V-F5kkVk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bkFfbF-NG8u7V-F5kkVk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bkFfbF-NG8u7V-F5kkVk.png" alt="【メガルカリオex】 bkFfbF-NG8u7V-F5kkVk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bkFfbF-NG8u7V-F5kkVk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bkFfbF-NG8u7V-F5kkVk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952715</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">ffkvFb-uxf5Ba-VfkFkf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ffkvFb-uxf5Ba-VfkFkf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ffkvFb-uxf5Ba-VfkFkf.png" alt="【メガルカリオex】 ffkvFb-uxf5Ba-VfkFkf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ffkvFb-uxf5Ba-VfkFkf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ffkvFb-uxf5Ba-VfkFkf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952716</div>
+                <div class="sub">埼玉県 / BOOKOFFSUPERBAZAAR大宮ステラタウン店</div>
+                <div class="code">yXypMX-FELaTT-pXpEMR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yXypMX-FELaTT-pXpEMR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yXypMX-FELaTT-pXpEMR.png" alt="【メガルカリオex】 yXypMX-FELaTT-pXpEMR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yXypMX-FELaTT-pXpEMR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yXypMX-FELaTT-pXpEMR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952716</div>
+                <div class="sub">埼玉県 / BOOKOFFSUPERBAZAAR大宮ステラタウン店</div>
+                <div class="code">bFwkkf-Yzp8ao-kFvkkv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bFwkkf-Yzp8ao-kFvkkv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bFwkkf-Yzp8ao-kFvkkv.png" alt="【メガルカリオex】 bFwkkf-Yzp8ao-kFvkkv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bFwkkf-Yzp8ao-kFvkkv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bFwkkf-Yzp8ao-kFvkkv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952716</div>
+                <div class="sub">埼玉県 / BOOKOFFSUPERBAZAAR大宮ステラタウン店</div>
+                <div class="code">yyMX2R-uyycUo-SpyppM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yyMX2R-uyycUo-SpyppM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yyMX2R-uyycUo-SpyppM.png" alt="【メガルカリオex】 yyMX2R-uyycUo-SpyppM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yyMX2R-uyycUo-SpyppM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yyMX2R-uyycUo-SpyppM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952775</div>
+                <div class="sub">千葉県 / 蔦屋書店　茂原店</div>
+                <div class="code">Vkfkf1-Hwyn7H-1bk1VF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vkfkf1-Hwyn7H-1bk1VF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vkfkf1-Hwyn7H-1bk1VF.png" alt="【メガルカリオex】 Vkfkf1-Hwyn7H-1bk1VF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vkfkf1-Hwyn7H-1bk1VF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vkfkf1-Hwyn7H-1bk1VF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952775</div>
+                <div class="sub">千葉県 / 蔦屋書店　茂原店</div>
+                <div class="code">kFVbfb-8BAJYL-vFkfFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFVbfb-8BAJYL-vFkfFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFVbfb-8BAJYL-vFkfFF.png" alt="【メガルカリオex】 kFVbfb-8BAJYL-vFkfFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFVbfb-8BAJYL-vFkfFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFVbfb-8BAJYL-vFkfFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952777</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">ngLLi9-0Ibkio-HnN6iN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngLLi9-0Ibkio-HnN6iN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngLLi9-0Ibkio-HnN6iN.png" alt="【メガルカリオex】 ngLLi9-0Ibkio-HnN6iN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngLLi9-0Ibkio-HnN6iN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngLLi9-0Ibkio-HnN6iN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952777</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">8Kxc8c-OhkIur-J8DG4D</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8Kxc8c-OhkIur-J8DG4D.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8Kxc8c-OhkIur-J8DG4D.png" alt="【メガルカリオex】 8Kxc8c-OhkIur-J8DG4D">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8Kxc8c-OhkIur-J8DG4D" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8Kxc8c-OhkIur-J8DG4D/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952777</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">NLgng9-k9caVL-nnNHgL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NLgng9-k9caVL-nnNHgL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NLgng9-k9caVL-nnNHgL.png" alt="【メガルカリオex】 NLgng9-k9caVL-nnNHgL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NLgng9-k9caVL-nnNHgL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NLgng9-k9caVL-nnNHgL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952778</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">Vk5VfF-ci5tyo-FVVbkf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vk5VfF-ci5tyo-FVVbkf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vk5VfF-ci5tyo-FVVbkf.png" alt="【メガルカリオex】 Vk5VfF-ci5tyo-FVVbkf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vk5VfF-ci5tyo-FVVbkf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vk5VfF-ci5tyo-FVVbkf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952868</div>
+                <div class="sub">神奈川県 / 青馬堂本店</div>
+                <div class="code">vfkbFw-y4vbvM-VwkFFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vfkbFw-y4vbvM-VwkFFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vfkbFw-y4vbvM-VwkFFF.png" alt="【メガルカリオex】 vfkbFw-y4vbvM-VwkFFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vfkbFw-y4vbvM-VwkFFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vfkbFw-y4vbvM-VwkFFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952868</div>
+                <div class="sub">神奈川県 / 青馬堂本店</div>
+                <div class="code">EyXSyy-vytlvk-ppyURp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EyXSyy-vytlvk-ppyURp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EyXSyy-vytlvk-ppyURp.png" alt="【メガルカリオex】 EyXSyy-vytlvk-ppyURp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EyXSyy-vytlvk-ppyURp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EyXSyy-vytlvk-ppyURp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952972</div>
+                <div class="sub">愛知県 / 宝島　高蔵寺店</div>
+                <div class="code">g9gnng-teAXJh-L9NggL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/g9gnng-teAXJh-L9NggL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/g9gnng-teAXJh-L9NggL.png" alt="【メガルカリオex】 g9gnng-teAXJh-L9NggL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=g9gnng-teAXJh-L9NggL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/g9gnng-teAXJh-L9NggL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 953265</div>
+                <div class="sub">富山県 / 【CARDBOX】おもちゃのバンビ　本郷店</div>
+                <div class="code">8DG8cG-nVC4cY-c8Dcx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8DG8cG-nVC4cY-c8Dcx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8DG8cG-nVC4cY-c8Dcx8.png" alt="【メガルカリオex】 8DG8cG-nVC4cY-c8Dcx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8DG8cG-nVC4cY-c8Dcx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8DG8cG-nVC4cY-c8Dcx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952717</div>
+                <div class="sub">栃木県 / Wonder GOO　足利店</div>
+                <div class="code">kv5Vvb-JYv2Gm-FfkfVk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kv5Vvb-JYv2Gm-FfkfVk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kv5Vvb-JYv2Gm-FfkfVk.png" alt="【メガルカリオex】 kv5Vvb-JYv2Gm-FfkfVk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kv5Vvb-JYv2Gm-FfkfVk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kv5Vvb-JYv2Gm-FfkfVk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952717</div>
+                <div class="sub">栃木県 / Wonder GOO　足利店</div>
+                <div class="code">kbv1vF-oA7beI-fFkFkf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kbv1vF-oA7beI-fFkFkf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kbv1vF-oA7beI-fFkFkf.png" alt="【メガルカリオex】 kbv1vF-oA7beI-fFkFkf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kbv1vF-oA7beI-fFkFkf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kbv1vF-oA7beI-fFkFkf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952718</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">FkVvkw-ittEob-5bffFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkVvkw-ittEob-5bffFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkVvkw-ittEob-5bffFk.png" alt="【メガルカリオex】 FkVvkw-ittEob-5bffFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkVvkw-ittEob-5bffFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkVvkw-ittEob-5bffFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952720</div>
+                <div class="sub">群馬県 / バトロコミニ前橋文京店</div>
+                <div class="code">gNgL6H-txHyd2-QN9L9n</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gNgL6H-txHyd2-QN9L9n.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gNgL6H-txHyd2-QN9L9n.png" alt="【メガルカリオex】 gNgL6H-txHyd2-QN9L9n">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gNgL6H-txHyd2-QN9L9n" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gNgL6H-txHyd2-QN9L9n/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952720</div>
+                <div class="sub">群馬県 / バトロコミニ前橋文京店</div>
+                <div class="code">kFfFwV-QMGZhM-V1FVVb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFfFwV-QMGZhM-V1FVVb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFfFwV-QMGZhM-V1FVVb.png" alt="【メガルカリオex】 kFfFwV-QMGZhM-V1FVVb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFfFwV-QMGZhM-V1FVVb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFfFwV-QMGZhM-V1FVVb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952721</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">yMXypR-uK8FQu-2yRpXy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yMXypR-uK8FQu-2yRpXy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yMXypR-uK8FQu-2yRpXy.png" alt="【メガルカリオex】 yMXypR-uK8FQu-2yRpXy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yMXypR-uK8FQu-2yRpXy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yMXypR-uK8FQu-2yRpXy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952721</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">RXy2yM-lRZ9dl-MpMyXp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RXy2yM-lRZ9dl-MpMyXp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RXy2yM-lRZ9dl-MpMyXp.png" alt="【メガルカリオex】 RXy2yM-lRZ9dl-MpMyXp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RXy2yM-lRZ9dl-MpMyXp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RXy2yM-lRZ9dl-MpMyXp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952721</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">GcxDc8-UlEJDG-cc888c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/GcxDc8-UlEJDG-cc888c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/GcxDc8-UlEJDG-cc888c.png" alt="【メガルカリオex】 GcxDc8-UlEJDG-cc888c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=GcxDc8-UlEJDG-cc888c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/GcxDc8-UlEJDG-cc888c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952721</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">9gnNLN-LcjQVH-nNnn6g</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9gnNLN-LcjQVH-nNnn6g.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9gnNLN-LcjQVH-nNnn6g.png" alt="【メガルカリオex】 9gnNLN-LcjQVH-nNnn6g">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9gnNLN-LcjQVH-nNnn6g" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9gnNLN-LcjQVH-nNnn6g/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952779</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">8D8GaK-9NXtd5-8c8xxc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8D8GaK-9NXtd5-8c8xxc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8D8GaK-9NXtd5-8c8xxc.png" alt="【メガルカリオex】 8D8GaK-9NXtd5-8c8xxc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8D8GaK-9NXtd5-8c8xxc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8D8GaK-9NXtd5-8c8xxc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952779</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">9LnnLH-NGrorY-gnNn9N</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9LnnLH-NGrorY-gnNn9N.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9LnnLH-NGrorY-gnNn9N.png" alt="【メガルカリオex】 9LnnLH-NGrorY-gnNn9N">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9LnnLH-NGrorY-gnNn9N" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9LnnLH-NGrorY-gnNn9N/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952779</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">xJYDD8-tYFhFj-D8c88G</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xJYDD8-tYFhFj-D8c88G.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xJYDD8-tYFhFj-D8c88G.png" alt="【メガルカリオex】 xJYDD8-tYFhFj-D8c88G">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xJYDD8-tYFhFj-D8c88G" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xJYDD8-tYFhFj-D8c88G/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952872</div>
+                <div class="sub">長野県 / バトスタ長野駅前店</div>
+                <div class="code">LgnL9N-bi9wQj-LnNnQQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LgnL9N-bi9wQj-LnNnQQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LgnL9N-bi9wQj-LnNnQQ.png" alt="【メガルカリオex】 LgnL9N-bi9wQj-LnNnQQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LgnL9N-bi9wQj-LnNnQQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LgnL9N-bi9wQj-LnNnQQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952872</div>
+                <div class="sub">長野県 / バトスタ長野駅前店</div>
+                <div class="code">LgnngH-z6vQAQ-n69ggN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LgnngH-z6vQAQ-n69ggN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LgnngH-z6vQAQ-n69ggN.png" alt="【メガルカリオex】 LgnngH-z6vQAQ-n69ggN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LgnngH-z6vQAQ-n69ggN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LgnngH-z6vQAQ-n69ggN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952873</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">yUMpRM-bS6N4k-MMypXR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yUMpRM-bS6N4k-MMypXR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yUMpRM-bS6N4k-MMypXR.png" alt="【メガルカリオex】 yUMpRM-bS6N4k-MMypXR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yUMpRM-bS6N4k-MMypXR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yUMpRM-bS6N4k-MMypXR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952974</div>
+                <div class="sub">愛知県 / 【CARDBOX】本の王国すまいるキング　安城店</div>
+                <div class="code">VkFfkV-Lq4GPL-5kk1bk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VkFfkV-Lq4GPL-5kk1bk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VkFfkV-Lq4GPL-5kk1bk.png" alt="【メガルカリオex】 VkFfkV-Lq4GPL-5kk1bk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VkFfkV-Lq4GPL-5kk1bk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VkFfkV-Lq4GPL-5kk1bk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952975</div>
+                <div class="sub">岐阜県 / 三洋堂書店　みのかも店</div>
+                <div class="code">iNLigL-DWo4FA-6Ln9nQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/iNLigL-DWo4FA-6Ln9nQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/iNLigL-DWo4FA-6Ln9nQ.png" alt="【メガルカリオex】 iNLigL-DWo4FA-6Ln9nQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=iNLigL-DWo4FA-6Ln9nQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/iNLigL-DWo4FA-6Ln9nQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952975</div>
+                <div class="sub">岐阜県 / 三洋堂書店　みのかも店</div>
+                <div class="code">9PgnLN-dy041j-n6nHgL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9PgnLN-dy041j-n6nHgL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9PgnLN-dy041j-n6nHgL.png" alt="【メガルカリオex】 9PgnLN-dy041j-n6nHgL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9PgnLN-dy041j-n6nHgL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9PgnLN-dy041j-n6nHgL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952976</div>
+                <div class="sub">滋賀県 / トレカショップVOW</div>
+                <div class="code">yMRpyU-qkRjfh-MMXMyX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yMRpyU-qkRjfh-MMXMyX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yMRpyU-qkRjfh-MMXMyX.png" alt="【メガルカリオex】 yMRpyU-qkRjfh-MMXMyX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yMRpyU-qkRjfh-MMXMyX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yMRpyU-qkRjfh-MMXMyX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952977</div>
+                <div class="sub">静岡県 / TSUTAYA三島店</div>
+                <div class="code">1fVfkV-y15ZOZ-kbFk5b</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/1fVfkV-y15ZOZ-kbFk5b.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/1fVfkV-y15ZOZ-kbFk5b.png" alt="【メガルカリオex】 1fVfkV-y15ZOZ-kbFk5b">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=1fVfkV-y15ZOZ-kbFk5b" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/1fVfkV-y15ZOZ-kbFk5b/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952977</div>
+                <div class="sub">静岡県 / TSUTAYA三島店</div>
+                <div class="code">XypMMp-67vabT-R3pyXy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XypMMp-67vabT-R3pyXy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XypMMp-67vabT-R3pyXy.png" alt="【メガルカリオex】 XypMMp-67vabT-R3pyXy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XypMMp-67vabT-R3pyXy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XypMMp-67vabT-R3pyXy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952977</div>
+                <div class="sub">静岡県 / TSUTAYA三島店</div>
+                <div class="code">nggPnQ-5lO8KV-9nniLN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nggPnQ-5lO8KV-9nniLN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nggPnQ-5lO8KV-9nniLN.png" alt="【メガルカリオex】 nggPnQ-5lO8KV-9nniLN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nggPnQ-5lO8KV-9nniLN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nggPnQ-5lO8KV-9nniLN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952979</div>
+                <div class="sub">岡山県 / BOOKOFF 250号東岡山店</div>
+                <div class="code">ypyyM3-OQ9fNP-MRXpyR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ypyyM3-OQ9fNP-MRXpyR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ypyyM3-OQ9fNP-MRXpyR.png" alt="【メガルカリオex】 ypyyM3-OQ9fNP-MRXpyR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ypyyM3-OQ9fNP-MRXpyR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ypyyM3-OQ9fNP-MRXpyR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952980</div>
+                <div class="sub">兵庫県 / トレカショップ竜のしっぽ　姫路店</div>
+                <div class="code">MpXyRE-hd6Erq-XyyMXp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MpXyRE-hd6Erq-XyyMXp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MpXyRE-hd6Erq-XyyMXp.png" alt="【メガルカリオex】 MpXyRE-hd6Erq-XyyMXp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MpXyRE-hd6Erq-XyyMXp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MpXyRE-hd6Erq-XyyMXp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952980</div>
+                <div class="sub">兵庫県 / トレカショップ竜のしっぽ　姫路店</div>
+                <div class="code">fbFFkd-WcW1Fj-FkFVk5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/fbFFkd-WcW1Fj-FkFVk5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/fbFFkd-WcW1Fj-FkFVk5.png" alt="【メガルカリオex】 fbFFkd-WcW1Fj-FkFVk5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=fbFFkd-WcW1Fj-FkFVk5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/fbFFkd-WcW1Fj-FkFVk5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952981</div>
+                <div class="sub">愛知県 / 宝島　長久手店</div>
+                <div class="code">f1FVkv-y7LE89-dVkbVk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/f1FVkv-y7LE89-dVkbVk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/f1FVkv-y7LE89-dVkbVk.png" alt="【メガルカリオex】 f1FVkv-y7LE89-dVkbVk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=f1FVkv-y7LE89-dVkbVk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/f1FVkv-y7LE89-dVkbVk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952981</div>
+                <div class="sub">愛知県 / 宝島　長久手店</div>
+                <div class="code">wFvFk1-iEMdDU-f5VFkb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/wFvFk1-iEMdDU-f5VFkb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/wFvFk1-iEMdDU-f5VFkb.png" alt="【メガルカリオex】 wFvFk1-iEMdDU-f5VFkb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=wFvFk1-iEMdDU-f5VFkb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/wFvFk1-iEMdDU-f5VFkb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953234</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">a48DYc-dKhJHe-8G8c48</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/a48DYc-dKhJHe-8G8c48.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/a48DYc-dKhJHe-8G8c48.png" alt="【メガルカリオex】 a48DYc-dKhJHe-8G8c48">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=a48DYc-dKhJHe-8G8c48" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/a48DYc-dKhJHe-8G8c48/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953266</div>
+                <div class="sub">広島県 / 【CARDBOX】カードボックス　福山店</div>
+                <div class="code">8c8DcJ-czE1mE-D8cx8G</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8c8DcJ-czE1mE-D8cx8G.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8c8DcJ-czE1mE-D8cx8G.png" alt="【メガルカリオex】 8c8DcJ-czE1mE-D8cx8G">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8c8DcJ-czE1mE-D8cx8G" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8c8DcJ-czE1mE-D8cx8G/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953408</div>
+                <div class="sub">京都府 / BOOKOFF SUPER BAZAAR 1号京都伏見店</div>
+                <div class="code">DxaacD-ZCSfuK-D888GD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/DxaacD-ZCSfuK-D888GD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/DxaacD-ZCSfuK-D888GD.png" alt="【メガルカリオex】 DxaacD-ZCSfuK-D888GD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=DxaacD-ZCSfuK-D888GD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/DxaacD-ZCSfuK-D888GD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953408</div>
+                <div class="sub">京都府 / BOOKOFF SUPER BAZAAR 1号京都伏見店</div>
+                <div class="code">yyR2py-fc1RaE-MUXypM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yyR2py-fc1RaE-MUXypM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yyR2py-fc1RaE-MUXypM.png" alt="【メガルカリオex】 yyR2py-fc1RaE-MUXypM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yyR2py-fc1RaE-MUXypM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yyR2py-fc1RaE-MUXypM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 952982</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">pRyyXp-GfTuv8-22Xypy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pRyyXp-GfTuv8-22Xypy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pRyyXp-GfTuv8-22Xypy.png" alt="【メガルカリオex】 pRyyXp-GfTuv8-22Xypy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pRyyXp-GfTuv8-22Xypy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pRyyXp-GfTuv8-22Xypy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 952982</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">Gc888D-thjvt5-8YY888</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Gc888D-thjvt5-8YY888.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Gc888D-thjvt5-8YY888.png" alt="【メガルカリオex】 Gc888D-thjvt5-8YY888">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Gc888D-thjvt5-8YY888" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Gc888D-thjvt5-8YY888/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 952982</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">ngL9n6-mxnPkO-NNgNLg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngL9n6-mxnPkO-NNgNLg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngL9n6-mxnPkO-NNgNLg.png" alt="【メガルカリオex】 ngL9n6-mxnPkO-NNgNLg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngL9n6-mxnPkO-NNgNLg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngL9n6-mxnPkO-NNgNLg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 953268</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">aDD8cG-ajSGUR-cDGxc8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/aDD8cG-ajSGUR-cDGxc8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/aDD8cG-ajSGUR-cDGxc8.png" alt="【メガルカリオex】 aDD8cG-ajSGUR-cDGxc8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=aDD8cG-ajSGUR-cDGxc8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/aDD8cG-ajSGUR-cDGxc8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 953268</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">M2pyRM-z3172z-yEM3yX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M2pyRM-z3172z-yEM3yX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M2pyRM-z3172z-yEM3yX.png" alt="【メガルカリオex】 M2pyRM-z3172z-yEM3yX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M2pyRM-z3172z-yEM3yX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M2pyRM-z3172z-yEM3yX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-24 / Event 952780</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">8cDcaD-SU7Lph-G48DDx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8cDcaD-SU7Lph-G48DDx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8cDcaD-SU7Lph-G48DDx.png" alt="【メガルカリオex】 8cDcaD-SU7Lph-G48DDx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8cDcaD-SU7Lph-G48DDx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8cDcaD-SU7Lph-G48DDx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952681</div>
+                <div class="sub">宮城県 / ポケ堂　仙台店</div>
+                <div class="code">v5kFfF-Rtfu2O-kFdFkb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/v5kFfF-Rtfu2O-kFdFkb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/v5kFfF-Rtfu2O-kFdFkb.png" alt="【メガルカリオex】 v5kFfF-Rtfu2O-kFdFkb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=v5kFfF-Rtfu2O-kFdFkb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/v5kFfF-Rtfu2O-kFdFkb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952681</div>
+                <div class="sub">宮城県 / ポケ堂　仙台店</div>
+                <div class="code">48Gxcc-pt36F0-xD48Yc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/48Gxcc-pt36F0-xD48Yc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/48Gxcc-pt36F0-xD48Yc.png" alt="【メガルカリオex】 48Gxcc-pt36F0-xD48Yc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=48Gxcc-pt36F0-xD48Yc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/48Gxcc-pt36F0-xD48Yc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952781</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">nHLnNn-TEiUVe-gnLH9N</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nHLnNn-TEiUVe-gnLH9N.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nHLnNn-TEiUVe-gnLH9N.png" alt="【メガルカリオex】 nHLnNn-TEiUVe-gnLH9N">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nHLnNn-TEiUVe-gnLH9N" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nHLnNn-TEiUVe-gnLH9N/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952984</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">xcY8D8-HxFvuO-a8aGcc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xcY8D8-HxFvuO-a8aGcc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xcY8D8-HxFvuO-a8aGcc.png" alt="【メガルカリオex】 xcY8D8-HxFvuO-a8aGcc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xcY8D8-HxFvuO-a8aGcc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xcY8D8-HxFvuO-a8aGcc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952984</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">Dc8c8D-c3JAMB-GD8GcY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Dc8c8D-c3JAMB-GD8GcY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Dc8c8D-c3JAMB-GD8GcY.png" alt="【メガルカリオex】 Dc8c8D-c3JAMB-GD8GcY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Dc8c8D-c3JAMB-GD8GcY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Dc8c8D-c3JAMB-GD8GcY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952984</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">cc48xG-GMoDiJ-D8Y8cc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cc48xG-GMoDiJ-D8Y8cc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cc48xG-GMoDiJ-D8Y8cc.png" alt="【メガルカリオex】 cc48xG-GMoDiJ-D8Y8cc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cc48xG-GMoDiJ-D8Y8cc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cc48xG-GMoDiJ-D8Y8cc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952986</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋2号店</div>
+                <div class="code">vFbVFf-RZtAQF-kvFkdk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vFbVFf-RZtAQF-kvFkdk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vFbVFf-RZtAQF-kvFkdk.png" alt="【メガルカリオex】 vFbVFf-RZtAQF-kvFkdk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vFbVFf-RZtAQF-kvFkdk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vFbVFf-RZtAQF-kvFkdk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952722</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">FkfffF-mML4vi-wk1kbk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkfffF-mML4vi-wk1kbk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkfffF-mML4vi-wk1kbk.png" alt="【メガルカリオex】 FkfffF-mML4vi-wk1kbk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkfffF-mML4vi-wk1kbk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkfffF-mML4vi-wk1kbk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952987</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">G8caD8-t9KAYg-88cG8Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/G8caD8-t9KAYg-88cG8Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/G8caD8-t9KAYg-88cG8Y.png" alt="【メガルカリオex】 G8caD8-t9KAYg-88cG8Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=G8caD8-t9KAYg-88cG8Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/G8caD8-t9KAYg-88cG8Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952987</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">RpyX2y-RCnImd-MMXRSS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RpyX2y-RCnImd-MMXRSS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RpyX2y-RCnImd-MMXRSS.png" alt="【メガルカリオex】 RpyX2y-RCnImd-MMXRSS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RpyX2y-RCnImd-MMXRSS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RpyX2y-RCnImd-MMXRSS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952987</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">2RpX3R-eCkiIG-pyXyMp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2RpX3R-eCkiIG-pyXyMp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2RpX3R-eCkiIG-pyXyMp.png" alt="【メガルカリオex】 2RpX3R-eCkiIG-pyXyMp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2RpX3R-eCkiIG-pyXyMp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2RpX3R-eCkiIG-pyXyMp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952987</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">xcxDc8-ue5KL6-GccG8D</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xcxDc8-ue5KL6-GccG8D.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xcxDc8-ue5KL6-GccG8D.png" alt="【メガルカリオex】 xcxDc8-ue5KL6-GccG8D">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xcxDc8-ue5KL6-GccG8D" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xcxDc8-ue5KL6-GccG8D/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952988</div>
+                <div class="sub">滋賀県 / トレカショップVOW</div>
+                <div class="code">ngLg9N-9Y2Wip-Q6ngNn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngLg9N-9Y2Wip-Q6ngNn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngLg9N-9Y2Wip-Q6ngNn.png" alt="【メガルカリオex】 ngLg9N-9Y2Wip-Q6ngNn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngLg9N-9Y2Wip-Q6ngNn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngLg9N-9Y2Wip-Q6ngNn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガルカリオex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-26 / Event 952988</div>
+                <div class="sub">滋賀県 / トレカショップVOW</div>
+                <div class="code">FkdbFk-LmoN6l-kFfbkf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkdbFk-LmoN6l-kFfbkf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkdbFk-LmoN6l-kFfbkf.png" alt="【メガルカリオex】 FkdbFk-LmoN6l-kFfbkf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkdbFk-LmoN6l-kFfbkf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkdbFk-LmoN6l-kFfbkf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>

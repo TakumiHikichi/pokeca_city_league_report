@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【ロケット団のミュウツーex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【ロケット団のミュウツーex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">22</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">22</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">22</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-03-26.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952770</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">cx4GKx-jTTMVK-JGD8xc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cx4GKx-jTTMVK-JGD8xc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cx4GKx-jTTMVK-JGD8xc.png" alt="【ロケット団のミュウツーex】 cx4GKx-jTTMVK-JGD8xc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cx4GKx-jTTMVK-JGD8xc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cx4GKx-jTTMVK-JGD8xc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952774</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">6nLQLN-n90Qfn-Q9nNgH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/6nLQLN-n90Qfn-Q9nNgH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/6nLQLN-n90Qfn-Q9nNgH.png" alt="【ロケット団のミュウツーex】 6nLQLN-n90Qfn-Q9nNgH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=6nLQLN-n90Qfn-Q9nNgH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/6nLQLN-n90Qfn-Q9nNgH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952774</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">884xKG-jvUzw2-KxxcD4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/884xKG-jvUzw2-KxxcD4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/884xKG-jvUzw2-KxxcD4.png" alt="【ロケット団のミュウツーex】 884xKG-jvUzw2-KxxcD4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=884xKG-jvUzw2-KxxcD4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/884xKG-jvUzw2-KxxcD4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952774</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">J8DxaD-F6hhOB-x8GK8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/J8DxaD-F6hhOB-x8GK8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/J8DxaD-F6hhOB-x8GK8c.png" alt="【ロケット団のミュウツーex】 J8DxaD-F6hhOB-x8GK8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=J8DxaD-F6hhOB-x8GK8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/J8DxaD-F6hhOB-x8GK8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952867</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">vkFkFf-Jww7O3-5bFvVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vkFkFf-Jww7O3-5bFvVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vkFkFf-Jww7O3-5bFvVF.png" alt="【ロケット団のミュウツーex】 vkFkFf-Jww7O3-5bFvVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vkFkFf-Jww7O3-5bFvVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vkFkFf-Jww7O3-5bFvVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952867</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">3yyp2X-mXoHVE-RSypyM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/3yyp2X-mXoHVE-RSypyM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/3yyp2X-mXoHVE-RSypyM.png" alt="【ロケット団のミュウツーex】 3yyp2X-mXoHVE-RSypyM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=3yyp2X-mXoHVE-RSypyM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/3yyp2X-mXoHVE-RSypyM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952964</div>
+                <div class="sub">静岡県 / ブックオフプラス浜北店</div>
+                <div class="code">Vbfkk5-Xyr29l-fFfbwF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vbfkk5-Xyr29l-fFfbwF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vbfkk5-Xyr29l-fFfbwF.png" alt="【ロケット団のミュウツーex】 Vbfkk5-Xyr29l-fFfbwF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vbfkk5-Xyr29l-fFfbwF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vbfkk5-Xyr29l-fFfbwF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-20 / Event 952968</div>
+                <div class="sub">高知県 / TSUTAYA土佐道路店</div>
+                <div class="code">15kbfk-gph6jC-FFFvkF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/15kbfk-gph6jC-FFFvkF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/15kbfk-gph6jC-FFFvkF.png" alt="【ロケット団のミュウツーex】 15kbfk-gph6jC-FFFvkF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=15kbfk-gph6jC-FFFvkF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/15kbfk-gph6jC-FFFvkF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-21 / Event 952714</div>
+                <div class="sub">埼玉県 / Wonder GOO　入間店</div>
+                <div class="code">fwVbFk-YROLZ5-kkkFVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/fwVbFk-YROLZ5-kkkFVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/fwVbFk-YROLZ5-kkkFVF.png" alt="【ロケット団のミュウツーex】 fwVbFk-YROLZ5-kkkFVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=fwVbFk-YROLZ5-kkkFVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/fwVbFk-YROLZ5-kkkFVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952717</div>
+                <div class="sub">栃木県 / Wonder GOO　足利店</div>
+                <div class="code">Xp3M2y-60r8fN-MMRyy3</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Xp3M2y-60r8fN-MMRyy3.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Xp3M2y-60r8fN-MMRyy3.png" alt="【ロケット団のミュウツーex】 Xp3M2y-60r8fN-MMRyy3">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Xp3M2y-60r8fN-MMRyy3" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Xp3M2y-60r8fN-MMRyy3/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952977</div>
+                <div class="sub">静岡県 / TSUTAYA三島店</div>
+                <div class="code">kFbv5f-5kYVfC-kkbFVk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFbv5f-5kYVfC-kkbFVk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFbv5f-5kYVfC-kkbFVk.png" alt="【ロケット団のミュウツーex】 kFbv5f-5kYVfC-kkbFVk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFbv5f-5kYVfC-kkbFVk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFbv5f-5kYVfC-kkbFVk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952978</div>
+                <div class="sub">大阪府 / トイコンプ高槻店</div>
+                <div class="code">ngHg9n-Cjg64c-nHNngL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngHg9n-Cjg64c-nHNngL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngHg9n-Cjg64c-nHNngL.png" alt="【ロケット団のミュウツーex】 ngHg9n-Cjg64c-nHNngL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngHg9n-Cjg64c-nHNngL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngHg9n-Cjg64c-nHNngL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952979</div>
+                <div class="sub">岡山県 / BOOKOFF 250号東岡山店</div>
+                <div class="code">yEXMyM-jB5u5F-RXpUyX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yEXMyM-jB5u5F-RXpUyX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yEXMyM-jB5u5F-RXpUyX.png" alt="【ロケット団のミュウツーex】 yEXMyM-jB5u5F-RXpUyX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yEXMyM-jB5u5F-RXpUyX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yEXMyM-jB5u5F-RXpUyX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 952981</div>
+                <div class="sub">愛知県 / 宝島　長久手店</div>
+                <div class="code">nLgQgn-wexIMA-NPn9L9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nLgQgn-wexIMA-NPn9L9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nLgQgn-wexIMA-NPn9L9.png" alt="【ロケット団のミュウツーex】 nLgQgn-wexIMA-NPn9L9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nLgQgn-wexIMA-NPn9L9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nLgQgn-wexIMA-NPn9L9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953234</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">xKYG8D-JqLguF-c4a8x4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xKYG8D-JqLguF-c4a8x4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xKYG8D-JqLguF-c4a8x4.png" alt="【ロケット団のミュウツーex】 xKYG8D-JqLguF-c4a8x4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xKYG8D-JqLguF-c4a8x4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xKYG8D-JqLguF-c4a8x4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-03-22 / Event 953408</div>
+                <div class="sub">京都府 / BOOKOFF SUPER BAZAAR 1号京都伏見店</div>
+                <div class="code">bk5fvF-hRDEwN-kkFVbV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bk5fvF-hRDEwN-kkFVbV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bk5fvF-hRDEwN-kkFVbV.png" alt="【ロケット団のミュウツーex】 bk5fvF-hRDEwN-kkFVbV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bk5fvF-hRDEwN-kkFVbV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bk5fvF-hRDEwN-kkFVbV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 952982</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">kF5k5F-KLSexD-kf5kfb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kF5k5F-KLSexD-kf5kfb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kF5k5F-KLSexD-kf5kfb.png" alt="【ロケット団のミュウツーex】 kF5k5F-KLSexD-kf5kfb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kF5k5F-KLSexD-kf5kfb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kF5k5F-KLSexD-kf5kfb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-03-23 / Event 953268</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">FbbV5w-zr9LAG-fFkfkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FbbV5w-zr9LAG-fFkfkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FbbV5w-zr9LAG-fFkfkk.png" alt="【ロケット団のミュウツーex】 FbbV5w-zr9LAG-fFkfkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FbbV5w-zr9LAG-fFkfkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FbbV5w-zr9LAG-fFkfkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-24 / Event 952780</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">c8xxDx-UDeRFr-GK4xDc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c8xxDx-UDeRFr-GK4xDc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c8xxDx-UDeRFr-GK4xDc.png" alt="【ロケット団のミュウツーex】 c8xxDx-UDeRFr-GK4xDc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c8xxDx-UDeRFr-GK4xDc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c8xxDx-UDeRFr-GK4xDc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952681</div>
+                <div class="sub">宮城県 / ポケ堂　仙台店</div>
+                <div class="code">HHnQn9-qlNa7Z-ngNNLQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HHnQn9-qlNa7Z-ngNNLQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HHnQn9-qlNa7Z-ngNNLQ.png" alt="【ロケット団のミュウツーex】 HHnQn9-qlNa7Z-ngNNLQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HHnQn9-qlNa7Z-ngNNLQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HHnQn9-qlNa7Z-ngNNLQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952681</div>
+                <div class="sub">宮城県 / ポケ堂　仙台店</div>
+                <div class="code">9n9LNn-LRSGzX-ggQL9N</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9n9LNn-LRSGzX-ggQL9N.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9n9LNn-LRSGzX-ggQL9N.png" alt="【ロケット団のミュウツーex】 9n9LNn-LRSGzX-ggQL9N">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9n9LNn-LRSGzX-ggQL9N" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9n9LNn-LRSGzX-ggQL9N/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ロケット団のミュウツーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-03-25 / Event 952986</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋2号店</div>
+                <div class="code">Ga8cxD-nR4bX4-D8448K</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ga8cxD-nR4bX4-D8448K.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ga8cxD-nR4bX4-D8448K.png" alt="【ロケット団のミュウツーex】 Ga8cxD-nR4bX4-D8448K">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ga8cxD-nR4bX4-D8448K" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ga8cxD-nR4bX4-D8448K/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
