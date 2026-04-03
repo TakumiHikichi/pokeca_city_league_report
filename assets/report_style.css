@@ -15,6 +15,25 @@ body { margin:0; font-family:"Yu Gothic UI","Meiryo",sans-serif; background:var(
   background:rgba(255,255,255,.12);
 }
 .report-nav a:hover { background:rgba(255,255,255,.22); }
+.special-nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.special-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #fff7df;
+  border: 1px solid #d4b55a;
+  color: #7a4b00;
+  text-decoration: none;
+  font-weight: 700;
+}
+.special-nav a:hover { background:#ffefbf; }
 .toc { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin-top:16px; }
 .toc a { display:block; color:#0f172a; text-decoration:none; padding:4px 0; }
 .deck-link { color:#2563eb; text-decoration:underline; font-weight:600; }
@@ -85,6 +104,7 @@ th { background:#f1f5f9; }
   .cover h1 { font-size:22px; line-height:1.25; }
   .cover p { font-size:13px; }
   .report-nav a { font-size:12px; padding:5px 9px; }
+  .special-nav a { font-size:12px; padding:6px 10px; }
   .toc { padding:12px 14px; }
   .toc a { font-size:14px; }
   .kpi-grid { grid-template-columns:1fr; gap:8px; }
