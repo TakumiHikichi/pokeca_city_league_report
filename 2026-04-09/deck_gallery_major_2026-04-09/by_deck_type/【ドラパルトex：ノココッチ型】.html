@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【ドラパルトex：ノココッチ型】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【ドラパルトex：ノココッチ型】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">31</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">27</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">31</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-04-09.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952684</div>
+                <div class="sub">宮城県 / シーガル　仙台駅前店</div>
+                <div class="code">MRUppy-IiG973-32Xp2M</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MRUppy-IiG973-32Xp2M.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MRUppy-IiG973-32Xp2M.png" alt="【ドラパルトex：ノココッチ型】 MRUppy-IiG973-32Xp2M">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MRUppy-IiG973-32Xp2M" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MRUppy-IiG973-32Xp2M/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952994</div>
+                <div class="sub">岐阜県 / カードショップ　海賊船-starch-</div>
+                <div class="code">4YccG8-xpEA1O-4cGJ8Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4YccG8-xpEA1O-4cGJ8Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4YccG8-xpEA1O-4cGJ8Y.png" alt="【ドラパルトex：ノココッチ型】 4YccG8-xpEA1O-4cGJ8Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4YccG8-xpEA1O-4cGJ8Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4YccG8-xpEA1O-4cGJ8Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952995</div>
+                <div class="sub">鳥取県 / カードボックスアリオン皆生店</div>
+                <div class="code">RyyM2p-VIwIl7-ySpM2y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RyyM2p-VIwIl7-ySpM2y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RyyM2p-VIwIl7-ySpM2y.png" alt="【ドラパルトex：ノココッチ型】 RyyM2p-VIwIl7-ySpM2y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RyyM2p-VIwIl7-ySpM2y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RyyM2p-VIwIl7-ySpM2y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953125</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">XppRyM-l9bE1A-Mp22My</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XppRyM-l9bE1A-Mp22My.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XppRyM-l9bE1A-Mp22My.png" alt="【ドラパルトex：ノココッチ型】 XppRyM-l9bE1A-Mp22My">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XppRyM-l9bE1A-Mp22My" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XppRyM-l9bE1A-Mp22My/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953269</div>
+                <div class="sub">愛知県 / BOOKOFF SUPER BAZAAR 248号西友岡崎店</div>
+                <div class="code">gggiHH-da8m15-HgnH96</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gggiHH-da8m15-HgnH96.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gggiHH-da8m15-HgnH96.png" alt="【ドラパルトex：ノココッチ型】 gggiHH-da8m15-HgnH96">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gggiHH-da8m15-HgnH96" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gggiHH-da8m15-HgnH96/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952789</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">kFvdV5-78zHyG-FFF5fb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFvdV5-78zHyG-FFF5fb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFvdV5-78zHyG-FFF5fb.png" alt="【ドラパルトex：ノココッチ型】 kFvdV5-78zHyG-FFF5fb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFvdV5-78zHyG-FFF5fb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFvdV5-78zHyG-FFF5fb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952789</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">Fkffvv-tMyIyB-5fFbFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fkffvv-tMyIyB-5fFbFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fkffvv-tMyIyB-5fFbFF.png" alt="【ドラパルトex：ノココッチ型】 Fkffvv-tMyIyB-5fFbFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fkffvv-tMyIyB-5fFbFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fkffvv-tMyIyB-5fFbFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952790</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">yXppyp-uyXZqg-pM2R2y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yXppyp-uyXZqg-pM2R2y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yXppyp-uyXZqg-pM2R2y.png" alt="【ドラパルトex：ノココッチ型】 yXppyp-uyXZqg-pM2R2y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yXppyp-uyXZqg-pM2R2y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yXppyp-uyXZqg-pM2R2y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952791</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">yySMpp-qwfTRQ-p2RMMp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yySMpp-qwfTRQ-p2RMMp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yySMpp-qwfTRQ-p2RMMp.png" alt="【ドラパルトex：ノココッチ型】 yySMpp-qwfTRQ-p2RMMp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yySMpp-qwfTRQ-p2RMMp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yySMpp-qwfTRQ-p2RMMp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952885</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">4GcGcx-P6uvvS-8G8ccY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4GcGcx-P6uvvS-8G8ccY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4GcGcx-P6uvvS-8G8ccY.png" alt="【ドラパルトex：ノココッチ型】 4GcGcx-P6uvvS-8G8ccY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4GcGcx-P6uvvS-8G8ccY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4GcGcx-P6uvvS-8G8ccY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952996</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">kb55FF-uTvPj2-Vkf1k5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kb55FF-uTvPj2-Vkf1k5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kb55FF-uTvPj2-Vkf1k5.png" alt="【ドラパルトex：ノココッチ型】 kb55FF-uTvPj2-Vkf1k5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kb55FF-uTvPj2-Vkf1k5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kb55FF-uTvPj2-Vkf1k5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952996</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">4YccG8-xpEA1O-4cGJ8Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4YccG8-xpEA1O-4cGJ8Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4YccG8-xpEA1O-4cGJ8Y.png" alt="【ドラパルトex：ノココッチ型】 4YccG8-xpEA1O-4cGJ8Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4YccG8-xpEA1O-4cGJ8Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4YccG8-xpEA1O-4cGJ8Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952996</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">Fkvb55-fDhMLk-fvkFbF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fkvb55-fDhMLk-fvkFbF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fkvb55-fDhMLk-fvkFbF.png" alt="【ドラパルトex：ノココッチ型】 Fkvb55-fDhMLk-fvkFbF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fkvb55-fDhMLk-fvkFbF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fkvb55-fDhMLk-fvkFbF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952999</div>
+                <div class="sub">三重県 / BOOKOFF SUPERBAZAAR 1号四日市日永店</div>
+                <div class="code">4YccG8-xpEA1O-4cGJ8Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4YccG8-xpEA1O-4cGJ8Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4YccG8-xpEA1O-4cGJ8Y.png" alt="【ドラパルトex：ノココッチ型】 4YccG8-xpEA1O-4cGJ8Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4YccG8-xpEA1O-4cGJ8Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4YccG8-xpEA1O-4cGJ8Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953000</div>
+                <div class="sub">愛知県 / トレカプラザ５５大須アメ横店</div>
+                <div class="code">ccGKY4-JdNw64-Y84xcJ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ccGKY4-JdNw64-Y84xcJ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ccGKY4-JdNw64-Y84xcJ.png" alt="【ドラパルトex：ノココッチ型】 ccGKY4-JdNw64-Y84xcJ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ccGKY4-JdNw64-Y84xcJ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ccGKY4-JdNw64-Y84xcJ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953000</div>
+                <div class="sub">愛知県 / トレカプラザ５５大須アメ横店</div>
+                <div class="code">cD48Ga-g48z3i-G4Dc84</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cD48Ga-g48z3i-G4Dc84.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cD48Ga-g48z3i-G4Dc84.png" alt="【ドラパルトex：ノココッチ型】 cD48Ga-g48z3i-G4Dc84">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cD48Ga-g48z3i-G4Dc84" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cD48Ga-g48z3i-G4Dc84/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953001</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">Y8cc4G-57MT66-4xcxcJ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Y8cc4G-57MT66-4xcxcJ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Y8cc4G-57MT66-4xcxcJ.png" alt="【ドラパルトex：ノココッチ型】 Y8cc4G-57MT66-4xcxcJ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Y8cc4G-57MT66-4xcxcJ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Y8cc4G-57MT66-4xcxcJ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-06 / Event 953004</div>
+                <div class="sub">滋賀県 / トレカショップVOW</div>
+                <div class="code">ggLn9L-5ORkg6-gP9gLH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ggLn9L-5ORkg6-gP9gLH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ggLn9L-5ORkg6-gP9gLH.png" alt="【ドラパルトex：ノココッチ型】 ggLn9L-5ORkg6-gP9gLH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ggLn9L-5ORkg6-gP9gLH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ggLn9L-5ORkg6-gP9gLH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-06 / Event 953004</div>
+                <div class="sub">滋賀県 / トレカショップVOW</div>
+                <div class="code">RpRM22-z3YP04-XpXyXp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RpRM22-z3YP04-XpXyXp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RpRM22-z3YP04-XpXyXp.png" alt="【ドラパルトex：ノココッチ型】 RpRM22-z3YP04-XpXyXp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RpRM22-z3YP04-XpXyXp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RpRM22-z3YP04-XpXyXp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 952794</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">Up2yEy-ZWxyVw-MRpMpS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Up2yEy-ZWxyVw-MRpMpS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Up2yEy-ZWxyVw-MRpMpS.png" alt="【ドラパルトex：ノココッチ型】 Up2yEy-ZWxyVw-MRpMpS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Up2yEy-ZWxyVw-MRpMpS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Up2yEy-ZWxyVw-MRpMpS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 952888</div>
+                <div class="sub">神奈川県 / 【CARDBOX】青馬堂矢向店</div>
+                <div class="code">k1F5fd-5JmHX7-5FfbFv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k1F5fd-5JmHX7-5FfbFv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k1F5fd-5JmHX7-5FfbFv.png" alt="【ドラパルトex：ノココッチ型】 k1F5fd-5JmHX7-5FfbFv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k1F5fd-5JmHX7-5FfbFv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k1F5fd-5JmHX7-5FfbFv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 952888</div>
+                <div class="sub">神奈川県 / 【CARDBOX】青馬堂矢向店</div>
+                <div class="code">cYDJc8-vdinYb-Y4G8cD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cYDJc8-vdinYb-Y4G8cD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cYDJc8-vdinYb-Y4G8cD.png" alt="【ドラパルトex：ノココッチ型】 cYDJc8-vdinYb-Y4G8cD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cYDJc8-vdinYb-Y4G8cD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cYDJc8-vdinYb-Y4G8cD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 952687</div>
+                <div class="sub">福島県 / カードゲームのシーガル郡山店</div>
+                <div class="code">c8GYac-xCIESe-a8cD44</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c8GYac-xCIESe-a8cD44.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c8GYac-xCIESe-a8cD44.png" alt="【ドラパルトex：ノココッチ型】 c8GYac-xCIESe-a8cD44">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c8GYac-xCIESe-a8cD44" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c8GYac-xCIESe-a8cD44/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 952795</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">NLn9ng-tcjQEm-iLHgg9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NLn9ng-tcjQEm-iLHgg9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NLn9ng-tcjQEm-iLHgg9.png" alt="【ドラパルトex：ノココッチ型】 NLn9ng-tcjQEm-iLHgg9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NLn9ng-tcjQEm-iLHgg9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NLn9ng-tcjQEm-iLHgg9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 952795</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">yUp2SM-xmSJ2h-yXREyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yUp2SM-xmSJ2h-yXREyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yUp2SM-xmSJ2h-yXREyp.png" alt="【ドラパルトex：ノココッチ型】 yUp2SM-xmSJ2h-yXREyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yUp2SM-xmSJ2h-yXREyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yUp2SM-xmSJ2h-yXREyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 953006</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋2号店</div>
+                <div class="code">k1F5fd-5JmHX7-5FfbFv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k1F5fd-5JmHX7-5FfbFv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k1F5fd-5JmHX7-5FfbFv.png" alt="【ドラパルトex：ノココッチ型】 k1F5fd-5JmHX7-5FfbFv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k1F5fd-5JmHX7-5FfbFv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k1F5fd-5JmHX7-5FfbFv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 953006</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋2号店</div>
+                <div class="code">pERpy2-WY9UZS-ypppS3</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pERpy2-WY9UZS-ypppS3.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pERpy2-WY9UZS-ypppS3.png" alt="【ドラパルトex：ノココッチ型】 pERpy2-WY9UZS-ypppS3">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pERpy2-WY9UZS-ypppS3" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pERpy2-WY9UZS-ypppS3/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953008</div>
+                <div class="sub">奈良県 / BOOKOFF奈良法華寺店</div>
+                <div class="code">cYDJc8-vdinYb-Y4G8cD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cYDJc8-vdinYb-Y4G8cD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cYDJc8-vdinYb-Y4G8cD.png" alt="【ドラパルトex：ノココッチ型】 cYDJc8-vdinYb-Y4G8cD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cYDJc8-vdinYb-Y4G8cD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cYDJc8-vdinYb-Y4G8cD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953009</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">6LNL6i-MijHa6-i9Hngg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/6LNL6i-MijHa6-i9Hngg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/6LNL6i-MijHa6-i9Hngg.png" alt="【ドラパルトex：ノココッチ型】 6LNL6i-MijHa6-i9Hngg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=6LNL6i-MijHa6-i9Hngg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/6LNL6i-MijHa6-i9Hngg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953010</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">Ngin9H-p7nxYe-g9HnnQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ngin9H-p7nxYe-g9HnnQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ngin9H-p7nxYe-g9HnnQ.png" alt="【ドラパルトex：ノココッチ型】 Ngin9H-p7nxYe-g9HnnQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ngin9H-p7nxYe-g9HnnQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ngin9H-p7nxYe-g9HnnQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ドラパルトex：ノココッチ型】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953010</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">y23pRy-RgTiYx-yMpUpE</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/y23pRy-RgTiYx-yMpUpE.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/y23pRy-RgTiYx-yMpUpE.png" alt="【ドラパルトex：ノココッチ型】 y23pRy-RgTiYx-yMpUpE">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=y23pRy-RgTiYx-yMpUpE" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/y23pRy-RgTiYx-yMpUpE/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
