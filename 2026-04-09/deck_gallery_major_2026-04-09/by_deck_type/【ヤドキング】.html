@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【ヤドキング】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【ヤドキング】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">23</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">22</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">23</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-04-09.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-03 / Event 952785</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">XpUpRy-ORZfFt-yXyp2p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XpUpRy-ORZfFt-yXyp2p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XpUpRy-ORZfFt-yXyp2p.png" alt="【ヤドキング】 XpUpRy-ORZfFt-yXyp2p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XpUpRy-ORZfFt-yXyp2p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XpUpRy-ORZfFt-yXyp2p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-03 / Event 953236</div>
+                <div class="sub">埼玉県 / 竜星のPAO　大宮店</div>
+                <div class="code">D4Ycc8-kuJGPg-GcK8xY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/D4Ycc8-kuJGPg-GcK8xY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/D4Ycc8-kuJGPg-GcK8xY.png" alt="【ヤドキング】 D4Ycc8-kuJGPg-GcK8xY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=D4Ycc8-kuJGPg-GcK8xY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/D4Ycc8-kuJGPg-GcK8xY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952670</div>
+                <div class="sub">北海道 / トーナメントセンターバトロコ　旭川駅前</div>
+                <div class="code">KG4c4x-L7QlTZ-cca4D8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/KG4c4x-L7QlTZ-cca4D8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/KG4c4x-L7QlTZ-cca4D8.png" alt="【ヤドキング】 KG4c4x-L7QlTZ-cca4D8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=KG4c4x-L7QlTZ-cca4D8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/KG4c4x-L7QlTZ-cca4D8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952786</div>
+                <div class="sub">東京都 / BOOKOFFSUPERBAZAAR町田中央通り店</div>
+                <div class="code">xDGD8Y-n6NSAg-cxDc84</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xDGD8Y-n6NSAg-cxDc84.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xDGD8Y-n6NSAg-cxDc84.png" alt="【ヤドキング】 xDGD8Y-n6NSAg-cxDc84">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xDGD8Y-n6NSAg-cxDc84" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xDGD8Y-n6NSAg-cxDc84/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952876</div>
+                <div class="sub">石川県 / トーナメントセンターバトロコ　金沢駅前</div>
+                <div class="code">dk5fk5-tN4CPP-kFbfVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/dk5fk5-tN4CPP-kFbfVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/dk5fk5-tN4CPP-kFbfVF.png" alt="【ヤドキング】 dk5fk5-tN4CPP-kFbfVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=dk5fk5-tN4CPP-kFbfVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/dk5fk5-tN4CPP-kFbfVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952878</div>
+                <div class="sub">神奈川県 / BOOKOFFPLUS　アミューあつぎ店</div>
+                <div class="code">4DcGac-4AZAHq-48D8YY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4DcGac-4AZAHq-48D8YY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4DcGac-4AZAHq-48D8YY.png" alt="【ヤドキング】 4DcGac-4AZAHq-48D8YY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4DcGac-4AZAHq-48D8YY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4DcGac-4AZAHq-48D8YY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952880</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　本厚木駅前</div>
+                <div class="code">5f5FkF-xeFHrg-55FVkb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5f5FkF-xeFHrg-55FVkb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5f5FkF-xeFHrg-55FVkb.png" alt="【ヤドキング】 5f5FkF-xeFHrg-55FVkb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5f5FkF-xeFHrg-55FVkb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5f5FkF-xeFHrg-55FVkb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952880</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　本厚木駅前</div>
+                <div class="code">DG88c4-fxo8Ci-GcYa88</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/DG88c4-fxo8Ci-GcYa88.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/DG88c4-fxo8Ci-GcYa88.png" alt="【ヤドキング】 DG88c4-fxo8Ci-GcYa88">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=DG88c4-fxo8Ci-GcYa88" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/DG88c4-fxo8Ci-GcYa88/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952994</div>
+                <div class="sub">岐阜県 / カードショップ　海賊船-starch-</div>
+                <div class="code">nHgnnn-Me8SmS-g9HigL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nHgnnn-Me8SmS-g9HigL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nHgnnn-Me8SmS-g9HigL.png" alt="【ヤドキング】 nHgnnn-Me8SmS-g9HigL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nHgnnn-Me8SmS-g9HigL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nHgnnn-Me8SmS-g9HigL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953238</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">MR2Myy-6wGc0K-pUp3XX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MR2Myy-6wGc0K-pUp3XX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MR2Myy-6wGc0K-pUp3XX.png" alt="【ヤドキング】 MR2Myy-6wGc0K-pUp3XX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MR2Myy-6wGc0K-pUp3XX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MR2Myy-6wGc0K-pUp3XX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953238</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">FVvk5k-uxgJdY-kF5Fbf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FVvk5k-uxgJdY-kF5Fbf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FVvk5k-uxgJdY-kF5Fbf.png" alt="【ヤドキング】 FVvk5k-uxgJdY-kF5Fbf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FVvk5k-uxgJdY-kF5Fbf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FVvk5k-uxgJdY-kF5Fbf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952686</div>
+                <div class="sub">秋田県 / トーナメントセンターバトロコ秋田駅前店</div>
+                <div class="code">ERMypS-zR2PBe-pMpMp2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ERMypS-zR2PBe-pMpMp2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ERMypS-zR2PBe-pMpMp2.png" alt="【ヤドキング】 ERMypS-zR2PBe-pMpMp2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ERMypS-zR2PBe-pMpMp2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ERMypS-zR2PBe-pMpMp2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952727</div>
+                <div class="sub">茨城県 / カードショップ裁龍</div>
+                <div class="code">Yc8Gcc-g6FbN7-Gcx4DD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Yc8Gcc-g6FbN7-Gcx4DD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Yc8Gcc-g6FbN7-Gcx4DD.png" alt="【ヤドキング】 Yc8Gcc-g6FbN7-Gcx4DD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Yc8Gcc-g6FbN7-Gcx4DD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Yc8Gcc-g6FbN7-Gcx4DD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952793</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">xJ88cY-gDVuOc-8KDccG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xJ88cY-gDVuOc-8KDccG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xJ88cY-gDVuOc-8KDccG.png" alt="【ヤドキング】 xJ88cY-gDVuOc-8KDccG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xJ88cY-gDVuOc-8KDccG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xJ88cY-gDVuOc-8KDccG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952881</div>
+                <div class="sub">福井県 / 【CARDBOX】Super KaBoS + GEO 鯖江店</div>
+                <div class="code">9NinnL-zha2a9-ngig9P</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9NinnL-zha2a9-ngig9P.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9NinnL-zha2a9-ngig9P.png" alt="【ヤドキング】 9NinnL-zha2a9-ngig9P">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9NinnL-zha2a9-ngig9P" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9NinnL-zha2a9-ngig9P/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952881</div>
+                <div class="sub">福井県 / 【CARDBOX】Super KaBoS + GEO 鯖江店</div>
+                <div class="code">Ry2pXM-cMikw4-pM2y2X</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ry2pXM-cMikw4-pM2y2X.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ry2pXM-cMikw4-pM2y2X.png" alt="【ヤドキング】 Ry2pXM-cMikw4-pM2y2X">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ry2pXM-cMikw4-pM2y2X" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ry2pXM-cMikw4-pM2y2X/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952882</div>
+                <div class="sub">長野県 / タッチ松本店</div>
+                <div class="code">KG4c4x-L7QlTZ-cca4D8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/KG4c4x-L7QlTZ-cca4D8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/KG4c4x-L7QlTZ-cca4D8.png" alt="【ヤドキング】 KG4c4x-L7QlTZ-cca4D8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=KG4c4x-L7QlTZ-cca4D8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/KG4c4x-L7QlTZ-cca4D8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952999</div>
+                <div class="sub">三重県 / BOOKOFF SUPERBAZAAR 1号四日市日永店</div>
+                <div class="code">vbFFdF-GzhKgB-1k5FVf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vbFFdF-GzhKgB-1k5FVf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vbFFdF-GzhKgB-1k5FVf.png" alt="【ヤドキング】 vbFFdF-GzhKgB-1k5FVf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vbFFdF-GzhKgB-1k5FVf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vbFFdF-GzhKgB-1k5FVf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953126</div>
+                <div class="sub">沖縄県 / カードスタジアム小禄店</div>
+                <div class="code">cY8DDG-1WI3cQ-8cc484</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cY8DDG-1WI3cQ-8cc484.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cY8DDG-1WI3cQ-8cc484.png" alt="【ヤドキング】 cY8DDG-1WI3cQ-8cc484">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cY8DDG-1WI3cQ-8cc484" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cY8DDG-1WI3cQ-8cc484/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953126</div>
+                <div class="sub">沖縄県 / カードスタジアム小禄店</div>
+                <div class="code">9H9HHn-akfthc-gNnLHg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9H9HHn-akfthc-gNnLHg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9H9HHn-akfthc-gNnLHg.png" alt="【ヤドキング】 9H9HHn-akfthc-gNnLHg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9H9HHn-akfthc-gNnLHg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9H9HHn-akfthc-gNnLHg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953239</div>
+                <div class="sub">北海道 / バトロコミニ苫小牧バイパス店</div>
+                <div class="code">a4G844-IdhcQG-cx4GYc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/a4G844-IdhcQG-cx4GYc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/a4G844-IdhcQG-cx4GYc.png" alt="【ヤドキング】 a4G844-IdhcQG-cx4GYc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=a4G844-IdhcQG-cx4GYc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/a4G844-IdhcQG-cx4GYc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953409</div>
+                <div class="sub">京都府 / BOOKOFF SUPER BAZAAR 1号京都伏見店</div>
+                <div class="code">RMSyp2-F5NV7Q-pSpppy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RMSyp2-F5NV7Q-pSpppy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RMSyp2-F5NV7Q-pSpppy.png" alt="【ヤドキング】 RMSyp2-F5NV7Q-pSpppy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RMSyp2-F5NV7Q-pSpppy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RMSyp2-F5NV7Q-pSpppy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ヤドキング】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 953005</div>
+                <div class="sub">大阪府 / トレカショップ竜のしっぽ　布施店</div>
+                <div class="code">R2ySp3-1FIa8M-pEUypp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/R2ySp3-1FIa8M-pEUypp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/R2ySp3-1FIa8M-pEUypp.png" alt="【ヤドキング】 R2ySp3-1FIa8M-pEUypp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=R2ySp3-1FIa8M-pEUypp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/R2ySp3-1FIa8M-pEUypp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>

@@ -1,0 +1,1737 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【フーディン】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【フーディン】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">79</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">79</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">79</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-04-09.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-03 / Event 952785</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">pEyp2X-93C5LR-ypppRp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pEyp2X-93C5LR-ypppRp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pEyp2X-93C5LR-ypppRp.png" alt="【フーディン】 pEyp2X-93C5LR-ypppRp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pEyp2X-93C5LR-ypppRp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pEyp2X-93C5LR-ypppRp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-03 / Event 953236</div>
+                <div class="sub">埼玉県 / 竜星のPAO　大宮店</div>
+                <div class="code">kbb5FF-bKd0Vj-fFkF5F</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kbb5FF-bKd0Vj-fFkF5F.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kbb5FF-bKd0Vj-fFkF5F.png" alt="【フーディン】 kbb5FF-bKd0Vj-fFkF5F">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kbb5FF-bKd0Vj-fFkF5F" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kbb5FF-bKd0Vj-fFkF5F/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952684</div>
+                <div class="sub">宮城県 / シーガル　仙台駅前店</div>
+                <div class="code">n9N9nn-NjjHLM-LLQggH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/n9N9nn-NjjHLM-LLQggH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/n9N9nn-NjjHLM-LLQggH.png" alt="【フーディン】 n9N9nn-NjjHLM-LLQggH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=n9N9nn-NjjHLM-LLQggH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/n9N9nn-NjjHLM-LLQggH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952723</div>
+                <div class="sub">茨城県 / WonderGOO PLUS つくば店</div>
+                <div class="code">Rpp2pR-M7Yy9d-X2RySy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Rpp2pR-M7Yy9d-X2RySy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Rpp2pR-M7Yy9d-X2RySy.png" alt="【フーディン】 Rpp2pR-M7Yy9d-X2RySy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Rpp2pR-M7Yy9d-X2RySy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Rpp2pR-M7Yy9d-X2RySy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952724</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">NNLgnN-AD492u-H9nHgQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NNLgnN-AD492u-H9nHgQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NNLgnN-AD492u-H9nHgQ.png" alt="【フーディン】 NNLgnN-AD492u-H9nHgQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NNLgnN-AD492u-H9nHgQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NNLgnN-AD492u-H9nHgQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952724</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">pRX2My-p937kn-Upp2ME</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pRX2My-p937kn-Upp2ME.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pRX2My-p937kn-Upp2ME.png" alt="【フーディン】 pRX2My-p937kn-Upp2ME">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pRX2My-p937kn-Upp2ME" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pRX2My-p937kn-Upp2ME/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952724</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">b5F5Vk-1ihymr-F55FFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/b5F5Vk-1ihymr-F55FFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/b5F5Vk-1ihymr-F55FFk.png" alt="【フーディン】 b5F5Vk-1ihymr-F55FFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=b5F5Vk-1ihymr-F55FFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/b5F5Vk-1ihymr-F55FFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952726</div>
+                <div class="sub">茨城県 / トーナメントセンターバトロコ　水戸駅前</div>
+                <div class="code">QL9gng-VUK9Mg-nggHPn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QL9gng-VUK9Mg-nggHPn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QL9gng-VUK9Mg-nggHPn.png" alt="【フーディン】 QL9gng-VUK9Mg-nggHPn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QL9gng-VUK9Mg-nggHPn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QL9gng-VUK9Mg-nggHPn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952726</div>
+                <div class="sub">茨城県 / トーナメントセンターバトロコ　水戸駅前</div>
+                <div class="code">yRyp2y-pzKgcq-pppy2p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yRyp2y-pzKgcq-pppy2p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yRyp2y-pzKgcq-pppy2p.png" alt="【フーディン】 yRyp2y-pzKgcq-pppy2p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yRyp2y-pzKgcq-pppy2p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yRyp2y-pzKgcq-pppy2p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952787</div>
+                <div class="sub">千葉県 / BOOKOFFSUPERBAZAAR東千葉祐光店</div>
+                <div class="code">Vfv5bV-GQpPK2-kkF5Fk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vfv5bV-GQpPK2-kkF5Fk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vfv5bV-GQpPK2-kkF5Fk.png" alt="【フーディン】 Vfv5bV-GQpPK2-kkF5Fk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vfv5bV-GQpPK2-kkF5Fk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vfv5bV-GQpPK2-kkF5Fk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952880</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　本厚木駅前</div>
+                <div class="code">HgngNg-zWKCij-i9HNng</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HgngNg-zWKCij-i9HNng.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HgngNg-zWKCij-i9HNng.png" alt="【フーディン】 HgngNg-zWKCij-i9HNng">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HgngNg-zWKCij-i9HNng" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HgngNg-zWKCij-i9HNng/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952992</div>
+                <div class="sub">大阪府 / ドラゴンスター泉佐野店</div>
+                <div class="code">pyySRp-o3AtFx-p2E2XM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pyySRp-o3AtFx-p2E2XM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pyySRp-o3AtFx-p2E2XM.png" alt="【フーディン】 pyySRp-o3AtFx-p2E2XM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pyySRp-o3AtFx-p2E2XM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pyySRp-o3AtFx-p2E2XM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952993</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">bbbkkk-z3Vxnz-55VFFV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bbbkkk-z3Vxnz-55VFFV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bbbkkk-z3Vxnz-55VFFV.png" alt="【フーディン】 bbbkkk-z3Vxnz-55VFFV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bbbkkk-z3Vxnz-55VFFV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bbbkkk-z3Vxnz-55VFFV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952993</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">FFF5kf-D0HHUE-kkk1bf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FFF5kf-D0HHUE-kkk1bf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FFF5kf-D0HHUE-kkk1bf.png" alt="【フーディン】 FFF5kf-D0HHUE-kkk1bf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FFF5kf-D0HHUE-kkk1bf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FFF5kf-D0HHUE-kkk1bf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952993</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">VkFwFk-PZc3ni-bvFkV5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VkFwFk-PZc3ni-bvFkV5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VkFwFk-PZc3ni-bvFkV5.png" alt="【フーディン】 VkFwFk-PZc3ni-bvFkV5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VkFwFk-PZc3ni-bvFkV5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VkFwFk-PZc3ni-bvFkV5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952994</div>
+                <div class="sub">岐阜県 / カードショップ　海賊船-starch-</div>
+                <div class="code">bv5Vf5-NJPtpZ-bk1FFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bv5Vf5-NJPtpZ-bk1FFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bv5Vf5-NJPtpZ-bk1FFF.png" alt="【フーディン】 bv5Vf5-NJPtpZ-bk1FFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bv5Vf5-NJPtpZ-bk1FFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bv5Vf5-NJPtpZ-bk1FFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952995</div>
+                <div class="sub">鳥取県 / カードボックスアリオン皆生店</div>
+                <div class="code">c8G44c-RSJvc4-x8cxc4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c8G44c-RSJvc4-x8cxc4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c8G44c-RSJvc4-x8cxc4.png" alt="【フーディン】 c8G44c-RSJvc4-x8cxc4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c8G44c-RSJvc4-x8cxc4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c8G44c-RSJvc4-x8cxc4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 952995</div>
+                <div class="sub">鳥取県 / カードボックスアリオン皆生店</div>
+                <div class="code">M2yppE-eoEkA6-pR2ySX</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M2yppE-eoEkA6-pR2ySX.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M2yppE-eoEkA6-pR2ySX.png" alt="【フーディン】 M2yppE-eoEkA6-pR2ySX">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M2yppE-eoEkA6-pR2ySX" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M2yppE-eoEkA6-pR2ySX/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953125</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">FFfbk5-thEujt-kk51VF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FFfbk5-thEujt-kk51VF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FFfbk5-thEujt-kk51VF.png" alt="【フーディン】 FFfbk5-thEujt-kk51VF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FFfbk5-thEujt-kk51VF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FFfbk5-thEujt-kk51VF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953237</div>
+                <div class="sub">千葉県 / カードショップ竜星のPAO千葉中央店</div>
+                <div class="code">44xG4c-gAQmk6-cYD8cc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/44xG4c-gAQmk6-cYD8cc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/44xG4c-gAQmk6-cYD8cc.png" alt="【フーディン】 44xG4c-gAQmk6-cYD8cc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=44xG4c-gAQmk6-cYD8cc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/44xG4c-gAQmk6-cYD8cc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953237</div>
+                <div class="sub">千葉県 / カードショップ竜星のPAO千葉中央店</div>
+                <div class="code">6nggPL-5IfOv6-gQ9HiN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/6nggPL-5IfOv6-gQ9HiN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/6nggPL-5IfOv6-gQ9HiN.png" alt="【フーディン】 6nggPL-5IfOv6-gQ9HiN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=6nggPL-5IfOv6-gQ9HiN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/6nggPL-5IfOv6-gQ9HiN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953238</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">c48GG4-0EzEyr-4ccx8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c48GG4-0EzEyr-4ccx8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c48GG4-0EzEyr-4ccx8c.png" alt="【フーディン】 c48GG4-0EzEyr-4ccx8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c48GG4-0EzEyr-4ccx8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c48GG4-0EzEyr-4ccx8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953269</div>
+                <div class="sub">愛知県 / BOOKOFF SUPER BAZAAR 248号西友岡崎店</div>
+                <div class="code">ccDG4x-HZDAIB-xYGc88</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ccDG4x-HZDAIB-xYGc88.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ccDG4x-HZDAIB-xYGc88.png" alt="【フーディン】 ccDG4x-HZDAIB-xYGc88">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ccDG4x-HZDAIB-xYGc88" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ccDG4x-HZDAIB-xYGc88/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953269</div>
+                <div class="sub">愛知県 / BOOKOFF SUPER BAZAAR 248号西友岡崎店</div>
+                <div class="code">kff5FF-dmhD5P-fFkbff</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kff5FF-dmhD5P-fFkbff.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kff5FF-dmhD5P-fFkbff.png" alt="【フーディン】 kff5FF-dmhD5P-fFkbff">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kff5FF-dmhD5P-fFkbff" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kff5FF-dmhD5P-fFkbff/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-04 / Event 953271</div>
+                <div class="sub">宮崎県 / CARDSHOPラリアット！</div>
+                <div class="code">4YGccc-gVRTxC-c84cc8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4YGccc-gVRTxC-c84cc8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4YGccc-gVRTxC-c84cc8.png" alt="【フーディン】 4YGccc-gVRTxC-c84cc8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4YGccc-gVRTxC-c84cc8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4YGccc-gVRTxC-c84cc8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952685</div>
+                <div class="sub">山形県 / シーガル　嶋北店</div>
+                <div class="code">4Dacc8-TmRJJx-48DGDD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4Dacc8-TmRJJx-48DGDD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4Dacc8-TmRJJx-48DGDD.png" alt="【フーディン】 4Dacc8-TmRJJx-48DGDD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4Dacc8-TmRJJx-48DGDD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4Dacc8-TmRJJx-48DGDD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952686</div>
+                <div class="sub">秋田県 / トーナメントセンターバトロコ秋田駅前店</div>
+                <div class="code">G4D88c-63Hlaf-Gcxc48</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/G4D88c-63Hlaf-Gcxc48.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/G4D88c-63Hlaf-Gcxc48.png" alt="【フーディン】 G4D88c-63Hlaf-Gcxc48">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=G4D88c-63Hlaf-Gcxc48" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/G4D88c-63Hlaf-Gcxc48/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952686</div>
+                <div class="sub">秋田県 / トーナメントセンターバトロコ秋田駅前店</div>
+                <div class="code">dVF55F-nLXN2X-bFv5kF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/dVF55F-nLXN2X-bFv5kF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/dVF55F-nLXN2X-bFv5kF.png" alt="【フーディン】 dVF55F-nLXN2X-bFv5kF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=dVF55F-nLXN2X-bFv5kF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/dVF55F-nLXN2X-bFv5kF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952727</div>
+                <div class="sub">茨城県 / カードショップ裁龍</div>
+                <div class="code">FVvkFb-E3pDcd-1wF5w5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FVvkFb-E3pDcd-1wF5w5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FVvkFb-E3pDcd-1wF5w5.png" alt="【フーディン】 FVvkFb-E3pDcd-1wF5w5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FVvkFb-E3pDcd-1wF5w5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FVvkFb-E3pDcd-1wF5w5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952788</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR ショップス市川店</div>
+                <div class="code">6HH6ng-JPvHDk-9HggQg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/6HH6ng-JPvHDk-9HggQg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/6HH6ng-JPvHDk-9HggQg.png" alt="【フーディン】 6HH6ng-JPvHDk-9HggQg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=6HH6ng-JPvHDk-9HggQg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/6HH6ng-JPvHDk-9HggQg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952788</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR ショップス市川店</div>
+                <div class="code">M22XRy-EgiQoQ-yyM2pp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M22XRy-EgiQoQ-yyM2pp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M22XRy-EgiQoQ-yyM2pp.png" alt="【フーディン】 M22XRy-EgiQoQ-yyM2pp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M22XRy-EgiQoQ-yyM2pp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M22XRy-EgiQoQ-yyM2pp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952789</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">FFbF5k-28UbCu-55FkvF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FFbF5k-28UbCu-55FkvF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FFbF5k-28UbCu-55FkvF.png" alt="【フーディン】 FFbF5k-28UbCu-55FkvF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FFbF5k-28UbCu-55FkvF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FFbF5k-28UbCu-55FkvF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952791</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">8Gccxc-6PEXev-caccY4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8Gccxc-6PEXev-caccY4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8Gccxc-6PEXev-caccY4.png" alt="【フーディン】 8Gccxc-6PEXev-caccY4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8Gccxc-6PEXev-caccY4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8Gccxc-6PEXev-caccY4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952791</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">UMMppy-y4T1RH-2RRMp2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/UMMppy-y4T1RH-2RRMp2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/UMMppy-y4T1RH-2RRMp2.png" alt="【フーディン】 UMMppy-y4T1RH-2RRMp2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=UMMppy-y4T1RH-2RRMp2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/UMMppy-y4T1RH-2RRMp2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952792</div>
+                <div class="sub">東京都 / ブックオフスーパーバザー　多摩永山</div>
+                <div class="code">FvvvFF-yfaLIE-5kbdFd</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FvvvFF-yfaLIE-5kbdFd.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FvvvFF-yfaLIE-5kbdFd.png" alt="【フーディン】 FvvvFF-yfaLIE-5kbdFd">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FvvvFF-yfaLIE-5kbdFd" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FvvvFF-yfaLIE-5kbdFd/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952881</div>
+                <div class="sub">福井県 / 【CARDBOX】Super KaBoS + GEO 鯖江店</div>
+                <div class="code">p2RpX2-yFnnrE-Mp2yXy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/p2RpX2-yFnnrE-Mp2yXy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/p2RpX2-yFnnrE-Mp2yXy.png" alt="【フーディン】 p2RpX2-yFnnrE-Mp2yXy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=p2RpX2-yFnnrE-Mp2yXy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/p2RpX2-yFnnrE-Mp2yXy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952882</div>
+                <div class="sub">長野県 / タッチ松本店</div>
+                <div class="code">v5fFwb-gitDfe-55FfkV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/v5fFwb-gitDfe-55FfkV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/v5fFwb-gitDfe-55FfkV.png" alt="【フーディン】 v5fFwb-gitDfe-55FfkV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=v5fFwb-gitDfe-55FfkV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/v5fFwb-gitDfe-55FfkV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952882</div>
+                <div class="sub">長野県 / タッチ松本店</div>
+                <div class="code">ERpypp-Ocxzlk-y2pXUS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ERpypp-Ocxzlk-y2pXUS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ERpypp-Ocxzlk-y2pXUS.png" alt="【フーディン】 ERpypp-Ocxzlk-y2pXUS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ERpypp-Ocxzlk-y2pXUS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ERpypp-Ocxzlk-y2pXUS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952883</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">8G4ccG-4YI42a-8G4cY8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8G4ccG-4YI42a-8G4cY8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8G4ccG-4YI42a-8G4cY8.png" alt="【フーディン】 8G4ccG-4YI42a-8G4cY8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8G4ccG-4YI42a-8G4cY8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8G4ccG-4YI42a-8G4cY8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952884</div>
+                <div class="sub">神奈川県 / BOOKOFF　イオン橋本</div>
+                <div class="code">F1kFdF-mqjEXR-fbFkFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/F1kFdF-mqjEXR-fbFkFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/F1kFdF-mqjEXR-fbFkFk.png" alt="【フーディン】 F1kFdF-mqjEXR-fbFkFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=F1kFdF-mqjEXR-fbFkFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/F1kFdF-mqjEXR-fbFkFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952887</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">cYYYG8-1c6CR6-c8c4cx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cYYYG8-1c6CR6-c8c4cx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cYYYG8-1c6CR6-c8c4cx.png" alt="【フーディン】 cYYYG8-1c6CR6-c8c4cx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cYYYG8-1c6CR6-c8c4cx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cYYYG8-1c6CR6-c8c4cx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952996</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">caDcJc-Tb7YEt-c4G888</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/caDcJc-Tb7YEt-c4G888.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/caDcJc-Tb7YEt-c4G888.png" alt="【フーディン】 caDcJc-Tb7YEt-c4G888">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=caDcJc-Tb7YEt-c4G888" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/caDcJc-Tb7YEt-c4G888/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952996</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">k1kF55-9UmSRU-Fvb5F1</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k1kF55-9UmSRU-Fvb5F1.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k1kF55-9UmSRU-Fvb5F1.png" alt="【フーディン】 k1kF55-9UmSRU-Fvb5F1">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k1kF55-9UmSRU-Fvb5F1" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k1kF55-9UmSRU-Fvb5F1/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952997</div>
+                <div class="sub">滋賀県 / ゲームプラザ元気302</div>
+                <div class="code">gQnH9P-HAvxFm-6ngHgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gQnH9P-HAvxFm-6ngHgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gQnH9P-HAvxFm-6ngHgn.png" alt="【フーディン】 gQnH9P-HAvxFm-6ngHgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gQnH9P-HAvxFm-6ngHgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gQnH9P-HAvxFm-6ngHgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952997</div>
+                <div class="sub">滋賀県 / ゲームプラザ元気302</div>
+                <div class="code">pXSRyR-08x4c1-yMX3My</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pXSRyR-08x4c1-yMX3My.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pXSRyR-08x4c1-yMX3My.png" alt="【フーディン】 pXSRyR-08x4c1-yMX3My">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pXSRyR-08x4c1-yMX3My" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pXSRyR-08x4c1-yMX3My/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952998</div>
+                <div class="sub">高知県 / カードショップ楓</div>
+                <div class="code">FVFkvF-YiJv30-b5F5kF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FVFkvF-YiJv30-b5F5kF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FVFkvF-YiJv30-b5F5kF.png" alt="【フーディン】 FVFkvF-YiJv30-b5F5kF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FVFkvF-YiJv30-b5F5kF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FVFkvF-YiJv30-b5F5kF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952999</div>
+                <div class="sub">三重県 / BOOKOFF SUPERBAZAAR 1号四日市日永店</div>
+                <div class="code">8G84Kc-bAQQj1-cx8844</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8G84Kc-bAQQj1-cx8844.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8G84Kc-bAQQj1-cx8844.png" alt="【フーディン】 8G84Kc-bAQQj1-cx8844">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8G84Kc-bAQQj1-cx8844" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8G84Kc-bAQQj1-cx8844/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 952999</div>
+                <div class="sub">三重県 / BOOKOFF SUPERBAZAAR 1号四日市日永店</div>
+                <div class="code">FkFVVb-8hacKS-5FdVfb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkFVVb-8hacKS-5FdVfb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkFVVb-8hacKS-5FdVfb.png" alt="【フーディン】 FkFVVb-8hacKS-5FdVfb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkFVVb-8hacKS-5FdVfb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkFVVb-8hacKS-5FdVfb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953000</div>
+                <div class="sub">愛知県 / トレカプラザ５５大須アメ横店</div>
+                <div class="code">2pXpyR-rWPFnW-pp2y3y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2pXpyR-rWPFnW-pp2y3y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2pXpyR-rWPFnW-pp2y3y.png" alt="【フーディン】 2pXpyR-rWPFnW-pp2y3y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2pXpyR-rWPFnW-pp2y3y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2pXpyR-rWPFnW-pp2y3y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953000</div>
+                <div class="sub">愛知県 / トレカプラザ５５大須アメ横店</div>
+                <div class="code">pyyp2y-MRdLLK-Rypp22</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pyyp2y-MRdLLK-Rypp22.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pyyp2y-MRdLLK-Rypp22.png" alt="【フーディン】 pyyp2y-MRdLLK-Rypp22">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pyyp2y-MRdLLK-Rypp22" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pyyp2y-MRdLLK-Rypp22/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953002</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">HgQgHL-iI28hu-n9nnQ9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HgQgHL-iI28hu-n9nnQ9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HgQgHL-iI28hu-n9nnQ9.png" alt="【フーディン】 HgQgHL-iI28hu-n9nnQ9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HgQgHL-iI28hu-n9nnQ9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HgQgHL-iI28hu-n9nnQ9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953002</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">SR2yp2-G036aG-ypMpEp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/SR2yp2-G036aG-ypMpEp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/SR2yp2-G036aG-ypMpEp.png" alt="【フーディン】 SR2yp2-G036aG-ypMpEp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=SR2yp2-G036aG-ypMpEp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/SR2yp2-G036aG-ypMpEp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953126</div>
+                <div class="sub">沖縄県 / カードスタジアム小禄店</div>
+                <div class="code">pMMpyy-1r9pM2-SEpRp2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pMMpyy-1r9pM2-SEpRp2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pMMpyy-1r9pM2-SEpRp2.png" alt="【フーディン】 pMMpyy-1r9pM2-SEpRp2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pMMpyy-1r9pM2-SEpRp2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pMMpyy-1r9pM2-SEpRp2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953126</div>
+                <div class="sub">沖縄県 / カードスタジアム小禄店</div>
+                <div class="code">RMRp2y-eDURpI-yyEp2p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RMRp2y-eDURpI-yyEp2p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RMRp2y-eDURpI-yyEp2p.png" alt="【フーディン】 RMRp2y-eDURpI-yyEp2p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RMRp2y-eDURpI-yyEp2p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RMRp2y-eDURpI-yyEp2p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953127</div>
+                <div class="sub">長崎県 / 遊ING浜町店</div>
+                <div class="code">kb5FF5-YQlPLe-kF5FFv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kb5FF5-YQlPLe-kF5FFv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kb5FF5-YQlPLe-kF5FFv.png" alt="【フーディン】 kb5FF5-YQlPLe-kF5FFv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kb5FF5-YQlPLe-kF5FFv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kb5FF5-YQlPLe-kF5FFv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953129</div>
+                <div class="sub">福岡県 / 竜星の嵐　小倉駅前店</div>
+                <div class="code">M32Mpp-JpNdKf-yy332R</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M32Mpp-JpNdKf-yy332R.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M32Mpp-JpNdKf-yy332R.png" alt="【フーディン】 M32Mpp-JpNdKf-yy332R">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M32Mpp-JpNdKf-yy332R" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M32Mpp-JpNdKf-yy332R/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953129</div>
+                <div class="sub">福岡県 / 竜星の嵐　小倉駅前店</div>
+                <div class="code">xG4Jx8-gqk9Tt-JDc48x</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xG4Jx8-gqk9Tt-JDc48x.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xG4Jx8-gqk9Tt-JDc48x.png" alt="【フーディン】 xG4Jx8-gqk9Tt-JDc48x">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xG4Jx8-gqk9Tt-JDc48x" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xG4Jx8-gqk9Tt-JDc48x/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953129</div>
+                <div class="sub">福岡県 / 竜星の嵐　小倉駅前店</div>
+                <div class="code">4ac8cG-W8ARfR-cxJ84x</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4ac8cG-W8ARfR-cxJ84x.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4ac8cG-W8ARfR-cxJ84x.png" alt="【フーディン】 4ac8cG-W8ARfR-cxJ84x">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4ac8cG-W8ARfR-cxJ84x" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4ac8cG-W8ARfR-cxJ84x/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953129</div>
+                <div class="sub">福岡県 / 竜星の嵐　小倉駅前店</div>
+                <div class="code">F1Fvkb-KZ956q-fkFf5F</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/F1Fvkb-KZ956q-fkFf5F.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/F1Fvkb-KZ956q-fkFf5F.png" alt="【フーディン】 F1Fvkb-KZ956q-fkFf5F">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=F1Fvkb-KZ956q-fkFf5F" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/F1Fvkb-KZ956q-fkFf5F/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953239</div>
+                <div class="sub">北海道 / バトロコミニ苫小牧バイパス店</div>
+                <div class="code">n69iNH-OBDYvF-HLgLgL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/n69iNH-OBDYvF-HLgLgL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/n69iNH-OBDYvF-HLgLgL.png" alt="【フーディン】 n69iNH-OBDYvF-HLgLgL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=n69iNH-OBDYvF-HLgLgL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/n69iNH-OBDYvF-HLgLgL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-05 / Event 953409</div>
+                <div class="sub">京都府 / BOOKOFF SUPER BAZAAR 1号京都伏見店</div>
+                <div class="code">4c8884-omSKdt-48cKcG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4c8884-omSKdt-48cKcG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4c8884-omSKdt-48cKcG.png" alt="【フーディン】 4c8884-omSKdt-48cKcG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4c8884-omSKdt-48cKcG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4c8884-omSKdt-48cKcG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-06 / Event 953003</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">LiHg9g-XVrp9P-nL9HQg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LiHg9g-XVrp9P-nL9HQg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LiHg9g-XVrp9P-nL9HQg.png" alt="【フーディン】 LiHg9g-XVrp9P-nL9HQg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LiHg9g-XVrp9P-nL9HQg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LiHg9g-XVrp9P-nL9HQg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-06 / Event 953004</div>
+                <div class="sub">滋賀県 / トレカショップVOW</div>
+                <div class="code">9LgHgg-GMH0dU-PH9ggn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9LgHgg-GMH0dU-PH9ggn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9LgHgg-GMH0dU-PH9ggn.png" alt="【フーディン】 9LgHgg-GMH0dU-PH9ggn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9LgHgg-GMH0dU-PH9ggn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9LgHgg-GMH0dU-PH9ggn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-06 / Event 953274</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">FFbFk5-RZ58Xc-bvkF55</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FFbFk5-RZ58Xc-bvkF55.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FFbFk5-RZ58Xc-bvkF55.png" alt="【フーディン】 FFbFk5-RZ58Xc-bvkF55">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FFbFk5-RZ58Xc-bvkF55" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FFbFk5-RZ58Xc-bvkF55/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 952794</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">RMXpX2-yDQqi4-Ryyyyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RMXpX2-yDQqi4-Ryyyyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RMXpX2-yDQqi4-Ryyyyp.png" alt="【フーディン】 RMXpX2-yDQqi4-Ryyyyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RMXpX2-yDQqi4-Ryyyyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RMXpX2-yDQqi4-Ryyyyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 952888</div>
+                <div class="sub">神奈川県 / 【CARDBOX】青馬堂矢向店</div>
+                <div class="code">pSMMRy-91zMEn-RMy2pU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pSMMRy-91zMEn-RMy2pU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pSMMRy-91zMEn-RMy2pU.png" alt="【フーディン】 pSMMRy-91zMEn-RMy2pU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pSMMRy-91zMEn-RMy2pU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pSMMRy-91zMEn-RMy2pU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 953005</div>
+                <div class="sub">大阪府 / トレカショップ竜のしっぽ　布施店</div>
+                <div class="code">H6Q9Pg-ygRDzo-g6nggg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/H6Q9Pg-ygRDzo-g6nggg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/H6Q9Pg-ygRDzo-g6nggg.png" alt="【フーディン】 H6Q9Pg-ygRDzo-g6nggg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=H6Q9Pg-ygRDzo-g6nggg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/H6Q9Pg-ygRDzo-g6nggg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-07 / Event 953005</div>
+                <div class="sub">大阪府 / トレカショップ竜のしっぽ　布施店</div>
+                <div class="code">kFFFkF-GOUgbM-Fb5FFb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFFFkF-GOUgbM-Fb5FFb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFFFkF-GOUgbM-Fb5FFb.png" alt="【フーディン】 kFFFkF-GOUgbM-Fb5FFb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFFFkF-GOUgbM-Fb5FFb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFFFkF-GOUgbM-Fb5FFb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 952795</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">d5FvFV-ac2boh-kfFdbF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/d5FvFV-ac2boh-kfFdbF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/d5FvFV-ac2boh-kfFdbF.png" alt="【フーディン】 d5FvFV-ac2boh-kfFdbF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=d5FvFV-ac2boh-kfFdbF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/d5FvFV-ac2boh-kfFdbF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 952795</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">2yyEpp-8tvxIA-EyypMR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2yyEpp-8tvxIA-EyypMR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2yyEpp-8tvxIA-EyypMR.png" alt="【フーディン】 2yyEpp-8tvxIA-EyypMR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2yyEpp-8tvxIA-EyypMR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2yyEpp-8tvxIA-EyypMR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 952795</div>
+                <div class="sub">東京都 / Card Secret</div>
+                <div class="code">GY8Dx4-neIg3r-Jcc8GJ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/GY8Dx4-neIg3r-Jcc8GJ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/GY8Dx4-neIg3r-Jcc8GJ.png" alt="【フーディン】 GY8Dx4-neIg3r-Jcc8GJ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=GY8Dx4-neIg3r-Jcc8GJ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/GY8Dx4-neIg3r-Jcc8GJ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 953006</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋2号店</div>
+                <div class="code">V5FFFV-gBSIOf-bkF1bv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/V5FFFV-gBSIOf-bkF1bv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/V5FFFV-gBSIOf-bkF1bv.png" alt="【フーディン】 V5FFFV-gBSIOf-bkF1bv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=V5FFFV-gBSIOf-bkF1bv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/V5FFFV-gBSIOf-bkF1bv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-08 / Event 953007</div>
+                <div class="sub">京都府 / GIRAFULL京都店</div>
+                <div class="code">kbkVk5-k2qp5R-vvFFvF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kbkVk5-k2qp5R-vvFFvF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kbkVk5-k2qp5R-vvFFvF.png" alt="【フーディン】 kbkVk5-k2qp5R-vvFFvF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kbkVk5-k2qp5R-vvFFvF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kbkVk5-k2qp5R-vvFFvF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953009</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">Up2XRX-faQkwO-XpSpyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Up2XRX-faQkwO-XpSpyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Up2XRX-faQkwO-XpSpyy.png" alt="【フーディン】 Up2XRX-faQkwO-XpSpyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Up2XRX-faQkwO-XpSpyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Up2XRX-faQkwO-XpSpyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953009</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">ppRy22-8m0EH0-pSy3RM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppRy22-8m0EH0-pSy3RM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppRy22-8m0EH0-pSy3RM.png" alt="【フーディン】 ppRy22-8m0EH0-pSy3RM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppRy22-8m0EH0-pSy3RM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppRy22-8m0EH0-pSy3RM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953009</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">Yc888c-JlBCMi-GJxa4c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Yc888c-JlBCMi-GJxa4c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Yc888c-JlBCMi-GJxa4c.png" alt="【フーディン】 Yc888c-JlBCMi-GJxa4c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Yc888c-JlBCMi-GJxa4c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Yc888c-JlBCMi-GJxa4c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953010</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">Rp2ypp-9jvmjD-S3MEyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Rp2ypp-9jvmjD-S3MEyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Rp2ypp-9jvmjD-S3MEyp.png" alt="【フーディン】 Rp2ypp-9jvmjD-S3MEyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Rp2ypp-9jvmjD-S3MEyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Rp2ypp-9jvmjD-S3MEyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953010</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">pMMXyp-4R4KFz-2pUpMR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pMMXyp-4R4KFz-2pUpMR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pMMXyp-4R4KFz-2pUpMR.png" alt="【フーディン】 pMMXyp-4R4KFz-2pUpMR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pMMXyp-4R4KFz-2pUpMR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pMMXyp-4R4KFz-2pUpMR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【フーディン】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-09 / Event 953010</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">kFFVwF-mUIZkS-fbvf5b</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFFVwF-mUIZkS-fbvf5b.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFFVwF-mUIZkS-fbvf5b.png" alt="【フーディン】 kFFVwF-mUIZkS-fbvf5b">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFFVwF-mUIZkS-fbvf5b" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFFVwF-mUIZkS-fbvf5b/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
