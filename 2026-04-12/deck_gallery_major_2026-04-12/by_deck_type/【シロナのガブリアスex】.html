@@ -1,0 +1,1452 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【シロナのガブリアスex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【シロナのガブリアスex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">64</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">64</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">64</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-04-12.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 952796</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">Xp2pRS-cVQQYz-yXpMpU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Xp2pRS-cVQQYz-yXpMpU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Xp2pRS-cVQQYz-yXpMpU.png" alt="【シロナのガブリアスex】 Xp2pRS-cVQQYz-yXpMpU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Xp2pRS-cVQQYz-yXpMpU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Xp2pRS-cVQQYz-yXpMpU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 953131</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">5b5wFF-gdlEzC-wkFF5b</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5b5wFF-gdlEzC-wkFF5b.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5b5wFF-gdlEzC-wkFF5b.png" alt="【シロナのガブリアスex】 5b5wFF-gdlEzC-wkFF5b">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5b5wFF-gdlEzC-wkFF5b" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5b5wFF-gdlEzC-wkFF5b/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952731</div>
+                <div class="sub">埼玉県 / BOOKOFFSUPERBAZAAR大宮ステラタウン店</div>
+                <div class="code">nggNLn-TtrFSI-9HNLgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nggNLn-TtrFSI-9HNLgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nggNLn-TtrFSI-9HNLgn.png" alt="【シロナのガブリアスex】 nggNLn-TtrFSI-9HNLgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nggNLn-TtrFSI-9HNLgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nggNLn-TtrFSI-9HNLgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952731</div>
+                <div class="sub">埼玉県 / BOOKOFFSUPERBAZAAR大宮ステラタウン店</div>
+                <div class="code">VVF5bb-S9jNSa-V5fkVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VVF5bb-S9jNSa-V5fkVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VVF5bb-S9jNSa-V5fkVF.png" alt="【シロナのガブリアスex】 VVF5bb-S9jNSa-V5fkVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VVF5bb-S9jNSa-V5fkVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VVF5bb-S9jNSa-V5fkVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952733</div>
+                <div class="sub">栃木県 / TSUTAYA Trading Card 宇都宮インターパークビレッジ店</div>
+                <div class="code">pyRXM2-MgnenN-E2py22</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pyRXM2-MgnenN-E2py22.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pyRXM2-MgnenN-E2py22.png" alt="【シロナのガブリアスex】 pyRXM2-MgnenN-E2py22">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pyRXM2-MgnenN-E2py22" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pyRXM2-MgnenN-E2py22/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952797</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR イトーヨーカドー流山店</div>
+                <div class="code">9ngL9g-CJSYN5-gnLPNH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9ngL9g-CJSYN5-gnLPNH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9ngL9g-CJSYN5-gnLPNH.png" alt="【シロナのガブリアスex】 9ngL9g-CJSYN5-gnLPNH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9ngL9g-CJSYN5-gnLPNH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9ngL9g-CJSYN5-gnLPNH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952889</div>
+                <div class="sub">石川県 / 北国書林　松任店</div>
+                <div class="code">5kFkbV-5L4GHS-FFVvb5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5kFkbV-5L4GHS-FFVvb5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5kFkbV-5L4GHS-FFVvb5.png" alt="【シロナのガブリアスex】 5kFkbV-5L4GHS-FFVvb5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5kFkbV-5L4GHS-FFVvb5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5kFkbV-5L4GHS-FFVvb5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952889</div>
+                <div class="sub">石川県 / 北国書林　松任店</div>
+                <div class="code">Y8888G-ZXHyvU-4ccx8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Y8888G-ZXHyvU-4ccx8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Y8888G-ZXHyvU-4ccx8c.png" alt="【シロナのガブリアスex】 Y8888G-ZXHyvU-4ccx8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Y8888G-ZXHyvU-4ccx8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Y8888G-ZXHyvU-4ccx8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952890</div>
+                <div class="sub">神奈川県 / 青馬堂本店</div>
+                <div class="code">cYDx84-LmXEn7-cGacxG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cYDx84-LmXEn7-cGacxG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cYDx84-LmXEn7-cGacxG.png" alt="【シロナのガブリアスex】 cYDx84-LmXEn7-cGacxG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cYDx84-LmXEn7-cGacxG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cYDx84-LmXEn7-cGacxG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952891</div>
+                <div class="sub">新潟県 / トーナメントセンターバトロコ新潟万代</div>
+                <div class="code">J4G8cx-gAxRDU-x8GaYc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/J4G8cx-gAxRDU-x8GaYc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/J4G8cx-gAxRDU-x8GaYc.png" alt="【シロナのガブリアスex】 J4G8cx-gAxRDU-x8GaYc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=J4G8cx-gAxRDU-x8GaYc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/J4G8cx-gAxRDU-x8GaYc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952891</div>
+                <div class="sub">新潟県 / トーナメントセンターバトロコ新潟万代</div>
+                <div class="code">Ry3X2p-3BPWHR-SXyyRp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ry3X2p-3BPWHR-SXyyRp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ry3X2p-3BPWHR-SXyyRp.png" alt="【シロナのガブリアスex】 Ry3X2p-3BPWHR-SXyyRp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ry3X2p-3BPWHR-SXyyRp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ry3X2p-3BPWHR-SXyyRp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953011</div>
+                <div class="sub">愛知県 / 宝島　高蔵寺店</div>
+                <div class="code">FbfFV5-gYVGJ7-5dFFk1</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FbfFV5-gYVGJ7-5dFFk1.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FbfFV5-gYVGJ7-5dFFk1.png" alt="【シロナのガブリアスex】 FbfFV5-gYVGJ7-5dFFk1">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FbfFV5-gYVGJ7-5dFFk1" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FbfFV5-gYVGJ7-5dFFk1/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953011</div>
+                <div class="sub">愛知県 / 宝島　高蔵寺店</div>
+                <div class="code">5vwbFF-ogauDI-bFkFV5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5vwbFF-ogauDI-bFkFV5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5vwbFF-ogauDI-bFkFV5.png" alt="【シロナのガブリアスex】 5vwbFF-ogauDI-bFkFV5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5vwbFF-ogauDI-bFkFV5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5vwbFF-ogauDI-bFkFV5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953012</div>
+                <div class="sub">愛知県 / 宝島　高蔵寺店</div>
+                <div class="code">kvwFVF-Y2qAEh-VkVb5b</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kvwFVF-Y2qAEh-VkVb5b.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kvwFVF-Y2qAEh-VkVb5b.png" alt="【シロナのガブリアスex】 kvwFVF-Y2qAEh-VkVb5b">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kvwFVF-Y2qAEh-VkVb5b" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kvwFVF-Y2qAEh-VkVb5b/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953015</div>
+                <div class="sub">大阪府 / トレカショップ竜のしっぽ　大阪梅田店</div>
+                <div class="code">FbfdkF-HkYKUd-VF5Fk5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FbfdkF-HkYKUd-VF5Fk5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FbfdkF-HkYKUd-VF5Fk5.png" alt="【シロナのガブリアスex】 FbfdkF-HkYKUd-VF5Fk5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FbfdkF-HkYKUd-VF5Fk5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FbfdkF-HkYKUd-VF5Fk5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953016</div>
+                <div class="sub">静岡県 / 駿河屋本店駿河屋ビル</div>
+                <div class="code">QHnggH-cGL5by-LgL9Hn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QHnggH-cGL5by-LgL9Hn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QHnggH-cGL5by-LgL9Hn.png" alt="【シロナのガブリアスex】 QHnggH-cGL5by-LgL9Hn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QHnggH-cGL5by-LgL9Hn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QHnggH-cGL5by-LgL9Hn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953016</div>
+                <div class="sub">静岡県 / 駿河屋本店駿河屋ビル</div>
+                <div class="code">c4D4x8-9owgrP-cKDGcx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c4D4x8-9owgrP-cKDGcx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c4D4x8-9owgrP-cKDGcx.png" alt="【シロナのガブリアスex】 c4D4x8-9owgrP-cKDGcx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c4D4x8-9owgrP-cKDGcx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c4D4x8-9owgrP-cKDGcx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953017</div>
+                <div class="sub">大阪府 / トイコンプ岸和田店</div>
+                <div class="code">V1Fdwk-wNYYgf-VbFVF5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/V1Fdwk-wNYYgf-VbFVF5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/V1Fdwk-wNYYgf-VbFVF5.png" alt="【シロナのガブリアスex】 V1Fdwk-wNYYgf-VbFVF5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=V1Fdwk-wNYYgf-VbFVF5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/V1Fdwk-wNYYgf-VbFVF5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953132</div>
+                <div class="sub">佐賀県 / ブックオフプラス佐賀南部バイパス店</div>
+                <div class="code">p2yR3p-j6cegu-MRy2yy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/p2yR3p-j6cegu-MRy2yy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/p2yR3p-j6cegu-MRy2yy.png" alt="【シロナのガブリアスex】 p2yR3p-j6cegu-MRy2yy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=p2yR3p-j6cegu-MRy2yy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/p2yR3p-j6cegu-MRy2yy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953132</div>
+                <div class="sub">佐賀県 / ブックオフプラス佐賀南部バイパス店</div>
+                <div class="code">MRpXpX-y7krqn-yy2MM2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MRpXpX-y7krqn-yy2MM2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MRpXpX-y7krqn-yy2MM2.png" alt="【シロナのガブリアスex】 MRpXpX-y7krqn-yy2MM2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MRpXpX-y7krqn-yy2MM2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MRpXpX-y7krqn-yy2MM2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953240</div>
+                <div class="sub">埼玉県 / Duel Stade Ganryu本庄店</div>
+                <div class="code">c8cxGx-RlPVdL-c4YYK4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c8cxGx-RlPVdL-c4YYK4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c8cxGx-RlPVdL-c4YYK4.png" alt="【シロナのガブリアスex】 c8cxGx-RlPVdL-c4YYK4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c8cxGx-RlPVdL-c4YYK4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c8cxGx-RlPVdL-c4YYK4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953276</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO多摩境店</div>
+                <div class="code">2Rp2yX-rSFrH9-M2y33p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2Rp2yX-rSFrH9-M2y33p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2Rp2yX-rSFrH9-M2y33p.png" alt="【シロナのガブリアスex】 2Rp2yX-rSFrH9-M2y33p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2Rp2yX-rSFrH9-M2y33p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2Rp2yX-rSFrH9-M2y33p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953276</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO多摩境店</div>
+                <div class="code">ppSSyp-VAWOln-U2ppRM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppSSyp-VAWOln-U2ppRM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppSSyp-VAWOln-U2ppRM.png" alt="【シロナのガブリアスex】 ppSSyp-VAWOln-U2ppRM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppSSyp-VAWOln-U2ppRM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppSSyp-VAWOln-U2ppRM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952672</div>
+                <div class="sub">青森県 / バトロコミニ十和田店</div>
+                <div class="code">Jx844c-IIfCAt-4axcG8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Jx844c-IIfCAt-4axcG8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Jx844c-IIfCAt-4axcG8.png" alt="【シロナのガブリアスex】 Jx844c-IIfCAt-4axcG8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Jx844c-IIfCAt-4axcG8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Jx844c-IIfCAt-4axcG8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952689</div>
+                <div class="sub">宮城県 / シーガル　泉中央店</div>
+                <div class="code">gLLH9n-upTg7S-iLgng9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gLLH9n-upTg7S-iLgng9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gLLH9n-upTg7S-iLgng9.png" alt="【シロナのガブリアスex】 gLLH9n-upTg7S-iLgng9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gLLH9n-upTg7S-iLgng9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gLLH9n-upTg7S-iLgng9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952689</div>
+                <div class="sub">宮城県 / シーガル　泉中央店</div>
+                <div class="code">bkV55F-gPqTtA-Fk15fF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bkV55F-gPqTtA-Fk15fF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bkV55F-gPqTtA-Fk15fF.png" alt="【シロナのガブリアスex】 bkV55F-gPqTtA-Fk15fF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bkV55F-gPqTtA-Fk15fF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bkV55F-gPqTtA-Fk15fF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952689</div>
+                <div class="sub">宮城県 / シーガル　泉中央店</div>
+                <div class="code">5kbVFf-7CPbPY-VkkvbV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5kbVFf-7CPbPY-VkkvbV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5kbVFf-7CPbPY-VkkvbV.png" alt="【シロナのガブリアスex】 5kbVFf-7CPbPY-VkkvbV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5kbVFf-7CPbPY-VkkvbV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5kbVFf-7CPbPY-VkkvbV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952734</div>
+                <div class="sub">埼玉県 / Wonder GOO　入間店</div>
+                <div class="code">M2Myyy-FvVgeE-MMpRyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M2Myyy-FvVgeE-MMpRyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M2Myyy-FvVgeE-MMpRyp.png" alt="【シロナのガブリアスex】 M2Myyy-FvVgeE-MMpRyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M2Myyy-FvVgeE-MMpRyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M2Myyy-FvVgeE-MMpRyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952735</div>
+                <div class="sub">栃木県 / Wonder GOO　足利店</div>
+                <div class="code">gN9L6n-HNvL5E-LLgQH6</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gN9L6n-HNvL5E-LLgQH6.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gN9L6n-HNvL5E-LLgQH6.png" alt="【シロナのガブリアスex】 gN9L6n-HNvL5E-LLgQH6">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gN9L6n-HNvL5E-LLgQH6" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gN9L6n-HNvL5E-LLgQH6/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952801</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">cGDx88-6BedMJ-888DG8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cGDx88-6BedMJ-888DG8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cGDx88-6BedMJ-888DG8.png" alt="【シロナのガブリアスex】 cGDx88-6BedMJ-888DG8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cGDx88-6BedMJ-888DG8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cGDx88-6BedMJ-888DG8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952801</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">xx4xD8-jpn2j5-D4GKc4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xx4xD8-jpn2j5-D4GKc4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xx4xD8-jpn2j5-D4GKc4.png" alt="【シロナのガブリアスex】 xx4xD8-jpn2j5-D4GKc4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xx4xD8-jpn2j5-D4GKc4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xx4xD8-jpn2j5-D4GKc4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952802</div>
+                <div class="sub">千葉県 / TSUTAYA BOOKSTORE　そよら成田ニュータウン</div>
+                <div class="code">LLQg99-XUNErm-LHgNnn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LLQg99-XUNErm-LHgNnn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LLQg99-XUNErm-LHgNnn.png" alt="【シロナのガブリアスex】 LLQg99-XUNErm-LHgNnn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LLQg99-XUNErm-LHgNnn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LLQg99-XUNErm-LHgNnn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952892</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">LQNgQn-7Nqyic-nPH9gg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LQNgQn-7Nqyic-nPH9gg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LQNgQn-7Nqyic-nPH9gg.png" alt="【シロナのガブリアスex】 LQNgQn-7Nqyic-nPH9gg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LQNgQn-7Nqyic-nPH9gg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LQNgQn-7Nqyic-nPH9gg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952893</div>
+                <div class="sub">福井県 / 【CARDBOX】Super KaBoS 二の宮本店</div>
+                <div class="code">vFF5kF-nwoWhx-5wVkVb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vFF5kF-nwoWhx-5wVkVb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vFF5kF-nwoWhx-5wVkVb.png" alt="【シロナのガブリアスex】 vFF5kF-nwoWhx-5wVkVb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vFF5kF-nwoWhx-5wVkVb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vFF5kF-nwoWhx-5wVkVb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952895</div>
+                <div class="sub">神奈川県 / ブックオフ　相模大野店</div>
+                <div class="code">2RpSyy-n7rUeR-XypRyM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2RpSyy-n7rUeR-XypRyM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2RpSyy-n7rUeR-XypRyM.png" alt="【シロナのガブリアスex】 2RpSyy-n7rUeR-XypRyM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2RpSyy-n7rUeR-XypRyM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2RpSyy-n7rUeR-XypRyM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952895</div>
+                <div class="sub">神奈川県 / ブックオフ　相模大野店</div>
+                <div class="code">xcYD4G-xiQxEd-84DDx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xcYD4G-xiQxEd-84DDx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xcYD4G-xiQxEd-84DDx8.png" alt="【シロナのガブリアスex】 xcYD4G-xiQxEd-84DDx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xcYD4G-xiQxEd-84DDx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xcYD4G-xiQxEd-84DDx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952896</div>
+                <div class="sub">神奈川県 / ブックオフ港北綱島西店</div>
+                <div class="code">88JcxG-Ywf2rI-cc444c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/88JcxG-Ywf2rI-cc444c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/88JcxG-Ywf2rI-cc444c.png" alt="【シロナのガブリアスex】 88JcxG-Ywf2rI-cc444c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=88JcxG-Ywf2rI-cc444c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/88JcxG-Ywf2rI-cc444c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952896</div>
+                <div class="sub">神奈川県 / ブックオフ港北綱島西店</div>
+                <div class="code">Lg9Ngn-tFxMJN-H9LNnL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Lg9Ngn-tFxMJN-H9LNnL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Lg9Ngn-tFxMJN-H9LNnL.png" alt="【シロナのガブリアスex】 Lg9Ngn-tFxMJN-H9LNnL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Lg9Ngn-tFxMJN-H9LNnL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Lg9Ngn-tFxMJN-H9LNnL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952896</div>
+                <div class="sub">神奈川県 / ブックオフ港北綱島西店</div>
+                <div class="code">Lngn9L-iQFS50-n9LHgg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Lngn9L-iQFS50-n9LHgg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Lngn9L-iQFS50-n9LHgg.png" alt="【シロナのガブリアスex】 Lngn9L-iQFS50-n9LHgg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Lngn9L-iQFS50-n9LHgg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Lngn9L-iQFS50-n9LHgg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952898</div>
+                <div class="sub">神奈川県 / 青馬堂本店</div>
+                <div class="code">cxGcx8-C4YTI7-8x84Jx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cxGcx8-C4YTI7-8x84Jx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cxGcx8-C4YTI7-8x84Jx.png" alt="【シロナのガブリアスex】 cxGcx8-C4YTI7-8x84Jx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cxGcx8-C4YTI7-8x84Jx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cxGcx8-C4YTI7-8x84Jx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952899</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">M2ppMU-yahf2X-yyyE2R</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M2ppMU-yahf2X-yyyE2R.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M2ppMU-yahf2X-yyyE2R.png" alt="【シロナのガブリアスex】 M2ppMU-yahf2X-yyyE2R">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M2ppMU-yahf2X-yyyE2R" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M2ppMU-yahf2X-yyyE2R/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952900</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">gnnHHL-uWq1li-P9iQgg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gnnHHL-uWq1li-P9iQgg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gnnHHL-uWq1li-P9iQgg.png" alt="【シロナのガブリアスex】 gnnHHL-uWq1li-P9iQgg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gnnHHL-uWq1li-P9iQgg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gnnHHL-uWq1li-P9iQgg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952900</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">F5dFFk-OvaIPu-bVVk55</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/F5dFFk-OvaIPu-bVVk55.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/F5dFFk-OvaIPu-bVVk55.png" alt="【シロナのガブリアスex】 F5dFFk-OvaIPu-bVVk55">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=F5dFFk-OvaIPu-bVVk55" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/F5dFFk-OvaIPu-bVVk55/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953018</div>
+                <div class="sub">山口県 / ドラグーン周南</div>
+                <div class="code">NPHQLL-Hu0FpL-9gn9Ln</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NPHQLL-Hu0FpL-9gn9Ln.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NPHQLL-Hu0FpL-9gn9Ln.png" alt="【シロナのガブリアスex】 NPHQLL-Hu0FpL-9gn9Ln">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NPHQLL-Hu0FpL-9gn9Ln" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NPHQLL-Hu0FpL-9gn9Ln/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953020</div>
+                <div class="sub">奈良県 / BOOKOFF奈良法華寺店</div>
+                <div class="code">5bVFFF-zxXIAf-kFfkV5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5bVFFF-zxXIAf-kFfkV5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5bVFFF-zxXIAf-kFfkV5.png" alt="【シロナのガブリアスex】 5bVFFF-zxXIAf-kFfkV5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5bVFFF-zxXIAf-kFfkV5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5bVFFF-zxXIAf-kFfkV5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953021</div>
+                <div class="sub">愛知県 / 【CARDBOX】本の王国すまいるキング　安城店</div>
+                <div class="code">acYc4x-FReSOD-G8xxxY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/acYc4x-FReSOD-G8xxxY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/acYc4x-FReSOD-G8xxxY.png" alt="【シロナのガブリアスex】 acYc4x-FReSOD-G8xxxY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=acYc4x-FReSOD-G8xxxY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/acYc4x-FReSOD-G8xxxY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953022</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">vkF5fb-tMGrag-VfvFkF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vkF5fb-tMGrag-VfvFkF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vkF5fb-tMGrag-VfvFkF.png" alt="【シロナのガブリアスex】 vkF5fb-tMGrag-VfvFkF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vkF5fb-tMGrag-VfvFkF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vkF5fb-tMGrag-VfvFkF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953022</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">cxGc4c-fmRbnV-DG8cx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cxGc4c-fmRbnV-DG8cx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cxGc4c-fmRbnV-DG8cx8.png" alt="【シロナのガブリアスex】 cxGc4c-fmRbnV-DG8cx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cxGc4c-fmRbnV-DG8cx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cxGc4c-fmRbnV-DG8cx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953022</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">giQHn9-8BawpY-QngHLn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/giQHn9-8BawpY-QngHLn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/giQHn9-8BawpY-QngHLn.png" alt="【シロナのガブリアスex】 giQHn9-8BawpY-QngHLn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=giQHn9-8BawpY-QngHLn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/giQHn9-8BawpY-QngHLn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953023</div>
+                <div class="sub">愛知県 / 王の洞窟jr.　一宮２２号バイパス店</div>
+                <div class="code">ppEMyR-xvqQHh-ypRUy2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppEMyR-xvqQHh-ypRUy2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppEMyR-xvqQHh-ypRUy2.png" alt="【シロナのガブリアスex】 ppEMyR-xvqQHh-ypRUy2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppEMyR-xvqQHh-ypRUy2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppEMyR-xvqQHh-ypRUy2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953026</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">ES2MpR-Aw2l7X-2XpUyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ES2MpR-Aw2l7X-2XpUyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ES2MpR-Aw2l7X-2XpUyy.png" alt="【シロナのガブリアスex】 ES2MpR-Aw2l7X-2XpUyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ES2MpR-Aw2l7X-2XpUyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ES2MpR-Aw2l7X-2XpUyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953026</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">k5FkkV-7DV1cp-V5FV5b</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k5FkkV-7DV1cp-V5FV5b.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k5FkkV-7DV1cp-V5FV5b.png" alt="【シロナのガブリアスex】 k5FkkV-7DV1cp-V5FV5b">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k5FkkV-7DV1cp-V5FV5b" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k5FkkV-7DV1cp-V5FV5b/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953026</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">FF5vbV-Qwn8Aw-kFb5kb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FF5vbV-Qwn8Aw-kFb5kb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FF5vbV-Qwn8Aw-kFb5kb.png" alt="【シロナのガブリアスex】 FF5vbV-Qwn8Aw-kFb5kb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FF5vbV-Qwn8Aw-kFb5kb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FF5vbV-Qwn8Aw-kFb5kb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953028</div>
+                <div class="sub">愛媛県 / トレカショップ　ファンクス</div>
+                <div class="code">4GDcKx-MyjErj-ccG888</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4GDcKx-MyjErj-ccG888.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4GDcKx-MyjErj-ccG888.png" alt="【シロナのガブリアスex】 4GDcKx-MyjErj-ccG888">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4GDcKx-MyjErj-ccG888" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4GDcKx-MyjErj-ccG888/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953133</div>
+                <div class="sub">宮崎県 / カードショップ＠ほ～む。宮崎店</div>
+                <div class="code">V5Vkfb-8u0dkL-bFVFk5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/V5Vkfb-8u0dkL-bFVFk5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/V5Vkfb-8u0dkL-bFVFk5.png" alt="【シロナのガブリアスex】 V5Vkfb-8u0dkL-bFVFk5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=V5Vkfb-8u0dkL-bFVFk5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/V5Vkfb-8u0dkL-bFVFk5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953133</div>
+                <div class="sub">宮崎県 / カードショップ＠ほ～む。宮崎店</div>
+                <div class="code">Vbk5VF-C1al8n-dfFVVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vbk5VF-C1al8n-dfFVVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vbk5VF-C1al8n-dfFVVF.png" alt="【シロナのガブリアスex】 Vbk5VF-C1al8n-dfFVVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vbk5VF-C1al8n-dfFVVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vbk5VF-C1al8n-dfFVVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953134</div>
+                <div class="sub">沖縄県 / カードスタジアム小禄店</div>
+                <div class="code">X2RMpy-7NfoDu-pyUpMy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/X2RMpy-7NfoDu-pyUpMy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/X2RMpy-7NfoDu-pyUpMy.png" alt="【シロナのガブリアスex】 X2RMpy-7NfoDu-pyUpMy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=X2RMpy-7NfoDu-pyUpMy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/X2RMpy-7NfoDu-pyUpMy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953136</div>
+                <div class="sub">鹿児島県 / BOOKOFF鹿児島ジョイプラザ店トレカ館</div>
+                <div class="code">YYa8xx-LcVdtu-x4cYG8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/YYa8xx-LcVdtu-x4cYG8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/YYa8xx-LcVdtu-x4cYG8.png" alt="【シロナのガブリアスex】 YYa8xx-LcVdtu-x4cYG8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=YYa8xx-LcVdtu-x4cYG8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/YYa8xx-LcVdtu-x4cYG8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953277</div>
+                <div class="sub">東京都 / 竜星のPAO　八王子店</div>
+                <div class="code">55Fkfb-LXWo9X-5VwkVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/55Fkfb-LXWo9X-5VwkVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/55Fkfb-LXWo9X-5VwkVF.png" alt="【シロナのガブリアスex】 55Fkfb-LXWo9X-5VwkVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=55Fkfb-LXWo9X-5VwkVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/55Fkfb-LXWo9X-5VwkVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953278</div>
+                <div class="sub">静岡県 / トレカステーション佐鳴台店</div>
+                <div class="code">NLgHHP-VLSPRa-9PNgLn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NLgHHP-VLSPRa-9PNgLn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NLgHHP-VLSPRa-9PNgLn.png" alt="【シロナのガブリアスex】 NLgHHP-VLSPRa-9PNgLn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NLgHHP-VLSPRa-9PNgLn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NLgHHP-VLSPRa-9PNgLn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953278</div>
+                <div class="sub">静岡県 / トレカステーション佐鳴台店</div>
+                <div class="code">RpEMMp-uQ3kQn-yypM2R</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RpEMMp-uQ3kQn-yypM2R.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RpEMMp-uQ3kQn-yypM2R.png" alt="【シロナのガブリアスex】 RpEMMp-uQ3kQn-yypM2R">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RpEMMp-uQ3kQn-yypM2R" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RpEMMp-uQ3kQn-yypM2R/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953279</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO町田店</div>
+                <div class="code">44Dxcx-05AMKg-Gc88cJ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/44Dxcx-05AMKg-Gc88cJ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/44Dxcx-05AMKg-Gc88cJ.png" alt="【シロナのガブリアスex】 44Dxcx-05AMKg-Gc88cJ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=44Dxcx-05AMKg-Gc88cJ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/44Dxcx-05AMKg-Gc88cJ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953279</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO町田店</div>
+                <div class="code">cccG8D-WVMouq-84cGD8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cccG8D-WVMouq-84cGD8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cccG8D-WVMouq-84cGD8.png" alt="【シロナのガブリアスex】 cccG8D-WVMouq-84cGD8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cccG8D-WVMouq-84cGD8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cccG8D-WVMouq-84cGD8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【シロナのガブリアスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953279</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO町田店</div>
+                <div class="code">QLnNnL-aQAP56-HNgH9L</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QLnNnL-aQAP56-HNgH9L.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QLnNnL-aQAP56-HNgH9L.png" alt="【シロナのガブリアスex】 QLnNnL-aQAP56-HNgH9L">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QLnNnL-aQAP56-HNgH9L" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QLnNnL-aQAP56-HNgH9L/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
