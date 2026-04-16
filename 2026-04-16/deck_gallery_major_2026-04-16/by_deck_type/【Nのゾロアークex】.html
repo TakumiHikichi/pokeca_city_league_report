@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【Nのゾロアークex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【Nのゾロアークex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">63</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">63</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">63</div></div>
+        </div>
+        <a class="back-link" href="../deck_gallery_2026-04-16.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 952796</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">Xpy2yp-2gng2v-3RpXyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Xpy2yp-2gng2v-3RpXyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Xpy2yp-2gng2v-3RpXyy.png" alt="【Nのゾロアークex】 Xpy2yp-2gng2v-3RpXyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Xpy2yp-2gng2v-3RpXyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Xpy2yp-2gng2v-3RpXyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 952796</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">pR2MpR-mZR9Ej-ySppyS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pR2MpR-mZR9Ej-ySppyS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pR2MpR-mZR9Ej-ySppyS.png" alt="【Nのゾロアークex】 pR2MpR-mZR9Ej-ySppyS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pR2MpR-mZR9Ej-ySppyS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pR2MpR-mZR9Ej-ySppyS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 952796</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">kF5wb5-zVmgX6-kbFkvF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kF5wb5-zVmgX6-kbFkvF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kF5wb5-zVmgX6-kbFkvF.png" alt="【Nのゾロアークex】 kF5wb5-zVmgX6-kbFkvF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kF5wb5-zVmgX6-kbFkvF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kF5wb5-zVmgX6-kbFkvF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 952796</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">EyyMp2-2TZ6qg-pp3Rp3</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EyyMp2-2TZ6qg-pp3Rp3.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EyyMp2-2TZ6qg-pp3Rp3.png" alt="【Nのゾロアークex】 EyyMp2-2TZ6qg-pp3Rp3">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EyyMp2-2TZ6qg-pp3Rp3" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EyyMp2-2TZ6qg-pp3Rp3/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-10 / Event 953131</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">FFfkbd-ZQXrAg-wkFFw5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FFfkbd-ZQXrAg-wkFFw5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FFfkbd-ZQXrAg-wkFFw5.png" alt="【Nのゾロアークex】 FFfkbd-ZQXrAg-wkFFw5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FFfkbd-ZQXrAg-wkFFw5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FFfkbd-ZQXrAg-wkFFw5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952732</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">DJc8c8-pHy0Kr-8G8x48</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/DJc8c8-pHy0Kr-8G8x48.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/DJc8c8-pHy0Kr-8G8x48.png" alt="【Nのゾロアークex】 DJc8c8-pHy0Kr-8G8x48">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=DJc8c8-pHy0Kr-8G8x48" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/DJc8c8-pHy0Kr-8G8x48/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952797</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR イトーヨーカドー流山店</div>
+                <div class="code">9NLngN-yrTHIg-nggnLH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9NLngN-yrTHIg-nggnLH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9NLngN-yrTHIg-nggnLH.png" alt="【Nのゾロアークex】 9NLngN-yrTHIg-nggnLH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9NLngN-yrTHIg-nggnLH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9NLngN-yrTHIg-nggnLH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952797</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR イトーヨーカドー流山店</div>
+                <div class="code">bkVv5F-zWu4DG-V5vFkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bkVv5F-zWu4DG-V5vFkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bkVv5F-zWu4DG-V5vFkk.png" alt="【Nのゾロアークex】 bkVv5F-zWu4DG-V5vFkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bkVv5F-zWu4DG-V5vFkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bkVv5F-zWu4DG-V5vFkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952797</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR イトーヨーカドー流山店</div>
+                <div class="code">nNHgNL-aHk8jG-6ggQ9L</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nNHgNL-aHk8jG-6ggQ9L.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nNHgNL-aHk8jG-6ggQ9L.png" alt="【Nのゾロアークex】 nNHgNL-aHk8jG-6ggQ9L">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nNHgNL-aHk8jG-6ggQ9L" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nNHgNL-aHk8jG-6ggQ9L/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952798</div>
+                <div class="sub">東京都 / BOOKOFFSUPERBAZAAR町田中央通り店</div>
+                <div class="code">48cccc-C2QnJV-GxDD8x</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/48cccc-C2QnJV-GxDD8x.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/48cccc-C2QnJV-GxDD8x.png" alt="【Nのゾロアークex】 48cccc-C2QnJV-GxDD8x">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=48cccc-C2QnJV-GxDD8x" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/48cccc-C2QnJV-GxDD8x/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952889</div>
+                <div class="sub">石川県 / 北国書林　松任店</div>
+                <div class="code">6nNnPQ-YdDD92-nHg9gL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/6nNnPQ-YdDD92-nHg9gL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/6nNnPQ-YdDD92-nHg9gL.png" alt="【Nのゾロアークex】 6nNnPQ-YdDD92-nHg9gL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=6nNnPQ-YdDD92-nHg9gL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/6nNnPQ-YdDD92-nHg9gL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952889</div>
+                <div class="sub">石川県 / 北国書林　松任店</div>
+                <div class="code">4cG888-vMyvzl-DxJ8cc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4cG888-vMyvzl-DxJ8cc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4cG888-vMyvzl-DxJ8cc.png" alt="【Nのゾロアークex】 4cG888-vMyvzl-DxJ8cc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4cG888-vMyvzl-DxJ8cc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4cG888-vMyvzl-DxJ8cc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 952890</div>
+                <div class="sub">神奈川県 / 青馬堂本店</div>
+                <div class="code">HNHHng-Bw07K8-LLLg9i</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HNHHng-Bw07K8-LLLg9i.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HNHHng-Bw07K8-LLLg9i.png" alt="【Nのゾロアークex】 HNHHng-Bw07K8-LLLg9i">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HNHHng-Bw07K8-LLLg9i" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HNHHng-Bw07K8-LLLg9i/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953011</div>
+                <div class="sub">愛知県 / 宝島　高蔵寺店</div>
+                <div class="code">DGacxx-czPBEk-c8xK84</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/DGacxx-czPBEk-c8xK84.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/DGacxx-czPBEk-c8xK84.png" alt="【Nのゾロアークex】 DGacxx-czPBEk-c8xK84">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=DGacxx-czPBEk-c8xK84" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/DGacxx-czPBEk-c8xK84/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953012</div>
+                <div class="sub">愛知県 / 宝島　高蔵寺店</div>
+                <div class="code">pyRyXM-3W4BF2-y2pySy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pyRyXM-3W4BF2-y2pySy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pyRyXM-3W4BF2-y2pySy.png" alt="【Nのゾロアークex】 pyRyXM-3W4BF2-y2pySy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pyRyXM-3W4BF2-y2pySy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pyRyXM-3W4BF2-y2pySy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953014</div>
+                <div class="sub">三重県 / 三洋堂書店 星川店</div>
+                <div class="code">c4G8xx-4byxXP-x8caxG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c4G8xx-4byxXP-x8caxG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c4G8xx-4byxXP-x8caxG.png" alt="【Nのゾロアークex】 c4G8xx-4byxXP-x8caxG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c4G8xx-4byxXP-x8caxG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c4G8xx-4byxXP-x8caxG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953014</div>
+                <div class="sub">三重県 / 三洋堂書店 星川店</div>
+                <div class="code">g9gnnN-NTEfE4-9HLngN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/g9gnnN-NTEfE4-9HLngN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/g9gnnN-NTEfE4-9HLngN.png" alt="【Nのゾロアークex】 g9gnnN-NTEfE4-9HLngN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=g9gnnN-NTEfE4-9HLngN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/g9gnnN-NTEfE4-9HLngN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953016</div>
+                <div class="sub">静岡県 / 駿河屋本店駿河屋ビル</div>
+                <div class="code">ccGDG8-KD0i8V-xcx848</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ccGDG8-KD0i8V-xcx848.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ccGDG8-KD0i8V-xcx848.png" alt="【Nのゾロアークex】 ccGDG8-KD0i8V-xcx848">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ccGDG8-KD0i8V-xcx848" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ccGDG8-KD0i8V-xcx848/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953017</div>
+                <div class="sub">大阪府 / トイコンプ岸和田店</div>
+                <div class="code">EpM2My-WT81PD-MRMpMp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EpM2My-WT81PD-MRMpMp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EpM2My-WT81PD-MRMpMp.png" alt="【Nのゾロアークex】 EpM2My-WT81PD-MRMpMp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EpM2My-WT81PD-MRMpMp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EpM2My-WT81PD-MRMpMp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-11 / Event 953017</div>
+                <div class="sub">大阪府 / トイコンプ岸和田店</div>
+                <div class="code">xc88Gc-150in2-ccax4x</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xc88Gc-150in2-ccax4x.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xc88Gc-150in2-ccax4x.png" alt="【Nのゾロアークex】 xc88Gc-150in2-ccax4x">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xc88Gc-150in2-ccax4x" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xc88Gc-150in2-ccax4x/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952672</div>
+                <div class="sub">青森県 / バトロコミニ十和田店</div>
+                <div class="code">k55bkF-GrZjrH-dFVFFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k55bkF-GrZjrH-dFVFFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k55bkF-GrZjrH-dFVFFk.png" alt="【Nのゾロアークex】 k55bkF-GrZjrH-dFVFFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k55bkF-GrZjrH-dFVFFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k55bkF-GrZjrH-dFVFFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952689</div>
+                <div class="sub">宮城県 / シーガル　泉中央店</div>
+                <div class="code">FdkvFb-wenkGv-kV5vdV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FdkvFb-wenkGv-kV5vdV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FdkvFb-wenkGv-kV5vdV.png" alt="【Nのゾロアークex】 FdkvFb-wenkGv-kV5vdV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FdkvFb-wenkGv-kV5vdV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FdkvFb-wenkGv-kV5vdV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952735</div>
+                <div class="sub">栃木県 / Wonder GOO　足利店</div>
+                <div class="code">pRySpy-fR1UPH-MXR2yp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pRySpy-fR1UPH-MXR2yp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pRySpy-fR1UPH-MXR2yp.png" alt="【Nのゾロアークex】 pRySpy-fR1UPH-MXR2yp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pRySpy-fR1UPH-MXR2yp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pRySpy-fR1UPH-MXR2yp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952736</div>
+                <div class="sub">茨城県 / トーナメントセンターバトロコ　水戸駅前</div>
+                <div class="code">84cc48-1RiMAy-4cY8G8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/84cc48-1RiMAy-4cY8G8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/84cc48-1RiMAy-4cY8G8.png" alt="【Nのゾロアークex】 84cc48-1RiMAy-4cY8G8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=84cc48-1RiMAy-4cY8G8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/84cc48-1RiMAy-4cY8G8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952736</div>
+                <div class="sub">茨城県 / トーナメントセンターバトロコ　水戸駅前</div>
+                <div class="code">dwkVk5-BP5grn-b5FFkv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/dwkVk5-BP5grn-b5FFkv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/dwkVk5-BP5grn-b5FFkv.png" alt="【Nのゾロアークex】 dwkVk5-BP5grn-b5FFkv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=dwkVk5-BP5grn-b5FFkv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/dwkVk5-BP5grn-b5FFkv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952737</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">kkVF1F-Kj8BCC-5ffb5k</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kkVF1F-Kj8BCC-5ffb5k.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kkVF1F-Kj8BCC-5ffb5k.png" alt="【Nのゾロアークex】 kkVF1F-Kj8BCC-5ffb5k">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kkVF1F-Kj8BCC-5ffb5k" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kkVF1F-Kj8BCC-5ffb5k/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952737</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">84ccD4-jFxc5h-cG8x88</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/84ccD4-jFxc5h-cG8x88.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/84ccD4-jFxc5h-cG8x88.png" alt="【Nのゾロアークex】 84ccD4-jFxc5h-cG8x88">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=84ccD4-jFxc5h-cG8x88" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/84ccD4-jFxc5h-cG8x88/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952737</div>
+                <div class="sub">埼玉県 / トーナメントセンターバトロコ　川越駅前</div>
+                <div class="code">HLQPnn-DP5DgT-ng9Qng</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HLQPnn-DP5DgT-ng9Qng.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HLQPnn-DP5DgT-ng9Qng.png" alt="【Nのゾロアークex】 HLQPnn-DP5DgT-ng9Qng">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HLQPnn-DP5DgT-ng9Qng" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HLQPnn-DP5DgT-ng9Qng/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952802</div>
+                <div class="sub">千葉県 / TSUTAYA BOOKSTORE　そよら成田ニュータウン</div>
+                <div class="code">fkkkFb-VNbySn-d55VFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/fkkkFb-VNbySn-d55VFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/fkkkFb-VNbySn-d55VFk.png" alt="【Nのゾロアークex】 fkkkFb-VNbySn-d55VFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=fkkkFb-VNbySn-d55VFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/fkkkFb-VNbySn-d55VFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952804</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">nnLL9L-zvMqz2-HgNLL9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nnLL9L-zvMqz2-HgNLL9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nnLL9L-zvMqz2-HgNLL9.png" alt="【Nのゾロアークex】 nnLL9L-zvMqz2-HgNLL9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nnLL9L-zvMqz2-HgNLL9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nnLL9L-zvMqz2-HgNLL9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952805</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">kVbkfV-PUJ2FH-FfVw5V</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kVbkfV-PUJ2FH-FfVw5V.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kVbkfV-PUJ2FH-FfVw5V.png" alt="【Nのゾロアークex】 kVbkfV-PUJ2FH-FfVw5V">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kVbkfV-PUJ2FH-FfVw5V" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kVbkfV-PUJ2FH-FfVw5V/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952805</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">Kccc4x-lTUllq-x8Gcx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Kccc4x-lTUllq-x8Gcx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Kccc4x-lTUllq-x8Gcx8.png" alt="【Nのゾロアークex】 Kccc4x-lTUllq-x8Gcx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Kccc4x-lTUllq-x8Gcx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Kccc4x-lTUllq-x8Gcx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952806</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">2MRppM-F0ukKw-Rpy2yp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2MRppM-F0ukKw-Rpy2yp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2MRppM-F0ukKw-Rpy2yp.png" alt="【Nのゾロアークex】 2MRppM-F0ukKw-Rpy2yp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2MRppM-F0ukKw-Rpy2yp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2MRppM-F0ukKw-Rpy2yp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952892</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">GcYG48-p4ivfJ-c88xDc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/GcYG48-p4ivfJ-c88xDc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/GcYG48-p4ivfJ-c88xDc.png" alt="【Nのゾロアークex】 GcYG48-p4ivfJ-c88xDc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=GcYG48-p4ivfJ-c88xDc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/GcYG48-p4ivfJ-c88xDc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952892</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">fbkVFV-du39AB-V55kFf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/fbkVFV-du39AB-V55kFf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/fbkVFV-du39AB-V55kFf.png" alt="【Nのゾロアークex】 fbkVFV-du39AB-V55kFf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=fbkVFV-du39AB-V55kFf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/fbkVFV-du39AB-V55kFf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952894</div>
+                <div class="sub">長野県 / バトスタ長野駅前店</div>
+                <div class="code">VFkbkk-wI83vr-VdV5k1</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VFkbkk-wI83vr-VdV5k1.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VFkbkk-wI83vr-VdV5k1.png" alt="【Nのゾロアークex】 VFkbkk-wI83vr-VdV5k1">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VFkbkk-wI83vr-VdV5k1" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VFkbkk-wI83vr-VdV5k1/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952894</div>
+                <div class="sub">長野県 / バトスタ長野駅前店</div>
+                <div class="code">kFFFV5-qVNIkd-5kbkwk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFFFV5-qVNIkd-5kbkwk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFFFV5-qVNIkd-5kbkwk.png" alt="【Nのゾロアークex】 kFFFV5-qVNIkd-5kbkwk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFFFV5-qVNIkd-5kbkwk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFFFV5-qVNIkd-5kbkwk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952895</div>
+                <div class="sub">神奈川県 / ブックオフ　相模大野店</div>
+                <div class="code">kf1b5V-t2If7q-FbVFkF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kf1b5V-t2If7q-FbVFkF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kf1b5V-t2If7q-FbVFkF.png" alt="【Nのゾロアークex】 kf1b5V-t2If7q-FbVFkF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kf1b5V-t2If7q-FbVFkF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kf1b5V-t2If7q-FbVFkF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952896</div>
+                <div class="sub">神奈川県 / ブックオフ港北綱島西店</div>
+                <div class="code">D4xxDc-nQjMhI-84Gx84</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/D4xxDc-nQjMhI-84Gx84.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/D4xxDc-nQjMhI-84Gx84.png" alt="【Nのゾロアークex】 D4xxDc-nQjMhI-84Gx84">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=D4xxDc-nQjMhI-84Gx84" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/D4xxDc-nQjMhI-84Gx84/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952897</div>
+                <div class="sub">神奈川県 / BOOKOFFPLUS　アミューあつぎ店</div>
+                <div class="code">9ggnnn-KMAY2L-HLQnng</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9ggnnn-KMAY2L-HLQnng.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9ggnnn-KMAY2L-HLQnng.png" alt="【Nのゾロアークex】 9ggnnn-KMAY2L-HLQnng">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9ggnnn-KMAY2L-HLQnng" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9ggnnn-KMAY2L-HLQnng/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952899</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">VVkFkk-5YRUhv-bkk51k</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VVkFkk-5YRUhv-bkk51k.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VVkFkk-5YRUhv-bkk51k.png" alt="【Nのゾロアークex】 VVkFkk-5YRUhv-bkk51k">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VVkFkk-5YRUhv-bkk51k" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VVkFkk-5YRUhv-bkk51k/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 952900</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">HnnHLN-Kizupg-gH9Lig</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HnnHLN-Kizupg-gH9Lig.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HnnHLN-Kizupg-gH9Lig.png" alt="【Nのゾロアークex】 HnnHLN-Kizupg-gH9Lig">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HnnHLN-Kizupg-gH9Lig" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HnnHLN-Kizupg-gH9Lig/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953020</div>
+                <div class="sub">奈良県 / BOOKOFF奈良法華寺店</div>
+                <div class="code">VfkVkk-eWgrSC-FfFbV5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VfkVkk-eWgrSC-FfFbV5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VfkVkk-eWgrSC-FfFbV5.png" alt="【Nのゾロアークex】 VfkVkk-eWgrSC-FfFbV5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VfkVkk-eWgrSC-FfFbV5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VfkVkk-eWgrSC-FfFbV5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953021</div>
+                <div class="sub">愛知県 / 【CARDBOX】本の王国すまいるキング　安城店</div>
+                <div class="code">Vw5Vbb-QD2qT1-VVVkFd</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vw5Vbb-QD2qT1-VVVkFd.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vw5Vbb-QD2qT1-VVVkFd.png" alt="【Nのゾロアークex】 Vw5Vbb-QD2qT1-VVVkFd">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vw5Vbb-QD2qT1-VVVkFd" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vw5Vbb-QD2qT1-VVVkFd/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953022</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">5VVFVF-VdBLH6-kVkbVd</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5VVFVF-VdBLH6-kVkbVd.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5VVFVF-VdBLH6-kVkbVd.png" alt="【Nのゾロアークex】 5VVFVF-VdBLH6-kVkbVd">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5VVFVF-VdBLH6-kVkbVd" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5VVFVF-VdBLH6-kVkbVd/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953024</div>
+                <div class="sub">静岡県 / TSUTAYA三島店</div>
+                <div class="code">ppRy2p-HqAL3a-pMyy2X</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppRy2p-HqAL3a-pMyy2X.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppRy2p-HqAL3a-pMyy2X.png" alt="【Nのゾロアークex】 ppRy2p-HqAL3a-pMyy2X">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppRy2p-HqAL3a-pMyy2X" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppRy2p-HqAL3a-pMyy2X/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953025</div>
+                <div class="sub">大阪府 / トイコンプ　住道店</div>
+                <div class="code">VFV5k5-CbSHLq-5FkbFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VFV5k5-CbSHLq-5FkbFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VFV5k5-CbSHLq-5FkbFF.png" alt="【Nのゾロアークex】 VFV5k5-CbSHLq-5FkbFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VFV5k5-CbSHLq-5FkbFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VFV5k5-CbSHLq-5FkbFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953026</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">ypMMyM-Oww0S9-yRyX32</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ypMMyM-Oww0S9-yRyX32.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ypMMyM-Oww0S9-yRyX32.png" alt="【Nのゾロアークex】 ypMMyM-Oww0S9-yRyX32">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ypMMyM-Oww0S9-yRyX32" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ypMMyM-Oww0S9-yRyX32/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953026</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">HLngnQ-7KaWvH-Pnnig9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HLngnQ-7KaWvH-Pnnig9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HLngnQ-7KaWvH-Pnnig9.png" alt="【Nのゾロアークex】 HLngnQ-7KaWvH-Pnnig9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HLngnQ-7KaWvH-Pnnig9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HLngnQ-7KaWvH-Pnnig9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953027</div>
+                <div class="sub">三重県 / 【CARDBOX】津店</div>
+                <div class="code">FV5bk5-CDUZjz-kkVFvF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FV5bk5-CDUZjz-kkVFvF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FV5bk5-CDUZjz-kkVFvF.png" alt="【Nのゾロアークex】 FV5bk5-CDUZjz-kkVFvF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FV5bk5-CDUZjz-kkVFvF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FV5bk5-CDUZjz-kkVFvF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953028</div>
+                <div class="sub">愛媛県 / トレカショップ　ファンクス</div>
+                <div class="code">84DGcc-XK1cEE-8GcxDY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/84DGcc-XK1cEE-8GcxDY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/84DGcc-XK1cEE-8GcxDY.png" alt="【Nのゾロアークex】 84DGcc-XK1cEE-8GcxDY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=84DGcc-XK1cEE-8GcxDY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/84DGcc-XK1cEE-8GcxDY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953030</div>
+                <div class="sub">愛知県 / 竜星の嵐　名古屋店</div>
+                <div class="code">8xGxGx-bN6qcX-Y8G4c8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8xGxGx-bN6qcX-Y8G4c8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8xGxGx-bN6qcX-Y8G4c8.png" alt="【Nのゾロアークex】 8xGxGx-bN6qcX-Y8G4c8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8xGxGx-bN6qcX-Y8G4c8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8xGxGx-bN6qcX-Y8G4c8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953133</div>
+                <div class="sub">宮崎県 / カードショップ＠ほ～む。宮崎店</div>
+                <div class="code">Sp2yMM-nF7KUf-RpUpMy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Sp2yMM-nF7KUf-RpUpMy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Sp2yMM-nF7KUf-RpUpMy.png" alt="【Nのゾロアークex】 Sp2yMM-nF7KUf-RpUpMy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Sp2yMM-nF7KUf-RpUpMy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Sp2yMM-nF7KUf-RpUpMy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953241</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">J848cx-OIto70-ccxGKx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/J848cx-OIto70-ccxGKx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/J848cx-OIto70-ccxGKx.png" alt="【Nのゾロアークex】 J848cx-OIto70-ccxGKx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=J848cx-OIto70-ccxGKx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/J848cx-OIto70-ccxGKx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953278</div>
+                <div class="sub">静岡県 / トレカステーション佐鳴台店</div>
+                <div class="code">QHnN9n-mcjFvM-LiLPLg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QHnN9n-mcjFvM-LiLPLg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QHnN9n-mcjFvM-LiLPLg.png" alt="【Nのゾロアークex】 QHnN9n-mcjFvM-LiLPLg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QHnN9n-mcjFvM-LiLPLg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QHnN9n-mcjFvM-LiLPLg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-12 / Event 953279</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO町田店</div>
+                <div class="code">pE2MMR-mCDB0i-XMM23y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pE2MMR-mCDB0i-XMM23y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pE2MMR-mCDB0i-XMM23y.png" alt="【Nのゾロアークex】 pE2MMR-mCDB0i-XMM23y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pE2MMR-mCDB0i-XMM23y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pE2MMR-mCDB0i-XMM23y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-13 / Event 952807</div>
+                <div class="sub">東京都 / ドラゴンスター秋葉原駅前店</div>
+                <div class="code">8x4D4K-jE4fJZ-Gcx88c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8x4D4K-jE4fJZ-Gcx88c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8x4D4K-jE4fJZ-Gcx88c.png" alt="【Nのゾロアークex】 8x4D4K-jE4fJZ-Gcx88c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8x4D4K-jE4fJZ-Gcx88c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8x4D4K-jE4fJZ-Gcx88c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-13 / Event 952807</div>
+                <div class="sub">東京都 / ドラゴンスター秋葉原駅前店</div>
+                <div class="code">QPnL6n-Zjxhjy-LHLgH9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QPnL6n-Zjxhjy-LHLgH9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QPnL6n-Zjxhjy-LHLgH9.png" alt="【Nのゾロアークex】 QPnL6n-Zjxhjy-LHLgH9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QPnL6n-Zjxhjy-LHLgH9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QPnL6n-Zjxhjy-LHLgH9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-14 / Event 952901</div>
+                <div class="sub">神奈川県 / 【CARDBOX】青馬堂矢向店</div>
+                <div class="code">EpMUpS-MzSjjk-22RXy2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EpMUpS-MzSjjk-22RXy2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EpMUpS-MzSjjk-22RXy2.png" alt="【Nのゾロアークex】 EpMUpS-MzSjjk-22RXy2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EpMUpS-MzSjjk-22RXy2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EpMUpS-MzSjjk-22RXy2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-14 / Event 953033</div>
+                <div class="sub">大阪府 / トレカショップ　スキップ玉出店</div>
+                <div class="code">4JcD4a-4jy1TR-x8GJ4c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4JcD4a-4jy1TR-x8GJ4c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4JcD4a-4jy1TR-x8GJ4c.png" alt="【Nのゾロアークex】 4JcD4a-4jy1TR-x8GJ4c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4JcD4a-4jy1TR-x8GJ4c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4JcD4a-4jy1TR-x8GJ4c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-15 / Event 953034</div>
+                <div class="sub">広島県 / BOOKOFFSUPERBAZAAR54号広島八木店</div>
+                <div class="code">FdfV5F-Art0yG-kVkbkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FdfV5F-Art0yG-kVkbkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FdfV5F-Art0yG-kVkbkk.png" alt="【Nのゾロアークex】 FdfV5F-Art0yG-kVkbkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FdfV5F-Art0yG-kVkbkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FdfV5F-Art0yG-kVkbkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-15 / Event 953035</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋2号店</div>
+                <div class="code">XMy2RS-lBlGJp-M2y2Sp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XMy2RS-lBlGJp-M2y2Sp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XMy2RS-lBlGJp-M2y2Sp.png" alt="【Nのゾロアークex】 XMy2RS-lBlGJp-M2y2Sp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XMy2RS-lBlGJp-M2y2Sp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XMy2RS-lBlGJp-M2y2Sp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【Nのゾロアークex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-16 / Event 953036</div>
+                <div class="sub">愛知県 / Torecacamp大須店</div>
+                <div class="code">Vkf5vf-GKxb3Y-vF1kbF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Vkf5vf-GKxb3Y-vF1kbF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Vkf5vf-GKxb3Y-vF1kbF.png" alt="【Nのゾロアークex】 Vkf5vf-GKxb3Y-vF1kbF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Vkf5vf-GKxb3Y-vF1kbF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Vkf5vf-GKxb3Y-vF1kbF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
