@@ -1,0 +1,2232 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【タケルライコex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【タケルライコex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">105</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">103</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">105</div></div>
+        </div>
+        <a class="back-link" href="../../season3_weekly_report_2026-04-23_styled.html">週次レポートへ戻る</a>
+        <a class="back-link" href="../deck_gallery_2026-04-23.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952810</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">2RyySR-v5ghnH-XXEpyM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2RyySR-v5ghnH-XXEpyM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2RyySR-v5ghnH-XXEpyM.png" alt="【タケルライコex】 2RyySR-v5ghnH-XXEpyM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2RyySR-v5ghnH-XXEpyM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2RyySR-v5ghnH-XXEpyM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952810</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">99HHnP-Ht2k9h-9ggL9Q</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/99HHnP-Ht2k9h-9ggL9Q.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/99HHnP-Ht2k9h-9ggL9Q.png" alt="【タケルライコex】 99HHnP-Ht2k9h-9ggL9Q">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=99HHnP-Ht2k9h-9ggL9Q" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/99HHnP-Ht2k9h-9ggL9Q/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952811</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">ppS2ER-FT3pxz-yRMpMy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppS2ER-FT3pxz-yRMpMy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppS2ER-FT3pxz-yRMpMy.png" alt="【タケルライコex】 ppS2ER-FT3pxz-yRMpMy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppS2ER-FT3pxz-yRMpMy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppS2ER-FT3pxz-yRMpMy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952811</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">QgHH9g-IiB4D6-ggHLgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QgHH9g-IiB4D6-ggHLgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QgHH9g-IiB4D6-ggHLgn.png" alt="【タケルライコex】 QgHH9g-IiB4D6-ggHLgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QgHH9g-IiB4D6-ggHLgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QgHH9g-IiB4D6-ggHLgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952812</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">4Dxc88-qZWEi3-xGGJKc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4Dxc88-qZWEi3-xGGJKc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4Dxc88-qZWEi3-xGGJKc.png" alt="【タケルライコex】 4Dxc88-qZWEi3-xGGJKc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4Dxc88-qZWEi3-xGGJKc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4Dxc88-qZWEi3-xGGJKc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952673</div>
+                <div class="sub">北海道 / ブックオフ　札幌南2条店</div>
+                <div class="code">gLgLLi-jDgDcZ-gLHin9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gLgLLi-jDgDcZ-gLHin9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gLgLLi-jDgDcZ-gLHin9.png" alt="【タケルライコex】 gLgLLi-jDgDcZ-gLHin9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gLgLLi-jDgDcZ-gLHin9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gLgLLi-jDgDcZ-gLHin9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952691</div>
+                <div class="sub">岩手県 / ポケ堂北上店</div>
+                <div class="code">Ga8xcY-fm8Xgi-cxcK44</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ga8xcY-fm8Xgi-cxcK44.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ga8xcY-fm8Xgi-cxcK44.png" alt="【タケルライコex】 Ga8xcY-fm8Xgi-cxcK44">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ga8xcY-fm8Xgi-cxcK44" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ga8xcY-fm8Xgi-cxcK44/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952814</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">bkkd5V-Ku6fiI-5Fkkdk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bkkd5V-Ku6fiI-5Fkkdk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bkkd5V-Ku6fiI-5Fkkdk.png" alt="【タケルライコex】 bkkd5V-Ku6fiI-5Fkkdk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bkkd5V-Ku6fiI-5Fkkdk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bkkd5V-Ku6fiI-5Fkkdk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952814</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 西友大森店</div>
+                <div class="code">848D88-AgyjUf-cxY48G</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/848D88-AgyjUf-cxY48G.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/848D88-AgyjUf-cxY48G.png" alt="【タケルライコex】 848D88-AgyjUf-cxY48G">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=848D88-AgyjUf-cxY48G" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/848D88-AgyjUf-cxY48G/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952815</div>
+                <div class="sub">東京都 / 福福トレカ　秋葉原店</div>
+                <div class="code">QgHH9g-IiB4D6-ggHLgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QgHH9g-IiB4D6-ggHLgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QgHH9g-IiB4D6-ggHLgn.png" alt="【タケルライコex】 QgHH9g-IiB4D6-ggHLgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QgHH9g-IiB4D6-ggHLgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QgHH9g-IiB4D6-ggHLgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952815</div>
+                <div class="sub">東京都 / 福福トレカ　秋葉原店</div>
+                <div class="code">8Y4xGG-ET9vbv-4x4cDD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8Y4xGG-ET9vbv-4x4cDD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8Y4xGG-ET9vbv-4x4cDD.png" alt="【タケルライコex】 8Y4xGG-ET9vbv-4x4cDD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8Y4xGG-ET9vbv-4x4cDD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8Y4xGG-ET9vbv-4x4cDD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952815</div>
+                <div class="sub">東京都 / 福福トレカ　秋葉原店</div>
+                <div class="code">nnPgn9-e7ESlH-9LHNgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nnPgn9-e7ESlH-9LHNgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nnPgn9-e7ESlH-9LHNgn.png" alt="【タケルライコex】 nnPgn9-e7ESlH-9LHNgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nnPgn9-e7ESlH-9LHNgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nnPgn9-e7ESlH-9LHNgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952816</div>
+                <div class="sub">千葉県 / 蔦屋書店　茂原店</div>
+                <div class="code">HiNLgH-2foIw2-n9QLHg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HiNLgH-2foIw2-n9QLHg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HiNLgH-2foIw2-n9QLHg.png" alt="【タケルライコex】 HiNLgH-2foIw2-n9QLHg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HiNLgH-2foIw2-n9QLHg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HiNLgH-2foIw2-n9QLHg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952902</div>
+                <div class="sub">石川県 / 北国書林　松任店</div>
+                <div class="code">pM2y3X-mqjF4b-Ep2pMR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pM2y3X-mqjF4b-Ep2pMR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pM2y3X-mqjF4b-Ep2pMR.png" alt="【タケルライコex】 pM2y3X-mqjF4b-Ep2pMR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pM2y3X-mqjF4b-Ep2pMR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pM2y3X-mqjF4b-Ep2pMR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952903</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">848xxG-yCL3Uc-J8DcG8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/848xxG-yCL3Uc-J8DcG8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/848xxG-yCL3Uc-J8DcG8.png" alt="【タケルライコex】 848xxG-yCL3Uc-J8DcG8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=848xxG-yCL3Uc-J8DcG8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/848xxG-yCL3Uc-J8DcG8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952903</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">yp2MM2-hnQLyJ-RpyMyU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yp2MM2-hnQLyJ-RpyMyU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yp2MM2-hnQLyJ-RpyMyU.png" alt="【タケルライコex】 yp2MM2-hnQLyJ-RpyMyU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yp2MM2-hnQLyJ-RpyMyU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yp2MM2-hnQLyJ-RpyMyU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952904</div>
+                <div class="sub">神奈川県 / BOOKOFF イオン本牧店</div>
+                <div class="code">FkVbfF-wadDvB-kVVdv5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkVbfF-wadDvB-kVVdv5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkVbfF-wadDvB-kVVdv5.png" alt="【タケルライコex】 FkVbfF-wadDvB-kVVdv5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkVbfF-wadDvB-kVVdv5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkVbfF-wadDvB-kVVdv5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952904</div>
+                <div class="sub">神奈川県 / BOOKOFF イオン本牧店</div>
+                <div class="code">ii9ign-O2aAiv-nHgLnL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ii9ign-O2aAiv-nHgLnL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ii9ign-O2aAiv-nHgLnL.png" alt="【タケルライコex】 ii9ign-O2aAiv-nHgLnL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ii9ign-O2aAiv-nHgLnL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ii9ign-O2aAiv-nHgLnL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952906</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　川崎駅前</div>
+                <div class="code">4ca8x8-pKQbWy-c4G4xa</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4ca8x8-pKQbWy-c4G4xa.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4ca8x8-pKQbWy-c4G4xa.png" alt="【タケルライコex】 4ca8x8-pKQbWy-c4G4xa">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4ca8x8-pKQbWy-c4G4xa" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4ca8x8-pKQbWy-c4G4xa/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952907</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　本厚木駅前</div>
+                <div class="code">G4xcc8-njFDW8-8YxGac</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/G4xcc8-njFDW8-8YxGac.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/G4xcc8-njFDW8-8YxGac.png" alt="【タケルライコex】 G4xcc8-njFDW8-8YxGac">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=G4xcc8-njFDW8-8YxGac" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/G4xcc8-njFDW8-8YxGac/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953038</div>
+                <div class="sub">岐阜県 / 宝島　岐阜本店</div>
+                <div class="code">SpyRRy-azxO0E-2yEM2p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/SpyRRy-azxO0E-2yEM2p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/SpyRRy-azxO0E-2yEM2p.png" alt="【タケルライコex】 SpyRRy-azxO0E-2yEM2p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=SpyRRy-azxO0E-2yEM2p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/SpyRRy-azxO0E-2yEM2p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953038</div>
+                <div class="sub">岐阜県 / 宝島　岐阜本店</div>
+                <div class="code">QHn9LN-wQFKnP-igNLgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QHn9LN-wQFKnP-igNLgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QHn9LN-wQFKnP-igNLgn.png" alt="【タケルライコex】 QHn9LN-wQFKnP-igNLgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QHn9LN-wQFKnP-igNLgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QHn9LN-wQFKnP-igNLgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953040</div>
+                <div class="sub">岐阜県 / 三洋堂書店　みのかも店</div>
+                <div class="code">2RyUpM-Mw3MDq-E2XSpR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2RyUpM-Mw3MDq-E2XSpR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2RyUpM-Mw3MDq-E2XSpR.png" alt="【タケルライコex】 2RyUpM-Mw3MDq-E2XSpR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2RyUpM-Mw3MDq-E2XSpR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2RyUpM-Mw3MDq-E2XSpR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953040</div>
+                <div class="sub">岐阜県 / 三洋堂書店　みのかも店</div>
+                <div class="code">2pyR2X-tGSoLw-MUXMXp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2pyR2X-tGSoLw-MUXMXp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2pyR2X-tGSoLw-MUXMXp.png" alt="【タケルライコex】 2pyR2X-tGSoLw-MUXMXp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2pyR2X-tGSoLw-MUXMXp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2pyR2X-tGSoLw-MUXMXp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953041</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">HLHNn9-oNgYeP-HngQPH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HLHNn9-oNgYeP-HngQPH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HLHNn9-oNgYeP-HngQPH.png" alt="【タケルライコex】 HLHNn9-oNgYeP-HngQPH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HLHNn9-oNgYeP-HngQPH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HLHNn9-oNgYeP-HngQPH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953041</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">2yX2My-xqz8N4-RXRpME</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2yX2My-xqz8N4-RXRpME.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2yX2My-xqz8N4-RXRpME.png" alt="【タケルライコex】 2yX2My-xqz8N4-RXRpME">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2yX2My-xqz8N4-RXRpME" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2yX2My-xqz8N4-RXRpME/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953041</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">32pyy2-GF9Zk9-2MURpR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/32pyy2-GF9Zk9-2MURpR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/32pyy2-GF9Zk9-2MURpR.png" alt="【タケルライコex】 32pyy2-GF9Zk9-2MURpR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=32pyy2-GF9Zk9-2MURpR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/32pyy2-GF9Zk9-2MURpR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953041</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">LnngnL-7obZ2k-NHHQP9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LnngnL-7obZ2k-NHHQP9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LnngnL-7obZ2k-NHHQP9.png" alt="【タケルライコex】 LnngnL-7obZ2k-NHHQP9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LnngnL-7obZ2k-NHHQP9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LnngnL-7obZ2k-NHHQP9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953042</div>
+                <div class="sub">岐阜県 / カードショップ　海賊船-starch-</div>
+                <div class="code">Jxc448-ng8iXQ-GDDx8Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Jxc448-ng8iXQ-GDDx8Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Jxc448-ng8iXQ-GDDx8Y.png" alt="【タケルライコex】 Jxc448-ng8iXQ-GDDx8Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Jxc448-ng8iXQ-GDDx8Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Jxc448-ng8iXQ-GDDx8Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953042</div>
+                <div class="sub">岐阜県 / カードショップ　海賊船-starch-</div>
+                <div class="code">yXyMp2-JXEq4r-yRUESp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yXyMp2-JXEq4r-yRUESp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yXyMp2-JXEq4r-yRUESp.png" alt="【タケルライコex】 yXyMp2-JXEq4r-yRUESp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yXyMp2-JXEq4r-yRUESp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yXyMp2-JXEq4r-yRUESp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953043</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">3yR2Xy-kehaKh-SSEMpS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/3yR2Xy-kehaKh-SSEMpS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/3yR2Xy-kehaKh-SSEMpS.png" alt="【タケルライコex】 3yR2Xy-kehaKh-SSEMpS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=3yR2Xy-kehaKh-SSEMpS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/3yR2Xy-kehaKh-SSEMpS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953044</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">4488xa-A7LmqN-cGYcD8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4488xa-A7LmqN-cGYcD8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4488xa-A7LmqN-cGYcD8.png" alt="【タケルライコex】 4488xa-A7LmqN-cGYcD8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4488xa-A7LmqN-cGYcD8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4488xa-A7LmqN-cGYcD8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953044</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">F1bVf5-4qVWm3-dFkVkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/F1bVf5-4qVWm3-dFkVkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/F1bVf5-4qVWm3-dFkVkk.png" alt="【タケルライコex】 F1bVf5-4qVWm3-dFkVkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=F1bVf5-4qVWm3-dFkVkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/F1bVf5-4qVWm3-dFkVkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953045</div>
+                <div class="sub">香川県 / 竜星の嵐　高松店</div>
+                <div class="code">ac8YG8-emdMNT-48c8xx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ac8YG8-emdMNT-48c8xx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ac8YG8-emdMNT-48c8xx.png" alt="【タケルライコex】 ac8YG8-emdMNT-48c8xx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ac8YG8-emdMNT-48c8xx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ac8YG8-emdMNT-48c8xx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953139</div>
+                <div class="sub">佐賀県 / ブックオフプラス佐賀南部バイパス店</div>
+                <div class="code">8848J8-aBOMIn-4G4cxc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8848J8-aBOMIn-4G4cxc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8848J8-aBOMIn-4G4cxc.png" alt="【タケルライコex】 8848J8-aBOMIn-4G4cxc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8848J8-aBOMIn-4G4cxc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8848J8-aBOMIn-4G4cxc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953244</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">kk55Fb-2x9wlQ-kbv5VV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kk55Fb-2x9wlQ-kbv5VV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kk55Fb-2x9wlQ-kbv5VV.png" alt="【タケルライコex】 kk55Fb-2x9wlQ-kbv5VV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kk55Fb-2x9wlQ-kbv5VV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kk55Fb-2x9wlQ-kbv5VV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953285</div>
+                <div class="sub">愛知県 / BOOKOFF SUPER BAZAAR 248号西友岡崎店</div>
+                <div class="code">pppypM-iu3Cb0-M2ppRU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pppypM-iu3Cb0-M2ppRU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pppypM-iu3Cb0-M2ppRU.png" alt="【タケルライコex】 pppypM-iu3Cb0-M2ppRU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pppypM-iu3Cb0-M2ppRU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pppypM-iu3Cb0-M2ppRU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953286</div>
+                <div class="sub">神奈川県 / ブックオフ イトーヨカドー溝ノ口店</div>
+                <div class="code">nH9gnN-JE3BxL-LHHPnP</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nH9gnN-JE3BxL-LHHPnP.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nH9gnN-JE3BxL-LHHPnP.png" alt="【タケルライコex】 nH9gnN-JE3BxL-LHHPnP">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nH9gnN-JE3BxL-LHHPnP" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nH9gnN-JE3BxL-LHHPnP/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953286</div>
+                <div class="sub">神奈川県 / ブックオフ イトーヨカドー溝ノ口店</div>
+                <div class="code">55dFff-DYiIZE-fVkkFb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/55dFff-DYiIZE-fVkkFb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/55dFff-DYiIZE-fVkkFb.png" alt="【タケルライコex】 55dFff-DYiIZE-fVkkFb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=55dFff-DYiIZE-fVkkFb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/55dFff-DYiIZE-fVkkFb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952693</div>
+                <div class="sub">岩手県 / トーナメントセンターバトロコ　盛岡大通</div>
+                <div class="code">NH6HLg-87yCvO-9nnHgg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NH6HLg-87yCvO-9nnHgg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NH6HLg-87yCvO-9nnHgg.png" alt="【タケルライコex】 NH6HLg-87yCvO-9nnHgg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NH6HLg-87yCvO-9nnHgg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NH6HLg-87yCvO-9nnHgg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952739</div>
+                <div class="sub">栃木県 / トーナメントセンターバトロコ　小山駅前</div>
+                <div class="code">MUy2RX-KEY3cl-pMppER</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MUy2RX-KEY3cl-pMppER.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MUy2RX-KEY3cl-pMppER.png" alt="【タケルライコex】 MUy2RX-KEY3cl-pMppER">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MUy2RX-KEY3cl-pMppER" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MUy2RX-KEY3cl-pMppER/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952740</div>
+                <div class="sub">茨城県 / カードショップ裁龍</div>
+                <div class="code">nHHgP9-EB0faO-gnLiHH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nHHgP9-EB0faO-gnLiHH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nHHgP9-EB0faO-gnLiHH.png" alt="【タケルライコex】 nHHgP9-EB0faO-gnLiHH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nHHgP9-EB0faO-gnLiHH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nHHgP9-EB0faO-gnLiHH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952740</div>
+                <div class="sub">茨城県 / カードショップ裁龍</div>
+                <div class="code">py2ypM-t03dXd-UUSyRy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/py2ypM-t03dXd-UUSyRy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/py2ypM-t03dXd-UUSyRy.png" alt="【タケルライコex】 py2ypM-t03dXd-UUSyRy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=py2ypM-t03dXd-UUSyRy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/py2ypM-t03dXd-UUSyRy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952741</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">vbF5wv-KmikCP-FVkwFV</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vbF5wv-KmikCP-FVkwFV.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vbF5wv-KmikCP-FVkwFV.png" alt="【タケルライコex】 vbF5wv-KmikCP-FVkwFV">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vbF5wv-KmikCP-FVkwFV" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vbF5wv-KmikCP-FVkwFV/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952741</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">K4cxcx-lbuZXW-cYc8xG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/K4cxcx-lbuZXW-cYc8xG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/K4cxcx-lbuZXW-cYc8xG.png" alt="【タケルライコex】 K4cxcx-lbuZXW-cYc8xG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=K4cxcx-lbuZXW-cYc8xG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/K4cxcx-lbuZXW-cYc8xG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952741</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">L96HnL-12YhLn-9iQgLg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/L96HnL-12YhLn-9iQgLg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/L96HnL-12YhLn-9iQgLg.png" alt="【タケルライコex】 L96HnL-12YhLn-9iQgLg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=L96HnL-12YhLn-9iQgLg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/L96HnL-12YhLn-9iQgLg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952741</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">aG8cDx-SiDaqG-4c8K8Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/aG8cDx-SiDaqG-4c8K8Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/aG8cDx-SiDaqG-4c8K8Y.png" alt="【タケルライコex】 aG8cDx-SiDaqG-4c8K8Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=aG8cDx-SiDaqG-4c8K8Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/aG8cDx-SiDaqG-4c8K8Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952742</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">15k1FF-fzBbAc-VbbVff</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/15k1FF-fzBbAc-VbbVff.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/15k1FF-fzBbAc-VbbVff.png" alt="【タケルライコex】 15k1FF-fzBbAc-VbbVff">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=15k1FF-fzBbAc-VbbVff" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/15k1FF-fzBbAc-VbbVff/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952742</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">yRypMS-T7wPGq-3py22S</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yRypMS-T7wPGq-3py22S.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yRypMS-T7wPGq-3py22S.png" alt="【タケルライコex】 yRypMS-T7wPGq-3py22S">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yRypMS-T7wPGq-3py22S" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yRypMS-T7wPGq-3py22S/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952817</div>
+                <div class="sub">千葉県 / ブックオフスーパーバザー ららぽーとTOKYO-BAY North Gate店</div>
+                <div class="code">ngNL9i-IrQTyZ-Lggg9H</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ngNL9i-IrQTyZ-Lggg9H.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ngNL9i-IrQTyZ-Lggg9H.png" alt="【タケルライコex】 ngNL9i-IrQTyZ-Lggg9H">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ngNL9i-IrQTyZ-Lggg9H" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ngNL9i-IrQTyZ-Lggg9H/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952819</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">4xK8GY-JSVkE6-c8cDx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4xK8GY-JSVkE6-c8cDx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4xK8GY-JSVkE6-c8cDx8.png" alt="【タケルライコex】 4xK8GY-JSVkE6-c8cDx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4xK8GY-JSVkE6-c8cDx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4xK8GY-JSVkE6-c8cDx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952819</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">6Hgng9-3pc5PE-LH6gnn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/6Hgng9-3pc5PE-LH6gnn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/6Hgng9-3pc5PE-LH6gnn.png" alt="【タケルライコex】 6Hgng9-3pc5PE-LH6gnn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=6Hgng9-3pc5PE-LH6gnn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/6Hgng9-3pc5PE-LH6gnn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952820</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR 松戸駅東口店</div>
+                <div class="code">9HnN6g-dnEvO8-gnLnng</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9HnN6g-dnEvO8-gnLnng.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9HnN6g-dnEvO8-gnLnng.png" alt="【タケルライコex】 9HnN6g-dnEvO8-gnLnng">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9HnN6g-dnEvO8-gnLnng" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9HnN6g-dnEvO8-gnLnng/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952820</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR 松戸駅東口店</div>
+                <div class="code">R2ppyX-U3fKr4-22M3Mp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/R2ppyX-U3fKr4-22M3Mp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/R2ppyX-U3fKr4-22M3Mp.png" alt="【タケルライコex】 R2ppyX-U3fKr4-22M3Mp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=R2ppyX-U3fKr4-22M3Mp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/R2ppyX-U3fKr4-22M3Mp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952821</div>
+                <div class="sub">東京都 / ブックオフスーパーバザー　多摩永山</div>
+                <div class="code">VdkwF5-3bwMDJ-wVbFVw</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VdkwF5-3bwMDJ-wVbFVw.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VdkwF5-3bwMDJ-wVbFVw.png" alt="【タケルライコex】 VdkwF5-3bwMDJ-wVbFVw">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VdkwF5-3bwMDJ-wVbFVw" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VdkwF5-3bwMDJ-wVbFVw/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952822</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">a88GxG-m8ZY6A-xa4c48</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/a88GxG-m8ZY6A-xa4c48.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/a88GxG-m8ZY6A-xa4c48.png" alt="【タケルライコex】 a88GxG-m8ZY6A-xa4c48">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=a88GxG-m8ZY6A-xa4c48" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/a88GxG-m8ZY6A-xa4c48/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952822</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">ca8x8Y-CKljPI-4G44c8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ca8x8Y-CKljPI-4G44c8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ca8x8Y-CKljPI-4G44c8.png" alt="【タケルライコex】 ca8x8Y-CKljPI-4G44c8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ca8x8Y-CKljPI-4G44c8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ca8x8Y-CKljPI-4G44c8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952822</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　新津田沼駅前</div>
+                <div class="code">b1F5kd-AWvdEl-fk5VfF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/b1F5kd-AWvdEl-fk5VfF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/b1F5kd-AWvdEl-fk5VfF.png" alt="【タケルライコex】 b1F5kd-AWvdEl-fk5VfF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=b1F5kd-AWvdEl-fk5VfF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/b1F5kd-AWvdEl-fk5VfF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952823</div>
+                <div class="sub">東京都 / フルコンプ　PLAYERS CENTER　八王子本店</div>
+                <div class="code">V5fwdb-PlR40n-kFFkVF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/V5fwdb-PlR40n-kFFkVF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/V5fwdb-PlR40n-kFFkVF.png" alt="【タケルライコex】 V5fwdb-PlR40n-kFFkVF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=V5fwdb-PlR40n-kFFkVF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/V5fwdb-PlR40n-kFFkVF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952823</div>
+                <div class="sub">東京都 / フルコンプ　PLAYERS CENTER　八王子本店</div>
+                <div class="code">G8Kxa4-PvwdR6-xG8Dxc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/G8Kxa4-PvwdR6-xG8Dxc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/G8Kxa4-PvwdR6-xG8Dxc.png" alt="【タケルライコex】 G8Kxa4-PvwdR6-xG8Dxc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=G8Kxa4-PvwdR6-xG8Dxc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/G8Kxa4-PvwdR6-xG8Dxc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952908</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">inLHnN-rxo371-gnLg9n</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/inLHnN-rxo371-gnLg9n.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/inLHnN-rxo371-gnLg9n.png" alt="【タケルライコex】 inLHnN-rxo371-gnLg9n">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=inLHnN-rxo371-gnLg9n" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/inLHnN-rxo371-gnLg9n/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952909</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">xDYxGc-m6CS2W-c448YK</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xDYxGc-m6CS2W-c448YK.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xDYxGc-m6CS2W-c448YK.png" alt="【タケルライコex】 xDYxGc-m6CS2W-c448YK">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xDYxGc-m6CS2W-c448YK" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xDYxGc-m6CS2W-c448YK/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952910</div>
+                <div class="sub">神奈川県 / BOOKOFF　イオン橋本</div>
+                <div class="code">Dxc4cD-Gql14Q-8KJ8aG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Dxc4cD-Gql14Q-8KJ8aG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Dxc4cD-Gql14Q-8KJ8aG.png" alt="【タケルライコex】 Dxc4cD-Gql14Q-8KJ8aG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Dxc4cD-Gql14Q-8KJ8aG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Dxc4cD-Gql14Q-8KJ8aG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952910</div>
+                <div class="sub">神奈川県 / BOOKOFF　イオン橋本</div>
+                <div class="code">4KaxGx-IZJG1F-8844Gc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4KaxGx-IZJG1F-8844Gc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4KaxGx-IZJG1F-8844Gc.png" alt="【タケルライコex】 4KaxGx-IZJG1F-8844Gc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4KaxGx-IZJG1F-8844Gc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4KaxGx-IZJG1F-8844Gc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952910</div>
+                <div class="sub">神奈川県 / BOOKOFF　イオン橋本</div>
+                <div class="code">p2yyUM-jZMmZM-RXMpyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/p2yyUM-jZMmZM-RXMpyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/p2yyUM-jZMmZM-RXMpyp.png" alt="【タケルライコex】 p2yyUM-jZMmZM-RXMpyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=p2yyUM-jZMmZM-RXMpyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/p2yyUM-jZMmZM-RXMpyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952911</div>
+                <div class="sub">神奈川県 / BOOKOFFPLUS　アミューあつぎ店</div>
+                <div class="code">pM22UR-R5wWwz-yXySXM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pM22UR-R5wWwz-yXySXM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pM22UR-R5wWwz-yXySXM.png" alt="【タケルライコex】 pM22UR-R5wWwz-yXySXM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pM22UR-R5wWwz-yXySXM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pM22UR-R5wWwz-yXySXM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952913</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">84ccxY-vbYUuu-KccGx8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/84ccxY-vbYUuu-KccGx8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/84ccxY-vbYUuu-KccGx8.png" alt="【タケルライコex】 84ccxY-vbYUuu-KccGx8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=84ccxY-vbYUuu-KccGx8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/84ccxY-vbYUuu-KccGx8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952913</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">nQnHLn-9KRvV6-9g9g6g</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nQnHLn-9KRvV6-9g9g6g.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nQnHLn-9KRvV6-9g9g6g.png" alt="【タケルライコex】 nQnHLn-9KRvV6-9g9g6g">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nQnHLn-9KRvV6-9g9g6g" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nQnHLn-9KRvV6-9g9g6g/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952914</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">cKaJGc-J9KyIM-c8cx44</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cKaJGc-J9KyIM-c8cx44.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cKaJGc-J9KyIM-c8cx44.png" alt="【タケルライコex】 cKaJGc-J9KyIM-c8cx44">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cKaJGc-J9KyIM-c8cx44" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cKaJGc-J9KyIM-c8cx44/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952914</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">FbFVV5-S00jBY-Fkkf5w</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FbFVV5-S00jBY-Fkkf5w.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FbFVV5-S00jBY-Fkkf5w.png" alt="【タケルライコex】 FbFVV5-S00jBY-Fkkf5w">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FbFVV5-S00jBY-Fkkf5w" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FbFVV5-S00jBY-Fkkf5w/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952914</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">QLniHL-xo5BfZ-gHn9nL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QLniHL-xo5BfZ-gHn9nL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QLniHL-xo5BfZ-gHn9nL.png" alt="【タケルライコex】 QLniHL-xo5BfZ-gHn9nL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QLniHL-xo5BfZ-gHn9nL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QLniHL-xo5BfZ-gHn9nL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952914</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">nLHgLg-uT184p-NH69Hg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nLHgLg-uT184p-NH69Hg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nLHgLg-uT184p-NH69Hg.png" alt="【タケルライコex】 nLHgLg-uT184p-NH69Hg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nLHgLg-uT184p-NH69Hg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nLHgLg-uT184p-NH69Hg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953046</div>
+                <div class="sub">徳島県 / ビデオ100　徳島藍住店</div>
+                <div class="code">LngPgn-mhiWo5-6H9QLP</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LngPgn-mhiWo5-6H9QLP.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LngPgn-mhiWo5-6H9QLP.png" alt="【タケルライコex】 LngPgn-mhiWo5-6H9QLP">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LngPgn-mhiWo5-6H9QLP" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LngPgn-mhiWo5-6H9QLP/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953046</div>
+                <div class="sub">徳島県 / ビデオ100　徳島藍住店</div>
+                <div class="code">PHnH6L-OCU7i2-gng9gP</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/PHnH6L-OCU7i2-gng9gP.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/PHnH6L-OCU7i2-gng9gP.png" alt="【タケルライコex】 PHnH6L-OCU7i2-gng9gP">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=PHnH6L-OCU7i2-gng9gP" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/PHnH6L-OCU7i2-gng9gP/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953047</div>
+                <div class="sub">兵庫県 / ドラゴンスター神戸三宮店</div>
+                <div class="code">L9PgHn-Ym224O-6NnnNg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/L9PgHn-Ym224O-6NnnNg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/L9PgHn-Ym224O-6NnnNg.png" alt="【タケルライコex】 L9PgHn-Ym224O-6NnnNg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=L9PgHn-Ym224O-6NnnNg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/L9PgHn-Ym224O-6NnnNg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953048</div>
+                <div class="sub">奈良県 / BOOKOFF奈良法華寺店</div>
+                <div class="code">cxK8cK-uxHQcU-x48cGY</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cxK8cK-uxHQcU-x48cGY.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cxK8cK-uxHQcU-x48cGY.png" alt="【タケルライコex】 cxK8cK-uxHQcU-x48cGY">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cxK8cK-uxHQcU-x48cGY" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cxK8cK-uxHQcU-x48cGY/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953048</div>
+                <div class="sub">奈良県 / BOOKOFF奈良法華寺店</div>
+                <div class="code">xGJ48c-QEPxFj-8cDYKx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xGJ48c-QEPxFj-8cDYKx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xGJ48c-QEPxFj-8cDYKx.png" alt="【タケルライコex】 xGJ48c-QEPxFj-8cDYKx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xGJ48c-QEPxFj-8cDYKx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xGJ48c-QEPxFj-8cDYKx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953049</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">acGY8c-80ehME-x88KY4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/acGY8c-80ehME-x88KY4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/acGY8c-80ehME-x88KY4.png" alt="【タケルライコex】 acGY8c-80ehME-x88KY4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=acGY8c-80ehME-x88KY4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/acGY8c-80ehME-x88KY4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953050</div>
+                <div class="sub">島根県 / CARDBOXアリオン塩冶店</div>
+                <div class="code">b1kkkF-5uwLWd-5Vbk5w</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/b1kkkF-5uwLWd-5Vbk5w.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/b1kkkF-5uwLWd-5Vbk5w.png" alt="【タケルライコex】 b1kkkF-5uwLWd-5Vbk5w">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=b1kkkF-5uwLWd-5Vbk5w" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/b1kkkF-5uwLWd-5Vbk5w/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953050</div>
+                <div class="sub">島根県 / CARDBOXアリオン塩冶店</div>
+                <div class="code">fkVvF5-l3Pebl-1bf5kf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/fkVvF5-l3Pebl-1bf5kf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/fkVvF5-l3Pebl-1bf5kf.png" alt="【タケルライコex】 fkVvF5-l3Pebl-1bf5kf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=fkVvF5-l3Pebl-1bf5kf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/fkVvF5-l3Pebl-1bf5kf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953052</div>
+                <div class="sub">愛媛県 / カードゲームショップ　オレタン松山店</div>
+                <div class="code">YDcxa8-OzSCPS-G8x4xc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/YDcxa8-OzSCPS-G8x4xc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/YDcxa8-OzSCPS-G8x4xc.png" alt="【タケルライコex】 YDcxa8-OzSCPS-G8x4xc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=YDcxa8-OzSCPS-G8x4xc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/YDcxa8-OzSCPS-G8x4xc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953052</div>
+                <div class="sub">愛媛県 / カードゲームショップ　オレタン松山店</div>
+                <div class="code">yyy2ER-anIA3e-2yyMpM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yyy2ER-anIA3e-2yyMpM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yyy2ER-anIA3e-2yyMpM.png" alt="【タケルライコex】 yyy2ER-anIA3e-2yyMpM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yyy2ER-anIA3e-2yyMpM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yyy2ER-anIA3e-2yyMpM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953053</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">L6N99N-oSLerI-gHnnHg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/L6N99N-oSLerI-gHnnHg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/L6N99N-oSLerI-gHnnHg.png" alt="【タケルライコex】 L6N99N-oSLerI-gHnnHg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=L6N99N-oSLerI-gHnnHg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/L6N99N-oSLerI-gHnnHg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953053</div>
+                <div class="sub">京都府 / カードボックス京都店</div>
+                <div class="code">FVVvdV-3P2iNK-kbFbfk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FVVvdV-3P2iNK-kbFbfk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FVVvdV-3P2iNK-kbFbfk.png" alt="【タケルライコex】 FVVvdV-3P2iNK-kbFbfk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FVVvdV-3P2iNK-kbFbfk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FVVvdV-3P2iNK-kbFbfk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953054</div>
+                <div class="sub">岡山県 / カードゲームショップ オレタン 岡山本店</div>
+                <div class="code">k515Fk-qwtf31-FVFwwb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k515Fk-qwtf31-FVFwwb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k515Fk-qwtf31-FVFwwb.png" alt="【タケルライコex】 k515Fk-qwtf31-FVFwwb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k515Fk-qwtf31-FVFwwb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k515Fk-qwtf31-FVFwwb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953054</div>
+                <div class="sub">岡山県 / カードゲームショップ オレタン 岡山本店</div>
+                <div class="code">G8cxxG-1gMzQg-4Kac8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/G8cxxG-1gMzQg-4Kac8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/G8cxxG-1gMzQg-4Kac8c.png" alt="【タケルライコex】 G8cxxG-1gMzQg-4Kac8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=G8cxxG-1gMzQg-4Kac8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/G8cxxG-1gMzQg-4Kac8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953054</div>
+                <div class="sub">岡山県 / カードゲームショップ オレタン 岡山本店</div>
+                <div class="code">9ggH6N-dY21Hm-PnnLQ9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9ggH6N-dY21Hm-PnnLQ9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9ggH6N-dY21Hm-PnnLQ9.png" alt="【タケルライコex】 9ggH6N-dY21Hm-PnnLQ9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9ggH6N-dY21Hm-PnnLQ9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9ggH6N-dY21Hm-PnnLQ9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953054</div>
+                <div class="sub">岡山県 / カードゲームショップ オレタン 岡山本店</div>
+                <div class="code">MX223R-Zn9gu2-pEM3py</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MX223R-Zn9gu2-pEM3py.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MX223R-Zn9gu2-pEM3py.png" alt="【タケルライコex】 MX223R-Zn9gu2-pEM3py">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MX223R-Zn9gu2-pEM3py" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MX223R-Zn9gu2-pEM3py/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953054</div>
+                <div class="sub">岡山県 / カードゲームショップ オレタン 岡山本店</div>
+                <div class="code">yMMSp3-31ephy-2Rpyyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yMMSp3-31ephy-2Rpyyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yMMSp3-31ephy-2Rpyyy.png" alt="【タケルライコex】 yMMSp3-31ephy-2Rpyyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yMMSp3-31ephy-2Rpyyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yMMSp3-31ephy-2Rpyyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953055</div>
+                <div class="sub">山口県 / 【CARDBOX】下関店</div>
+                <div class="code">DcY44c-a5r7gA-xG8Kxx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/DcY44c-a5r7gA-xG8Kxx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/DcY44c-a5r7gA-xG8Kxx.png" alt="【タケルライコex】 DcY44c-a5r7gA-xG8Kxx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=DcY44c-a5r7gA-xG8Kxx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/DcY44c-a5r7gA-xG8Kxx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953055</div>
+                <div class="sub">山口県 / 【CARDBOX】下関店</div>
+                <div class="code">UpRSy2-KofaG7-3XMyMR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/UpRSy2-KofaG7-3XMyMR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/UpRSy2-KofaG7-3XMyMR.png" alt="【タケルライコex】 UpRSy2-KofaG7-3XMyMR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=UpRSy2-KofaG7-3XMyMR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/UpRSy2-KofaG7-3XMyMR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953056</div>
+                <div class="sub">愛知県 / 竜星の嵐　名古屋店</div>
+                <div class="code">gLgL9H-AbzjXU-nHiLLi</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gLgL9H-AbzjXU-nHiLLi.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gLgL9H-AbzjXU-nHiLLi.png" alt="【タケルライコex】 gLgL9H-AbzjXU-nHiLLi">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gLgL9H-AbzjXU-nHiLLi" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gLgL9H-AbzjXU-nHiLLi/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953056</div>
+                <div class="sub">愛知県 / 竜星の嵐　名古屋店</div>
+                <div class="code">XyyRUp-L4GWcb-3p22RM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XyyRUp-L4GWcb-3p22RM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XyyRUp-L4GWcb-3p22RM.png" alt="【タケルライコex】 XyyRUp-L4GWcb-3p22RM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XyyRUp-L4GWcb-3p22RM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XyyRUp-L4GWcb-3p22RM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953140</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">SSypRM-vr3ODG-Uy2yyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/SSypRM-vr3ODG-Uy2yyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/SSypRM-vr3ODG-Uy2yyy.png" alt="【タケルライコex】 SSypRM-vr3ODG-Uy2yyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=SSypRM-vr3ODG-Uy2yyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/SSypRM-vr3ODG-Uy2yyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953140</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">gLgL9n-nma3yC-HL6gnQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gLgL9n-nma3yC-HL6gnQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gLgL9n-nma3yC-HL6gnQ.png" alt="【タケルライコex】 gLgL9n-nma3yC-HL6gnQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gLgL9n-nma3yC-HL6gnQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gLgL9n-nma3yC-HL6gnQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953140</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">yU2RpX-olC27q-MXR3yM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yU2RpX-olC27q-MXR3yM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yU2RpX-olC27q-MXR3yM.png" alt="【タケルライコex】 yU2RpX-olC27q-MXR3yM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yU2RpX-olC27q-MXR3yM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yU2RpX-olC27q-MXR3yM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953141</div>
+                <div class="sub">鹿児島県 / カードショップ彩々 国分店</div>
+                <div class="code">84cG8K-q1iLg8-xJ4x8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/84cG8K-q1iLg8-xJ4x8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/84cG8K-q1iLg8-xJ4x8c.png" alt="【タケルライコex】 84cG8K-q1iLg8-xJ4x8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=84cG8K-q1iLg8-xJ4x8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/84cG8K-q1iLg8-xJ4x8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953245</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">QgHH9g-IiB4D6-ggHLgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/QgHH9g-IiB4D6-ggHLgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/QgHH9g-IiB4D6-ggHLgn.png" alt="【タケルライコex】 QgHH9g-IiB4D6-ggHLgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=QgHH9g-IiB4D6-ggHLgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/QgHH9g-IiB4D6-ggHLgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953245</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">ac4K44-ILvpP4-xGx8xc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ac4K44-ILvpP4-xGx8xc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ac4K44-ILvpP4-xGx8xc.png" alt="【タケルライコex】 ac4K44-ILvpP4-xGx8xc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ac4K44-ILvpP4-xGx8xc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ac4K44-ILvpP4-xGx8xc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953246</div>
+                <div class="sub">東京都 / ブックオフ武蔵小金井</div>
+                <div class="code">wfVF5F-DezbKc-kVb5F5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/wfVF5F-DezbKc-kVb5F5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/wfVF5F-DezbKc-kVb5F5.png" alt="【タケルライコex】 wfVF5F-DezbKc-kVb5F5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=wfVF5F-DezbKc-kVb5F5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/wfVF5F-DezbKc-kVb5F5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953247</div>
+                <div class="sub">北海道 / バトロコミニ苫小牧バイパス店</div>
+                <div class="code">g9HLnL-ttvNFZ-nnNHi9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/g9HLnL-ttvNFZ-nnNHi9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/g9HLnL-ttvNFZ-nnNHi9.png" alt="【タケルライコex】 g9HLnL-ttvNFZ-nnNHi9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=g9HLnL-ttvNFZ-nnNHi9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/g9HLnL-ttvNFZ-nnNHi9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953248</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">5VV5b1-yOIqv8-FFFVbk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5VV5b1-yOIqv8-FFFVbk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5VV5b1-yOIqv8-FFFVbk.png" alt="【タケルライコex】 5VV5b1-yOIqv8-FFFVbk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5VV5b1-yOIqv8-FFFVbk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5VV5b1-yOIqv8-FFFVbk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-21 / Event 952824</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">pRRyM3-KqMble-MMyp2p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pRRyM3-KqMble-MMyp2p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pRRyM3-KqMble-MMyp2p.png" alt="【タケルライコex】 pRRyM3-KqMble-MMyp2p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pRRyM3-KqMble-MMyp2p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pRRyM3-KqMble-MMyp2p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-23 / Event 953058</div>
+                <div class="sub">大阪府 / ドラゴンスター日本橋3号店</div>
+                <div class="code">Xy2ppR-GWoFg9-XM2ypy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Xy2ppR-GWoFg9-XM2ypy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Xy2ppR-GWoFg9-XM2ypy.png" alt="【タケルライコex】 Xy2ppR-GWoFg9-XM2ypy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Xy2ppR-GWoFg9-XM2ypy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Xy2ppR-GWoFg9-XM2ypy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【タケルライコex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-23 / Event 953290</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">HHnnng-QxLkjw-n9nQNH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HHnnng-QxLkjw-n9nQNH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HHnnng-QxLkjw-n9nQNH.png" alt="【タケルライコex】 HHnnng-QxLkjw-n9nQNH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HHnnng-QxLkjw-n9nQNH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HHnnng-QxLkjw-n9nQNH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>

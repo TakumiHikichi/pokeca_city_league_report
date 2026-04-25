@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【メガガルーラex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【メガガルーラex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">51</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">51</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">51</div></div>
+        </div>
+        <a class="back-link" href="../../season3_weekly_report_2026-04-23_styled.html">週次レポートへ戻る</a>
+        <a class="back-link" href="../deck_gallery_2026-04-23.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952810</div>
+                <div class="sub">東京都 / トーナメントセンターバトロコ　高田馬場</div>
+                <div class="code">2ypyRy-P15BT6-RyXM3E</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2ypyRy-P15BT6-RyXM3E.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2ypyRy-P15BT6-RyXM3E.png" alt="【メガガルーラex】 2ypyRy-P15BT6-RyXM3E">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2ypyRy-P15BT6-RyXM3E" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2ypyRy-P15BT6-RyXM3E/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952811</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">Fkbbv5-X5qi9F-kkVbk5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fkbbv5-X5qi9F-kkVbk5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fkbbv5-X5qi9F-kkVbk5.png" alt="【メガガルーラex】 Fkbbv5-X5qi9F-kkVbk5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fkbbv5-X5qi9F-kkVbk5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fkbbv5-X5qi9F-kkVbk5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952811</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">2MESp2-aLp2h6-R2SEyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2MESp2-aLp2h6-R2SEyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2MESp2-aLp2h6-R2SEyp.png" alt="【メガガルーラex】 2MESp2-aLp2h6-R2SEyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2MESp2-aLp2h6-R2SEyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2MESp2-aLp2h6-R2SEyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952812</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">x8cxJ4-MkNafE-8Gc8cx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/x8cxJ4-MkNafE-8Gc8cx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/x8cxJ4-MkNafE-8Gc8cx.png" alt="【メガガルーラex】 x8cxJ4-MkNafE-8Gc8cx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=x8cxJ4-MkNafE-8Gc8cx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/x8cxJ4-MkNafE-8Gc8cx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952812</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">bkdbF5-ttJXly-kFVFkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/bkdbF5-ttJXly-kFVFkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/bkdbF5-ttJXly-kFVFkk.png" alt="【メガガルーラex】 bkdbF5-ttJXly-kFVFkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=bkdbF5-ttJXly-kFVFkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/bkdbF5-ttJXly-kFVFkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952673</div>
+                <div class="sub">北海道 / ブックオフ　札幌南2条店</div>
+                <div class="code">cccKD4-6CPn55-a8Gxxc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cccKD4-6CPn55-a8Gxxc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cccKD4-6CPn55-a8Gxxc.png" alt="【メガガルーラex】 cccKD4-6CPn55-a8Gxxc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cccKD4-6CPn55-a8Gxxc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cccKD4-6CPn55-a8Gxxc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952691</div>
+                <div class="sub">岩手県 / ポケ堂北上店</div>
+                <div class="code">5dFkdF-XEKqRj-VkVbFk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5dFkdF-XEKqRj-VkVbFk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5dFkdF-XEKqRj-VkVbFk.png" alt="【メガガルーラex】 5dFkdF-XEKqRj-VkVbFk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5dFkdF-XEKqRj-VkVbFk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5dFkdF-XEKqRj-VkVbFk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952692</div>
+                <div class="sub">福島県 / カードゲームのシーガル郡山店</div>
+                <div class="code">LHLPgL-oz7G7B-PnHH9L</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LHLPgL-oz7G7B-PnHH9L.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LHLPgL-oz7G7B-PnHH9L.png" alt="【メガガルーラex】 LHLPgL-oz7G7B-PnHH9L">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LHLPgL-oz7G7B-PnHH9L" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LHLPgL-oz7G7B-PnHH9L/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952738</div>
+                <div class="sub">埼玉県 / トレカショップKCC</div>
+                <div class="code">EyMUp2-6qckJ0-ypMpRp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EyMUp2-6qckJ0-ypMpRp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EyMUp2-6qckJ0-ypMpRp.png" alt="【メガガルーラex】 EyMUp2-6qckJ0-ypMpRp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EyMUp2-6qckJ0-ypMpRp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EyMUp2-6qckJ0-ypMpRp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952813</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">F1Fbkw-QuxIu5-5V5Ff1</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/F1Fbkw-QuxIu5-5V5Ff1.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/F1Fbkw-QuxIu5-5V5Ff1.png" alt="【メガガルーラex】 F1Fbkw-QuxIu5-5V5Ff1">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=F1Fbkw-QuxIu5-5V5Ff1" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/F1Fbkw-QuxIu5-5V5Ff1/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952813</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">Myp2pp-Aympwy-R2SyXU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Myp2pp-Aympwy-R2SyXU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Myp2pp-Aympwy-R2SyXU.png" alt="【メガガルーラex】 Myp2pp-Aympwy-R2SyXU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Myp2pp-Aympwy-R2SyXU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Myp2pp-Aympwy-R2SyXU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952906</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　川崎駅前</div>
+                <div class="code">FkVF1b-UdADgc-kV5F11</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkVF1b-UdADgc-kV5F11.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkVF1b-UdADgc-kV5F11.png" alt="【メガガルーラex】 FkVF1b-UdADgc-kV5F11">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkVF1b-UdADgc-kV5F11" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkVF1b-UdADgc-kV5F11/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952907</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　本厚木駅前</div>
+                <div class="code">p2UpRM-p2nmQM-2pMyyR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/p2UpRM-p2nmQM-2pMyyR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/p2UpRM-p2nmQM-2pMyyR.png" alt="【メガガルーラex】 p2UpRM-p2nmQM-2pMyyR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=p2UpRM-p2nmQM-2pMyyR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/p2UpRM-p2nmQM-2pMyyR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953040</div>
+                <div class="sub">岐阜県 / 三洋堂書店　みのかも店</div>
+                <div class="code">nQH9ng-mcWkEp-niLPHn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nQH9ng-mcWkEp-niLPHn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nQH9ng-mcWkEp-niLPHn.png" alt="【メガガルーラex】 nQH9ng-mcWkEp-niLPHn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nQH9ng-mcWkEp-niLPHn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nQH9ng-mcWkEp-niLPHn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953043</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">pMyMEp-iw3mKp-RMSU2y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pMyMEp-iw3mKp-RMSU2y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pMyMEp-iw3mKp-RMSU2y.png" alt="【メガガルーラex】 pMyMEp-iw3mKp-RMSU2y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pMyMEp-iw3mKp-RMSU2y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pMyMEp-iw3mKp-RMSU2y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953044</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">vV5dbF-HoIrrP-vkVwkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/vV5dbF-HoIrrP-vkVwkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/vV5dbF-HoIrrP-vkVwkk.png" alt="【メガガルーラex】 vV5dbF-HoIrrP-vkVwkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=vV5dbF-HoIrrP-vkVwkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/vV5dbF-HoIrrP-vkVwkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953044</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">cG88aD-Fr49mG-cxcxc4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cG88aD-Fr49mG-cxcxc4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cG88aD-Fr49mG-cxcxc4.png" alt="【メガガルーラex】 cG88aD-Fr49mG-cxcxc4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cG88aD-Fr49mG-cxcxc4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cG88aD-Fr49mG-cxcxc4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953044</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">nH9gHn-4ICowL-inLLLg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nH9gHn-4ICowL-inLLLg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nH9gHn-4ICowL-inLLLg.png" alt="【メガガルーラex】 nH9gHn-4ICowL-inLLLg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nH9gHn-4ICowL-inLLLg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nH9gHn-4ICowL-inLLLg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953137</div>
+                <div class="sub">熊本県 / 遊ING　熊本上通り店</div>
+                <div class="code">giQ99n-pJU7Io-nNgPHL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/giQ99n-pJU7Io-nNgPHL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/giQ99n-pJU7Io-nNgPHL.png" alt="【メガガルーラex】 giQ99n-pJU7Io-nNgPHL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=giQ99n-pJU7Io-nNgPHL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/giQ99n-pJU7Io-nNgPHL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953244</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">VFVdF5-IRXBkU-bkVk1F</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/VFVdF5-IRXBkU-bkVk1F.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/VFVdF5-IRXBkU-bkVk1F.png" alt="【メガガルーラex】 VFVdF5-IRXBkU-bkVk1F">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=VFVdF5-IRXBkU-bkVk1F" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/VFVdF5-IRXBkU-bkVk1F/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952693</div>
+                <div class="sub">岩手県 / トーナメントセンターバトロコ　盛岡大通</div>
+                <div class="code">XpEypp-A0Lzw5-XSyRpp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XpEypp-A0Lzw5-XSyRpp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XpEypp-A0Lzw5-XSyRpp.png" alt="【メガガルーラex】 XpEypp-A0Lzw5-XSyRpp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XpEypp-A0Lzw5-XSyRpp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XpEypp-A0Lzw5-XSyRpp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952739</div>
+                <div class="sub">栃木県 / トーナメントセンターバトロコ　小山駅前</div>
+                <div class="code">xK8cc4-7mv6w3-8x48aG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xK8cc4-7mv6w3-8x48aG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xK8cc4-7mv6w3-8x48aG.png" alt="【メガガルーラex】 xK8cc4-7mv6w3-8x48aG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xK8cc4-7mv6w3-8x48aG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xK8cc4-7mv6w3-8x48aG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952740</div>
+                <div class="sub">茨城県 / カードショップ裁龍</div>
+                <div class="code">c84xcG-4UEtX8-aGDx8D</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c84xcG-4UEtX8-aGDx8D.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c84xcG-4UEtX8-aGDx8D.png" alt="【メガガルーラex】 c84xcG-4UEtX8-aGDx8D">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c84xcG-4UEtX8-aGDx8D" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c84xcG-4UEtX8-aGDx8D/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952741</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">5VFk1V-GTvm0R-vkbF51</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5VFk1V-GTvm0R-vkbF51.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5VFk1V-GTvm0R-vkbF51.png" alt="【メガガルーラex】 5VFk1V-GTvm0R-vkbF51">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5VFk1V-GTvm0R-vkbF51" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5VFk1V-GTvm0R-vkbF51/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952741</div>
+                <div class="sub">茨城県 / Duel Stade Ganryu　ひたち野うしく店</div>
+                <div class="code">D4xYc8-zuFSOI-xx8G4a</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/D4xYc8-zuFSOI-xx8G4a.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/D4xYc8-zuFSOI-xx8G4a.png" alt="【メガガルーラex】 D4xYc8-zuFSOI-xx8G4a">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=D4xYc8-zuFSOI-xx8G4a" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/D4xYc8-zuFSOI-xx8G4a/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952742</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">4axxGc-aXGzP4-cK88cc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4axxGc-aXGzP4-cK88cc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4axxGc-aXGzP4-cK88cc.png" alt="【メガガルーラex】 4axxGc-aXGzP4-cK88cc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4axxGc-aXGzP4-cK88cc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4axxGc-aXGzP4-cK88cc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952742</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">V5kbvw-UEoHbf-1FwFF5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/V5kbvw-UEoHbf-1FwFF5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/V5kbvw-UEoHbf-1FwFF5.png" alt="【メガガルーラex】 V5kbvw-UEoHbf-1FwFF5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=V5kbvw-UEoHbf-1FwFF5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/V5kbvw-UEoHbf-1FwFF5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952817</div>
+                <div class="sub">千葉県 / ブックオフスーパーバザー ららぽーとTOKYO-BAY North Gate店</div>
+                <div class="code">gnHQHH-MbGaoX-Hig9Ln</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gnHQHH-MbGaoX-Hig9Ln.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gnHQHH-MbGaoX-Hig9Ln.png" alt="【メガガルーラex】 gnHQHH-MbGaoX-Hig9Ln">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gnHQHH-MbGaoX-Hig9Ln" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gnHQHH-MbGaoX-Hig9Ln/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952819</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">K88GDx-G5I6xw-xKa8c4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/K88GDx-G5I6xw-xKa8c4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/K88GDx-G5I6xw-xKa8c4.png" alt="【メガガルーラex】 K88GDx-G5I6xw-xKa8c4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=K88GDx-G5I6xw-xKa8c4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/K88GDx-G5I6xw-xKa8c4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952821</div>
+                <div class="sub">東京都 / ブックオフスーパーバザー　多摩永山</div>
+                <div class="code">yp2Eyp-Sjbazb-URMSXy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yp2Eyp-Sjbazb-URMSXy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yp2Eyp-Sjbazb-URMSXy.png" alt="【メガガルーラex】 yp2Eyp-Sjbazb-URMSXy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yp2Eyp-Sjbazb-URMSXy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yp2Eyp-Sjbazb-URMSXy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952908</div>
+                <div class="sub">新潟県 / トイニティ長岡E・PLAZA店</div>
+                <div class="code">KDc4c8-uIubmc-8GcGxc</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/KDc4c8-uIubmc-8GcGxc.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/KDc4c8-uIubmc-8GcGxc.png" alt="【メガガルーラex】 KDc4c8-uIubmc-8GcGxc">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=KDc4c8-uIubmc-8GcGxc" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/KDc4c8-uIubmc-8GcGxc/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952909</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">dFvwkb-lrz40p-V51FVk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/dFvwkb-lrz40p-V51FVk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/dFvwkb-lrz40p-V51FVk.png" alt="【メガガルーラex】 dFvwkb-lrz40p-V51FVk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=dFvwkb-lrz40p-V51FVk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/dFvwkb-lrz40p-V51FVk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952909</div>
+                <div class="sub">神奈川県 / BOOKOFFSUPERBAZAARノースポート・モール店</div>
+                <div class="code">HgH9gn-W1dp9e-iLNniL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HgH9gn-W1dp9e-iLNniL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HgH9gn-W1dp9e-iLNniL.png" alt="【メガガルーラex】 HgH9gn-W1dp9e-iLNniL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HgH9gn-W1dp9e-iLNniL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HgH9gn-W1dp9e-iLNniL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952911</div>
+                <div class="sub">神奈川県 / BOOKOFFPLUS　アミューあつぎ店</div>
+                <div class="code">gN6ngQ-b4OJgT-9NP9HL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gN6ngQ-b4OJgT-9NP9HL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gN6ngQ-b4OJgT-9NP9HL.png" alt="【メガガルーラex】 gN6ngQ-b4OJgT-9NP9HL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gN6ngQ-b4OJgT-9NP9HL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gN6ngQ-b4OJgT-9NP9HL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952912</div>
+                <div class="sub">山梨県 / BOOKOFFSUPERBAZAAR甲府貢川店</div>
+                <div class="code">Ga4Yx4-0Rxt6B-ca88xx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ga4Yx4-0Rxt6B-ca88xx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ga4Yx4-0Rxt6B-ca88xx.png" alt="【メガガルーラex】 Ga4Yx4-0Rxt6B-ca88xx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ga4Yx4-0Rxt6B-ca88xx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ga4Yx4-0Rxt6B-ca88xx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952913</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">LHnQgL-OBbUUA-9L6gNg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LHnQgL-OBbUUA-9L6gNg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LHnQgL-OBbUUA-9L6gNg.png" alt="【メガガルーラex】 LHnQgL-OBbUUA-9L6gNg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LHnQgL-OBbUUA-9L6gNg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LHnQgL-OBbUUA-9L6gNg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952913</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">3ppXyS-y3J5bA-3XpR2M</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/3ppXyS-y3J5bA-3XpR2M.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/3ppXyS-y3J5bA-3XpR2M.png" alt="【メガガルーラex】 3ppXyS-y3J5bA-3XpR2M">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=3ppXyS-y3J5bA-3XpR2M" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/3ppXyS-y3J5bA-3XpR2M/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952914</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">kbkFkw-4q4vHR-Fk5kVv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kbkFkw-4q4vHR-Fk5kVv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kbkFkw-4q4vHR-Fk5kVv.png" alt="【メガガルーラex】 kbkFkw-4q4vHR-Fk5kVv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kbkFkw-4q4vHR-Fk5kVv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kbkFkw-4q4vHR-Fk5kVv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952914</div>
+                <div class="sub">神奈川県 / チェルモサード</div>
+                <div class="code">gg6gQn-QCTDQj-Q9inHL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gg6gQn-QCTDQj-Q9inHL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gg6gQn-QCTDQj-Q9inHL.png" alt="【メガガルーラex】 gg6gQn-QCTDQj-Q9inHL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gg6gQn-QCTDQj-Q9inHL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gg6gQn-QCTDQj-Q9inHL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953047</div>
+                <div class="sub">兵庫県 / ドラゴンスター神戸三宮店</div>
+                <div class="code">xDx8Yx-4wvGDz-c4DaG8</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/xDx8Yx-4wvGDz-c4DaG8.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/xDx8Yx-4wvGDz-c4DaG8.png" alt="【メガガルーラex】 xDx8Yx-4wvGDz-c4DaG8">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=xDx8Yx-4wvGDz-c4DaG8" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/xDx8Yx-4wvGDz-c4DaG8/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953049</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">48G8Yc-EJe6Pb-xa8cxx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/48G8Yc-EJe6Pb-xa8cxx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/48G8Yc-EJe6Pb-xa8cxx.png" alt="【メガガルーラex】 48G8Yc-EJe6Pb-xa8cxx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=48G8Yc-EJe6Pb-xa8cxx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/48G8Yc-EJe6Pb-xa8cxx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953050</div>
+                <div class="sub">島根県 / CARDBOXアリオン塩冶店</div>
+                <div class="code">ccxJG8-BSuA8A-K4c4Jx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ccxJG8-BSuA8A-K4c4Jx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ccxJG8-BSuA8A-K4c4Jx.png" alt="【メガガルーラex】 ccxJG8-BSuA8A-K4c4Jx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ccxJG8-BSuA8A-K4c4Jx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ccxJG8-BSuA8A-K4c4Jx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953140</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">kkdfk5-S1Cy3d-FVFb1b</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kkdfk5-S1Cy3d-FVFb1b.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kkdfk5-S1Cy3d-FVFb1b.png" alt="【メガガルーラex】 kkdfk5-S1Cy3d-FVFb1b">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kkdfk5-S1Cy3d-FVFb1b" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kkdfk5-S1Cy3d-FVFb1b/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953245</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">2yM3Ry-kiwdie-SMppM2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2yM3Ry-kiwdie-SMppM2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2yM3Ry-kiwdie-SMppM2.png" alt="【メガガルーラex】 2yM3Ry-kiwdie-SMppM2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2yM3Ry-kiwdie-SMppM2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2yM3Ry-kiwdie-SMppM2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953247</div>
+                <div class="sub">北海道 / バトロコミニ苫小牧バイパス店</div>
+                <div class="code">gng9HL-udAcJu-H9nn6L</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gng9HL-udAcJu-H9nn6L.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gng9HL-udAcJu-H9nn6L.png" alt="【メガガルーラex】 gng9HL-udAcJu-H9nn6L">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gng9HL-udAcJu-H9nn6L" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gng9HL-udAcJu-H9nn6L/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953248</div>
+                <div class="sub">東京都 / カードショップリドル京急蒲田店</div>
+                <div class="code">EMp3MS-bPZ0Q5-ypR2My</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EMp3MS-bPZ0Q5-ypR2My.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EMp3MS-bPZ0Q5-ypR2My.png" alt="【メガガルーラex】 EMp3MS-bPZ0Q5-ypR2My">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EMp3MS-bPZ0Q5-ypR2My" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EMp3MS-bPZ0Q5-ypR2My/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953289</div>
+                <div class="sub">静岡県 / トレカステーション領家店</div>
+                <div class="code">SMpMyy-9LAE7p-2yRpU3</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/SMpMyy-9LAE7p-2yRpU3.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/SMpMyy-9LAE7p-2yRpU3.png" alt="【メガガルーラex】 SMpMyy-9LAE7p-2yRpU3">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=SMpMyy-9LAE7p-2yRpU3" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/SMpMyy-9LAE7p-2yRpU3/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953289</div>
+                <div class="sub">静岡県 / トレカステーション領家店</div>
+                <div class="code">pMUXMp-zhJyHi-RMy2My</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pMUXMp-zhJyHi-RMy2My.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pMUXMp-zhJyHi-RMy2My.png" alt="【メガガルーラex】 pMUXMp-zhJyHi-RMy2My">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pMUXMp-zhJyHi-RMy2My" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pMUXMp-zhJyHi-RMy2My/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-21 / Event 952824</div>
+                <div class="sub">千葉県 / トーナメントセンターバトロコ　柏駅前</div>
+                <div class="code">Fbk51F-wCDCNo-FkbFfk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fbk51F-wCDCNo-FkbFfk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fbk51F-wCDCNo-FkbFfk.png" alt="【メガガルーラex】 Fbk51F-wCDCNo-FkbFfk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fbk51F-wCDCNo-FkbFfk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fbk51F-wCDCNo-FkbFfk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-23 / Event 953290</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">SMX22U-RYbnah-yMRppy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/SMX22U-RYbnah-yMRppy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/SMX22U-RYbnah-yMRppy.png" alt="【メガガルーラex】 SMX22U-RYbnah-yMRppy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=SMX22U-RYbnah-yMRppy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/SMX22U-RYbnah-yMRppy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガガルーラex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-23 / Event 953290</div>
+                <div class="sub">東京都 / 秋葉原チェルモ</div>
+                <div class="code">ypy2py-UzmKBr-yyR2pM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ypy2py-UzmKBr-yyR2pM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ypy2py-UzmKBr-yyR2pM.png" alt="【メガガルーラex】 ypy2py-UzmKBr-yyR2pM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ypy2py-UzmKBr-yyR2pM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ypy2py-UzmKBr-yyR2pM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>

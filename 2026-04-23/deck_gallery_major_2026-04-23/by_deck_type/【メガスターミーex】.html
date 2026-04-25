@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【メガスターミーex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【メガスターミーex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">13</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">13</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">13</div></div>
+        </div>
+        <a class="back-link" href="../../season3_weekly_report_2026-04-23_styled.html">週次レポートへ戻る</a>
+        <a class="back-link" href="../deck_gallery_2026-04-23.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952811</div>
+                <div class="sub">東京都 / カードショップ竜星のPAO　立川店</div>
+                <div class="code">dvkFVV-ol6aN0-bkF5VF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/dvkFVV-ol6aN0-bkF5VF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/dvkFVV-ol6aN0-bkF5VF.png" alt="【メガスターミーex】 dvkFVV-ol6aN0-bkF5VF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=dvkFVV-ol6aN0-bkF5VF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/dvkFVV-ol6aN0-bkF5VF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952812</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">2MSyRp-38H8BQ-URRMpy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2MSyRp-38H8BQ-URRMpy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2MSyRp-38H8BQ-URRMpy.png" alt="【メガスターミーex】 2MSyRp-38H8BQ-URRMpy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2MSyRp-38H8BQ-URRMpy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2MSyRp-38H8BQ-URRMpy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-17 / Event 952812</div>
+                <div class="sub">東京都 / ドラゴンスター池袋店</div>
+                <div class="code">c48cxx-YLAhzP-J8G8Dx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/c48cxx-YLAhzP-J8G8Dx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/c48cxx-YLAhzP-J8G8Dx.png" alt="【メガスターミーex】 c48cxx-YLAhzP-J8G8Dx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=c48cxx-YLAhzP-J8G8Dx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/c48cxx-YLAhzP-J8G8Dx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 952905</div>
+                <div class="sub">神奈川県 / ブックオフ　相模大野店</div>
+                <div class="code">FVkwkb-m7iMFZ-v51FVv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FVkwkb-m7iMFZ-v51FVv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FVkwkb-m7iMFZ-v51FVv.png" alt="【メガスターミーex】 FVkwkb-m7iMFZ-v51FVv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FVkwkb-m7iMFZ-v51FVv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FVkwkb-m7iMFZ-v51FVv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953041</div>
+                <div class="sub">静岡県 / TSUTAYA富士八幡町店</div>
+                <div class="code">g9iQPH-d4C0aG-LgngQ9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/g9iQPH-d4C0aG-LgngQ9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/g9iQPH-d4C0aG-LgngQ9.png" alt="【メガスターミーex】 g9iQPH-d4C0aG-LgngQ9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=g9iQPH-d4C0aG-LgngQ9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/g9iQPH-d4C0aG-LgngQ9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-18 / Event 953043</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">XRypSM-gcOmag-3ER2MS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XRypSM-gcOmag-3ER2MS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XRypSM-gcOmag-3ER2MS.png" alt="【メガスターミーex】 XRypSM-gcOmag-3ER2MS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XRypSM-gcOmag-3ER2MS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XRypSM-gcOmag-3ER2MS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952742</div>
+                <div class="sub">埼玉県 / TSUTAYA嵐山店</div>
+                <div class="code">4xDGx8-XKAo6e-D8a88c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/4xDGx8-XKAo6e-D8a88c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/4xDGx8-XKAo6e-D8a88c.png" alt="【メガスターミーex】 4xDGx8-XKAo6e-D8a88c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=4xDGx8-XKAo6e-D8a88c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/4xDGx8-XKAo6e-D8a88c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952743</div>
+                <div class="sub">群馬県 / バトロコミニ前橋文京店</div>
+                <div class="code">9LLPin-gU5YVr-nigHPH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9LLPin-gU5YVr-nigHPH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9LLPin-gU5YVr-nigHPH.png" alt="【メガスターミーex】 9LLPin-gU5YVr-nigHPH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9LLPin-gU5YVr-nigHPH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9LLPin-gU5YVr-nigHPH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952820</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR 松戸駅東口店</div>
+                <div class="code">EMpMRy-90ACCv-2EX2yS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/EMpMRy-90ACCv-2EX2yS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/EMpMRy-90ACCv-2EX2yS.png" alt="【メガスターミーex】 EMpMRy-90ACCv-2EX2yS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=EMpMRy-90ACCv-2EX2yS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/EMpMRy-90ACCv-2EX2yS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 952910</div>
+                <div class="sub">神奈川県 / BOOKOFF　イオン橋本</div>
+                <div class="code">UU2XXM-LKWR8M-yypR2y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/UU2XXM-LKWR8M-yypR2y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/UU2XXM-LKWR8M-yypR2y.png" alt="【メガスターミーex】 UU2XXM-LKWR8M-yypR2y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=UU2XXM-LKWR8M-yypR2y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/UU2XXM-LKWR8M-yypR2y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953049</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">gignNH-jQHuVC-nL99gQ</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gignNH-jQHuVC-nL99gQ.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gignNH-jQHuVC-nL99gQ.png" alt="【メガスターミーex】 gignNH-jQHuVC-nL99gQ">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gignNH-jQHuVC-nL99gQ" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gignNH-jQHuVC-nL99gQ/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953288</div>
+                <div class="sub">広島県 / ゲームアーク　西条中央店</div>
+                <div class="code">HNnL99-TR3Meh-ng6gLL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HNnL99-TR3Meh-ng6gLL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HNnL99-TR3Meh-ng6gLL.png" alt="【メガスターミーex】 HNnL99-TR3Meh-ng6gLL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HNnL99-TR3Meh-ng6gLL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HNnL99-TR3Meh-ng6gLL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【メガスターミーex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-19 / Event 953289</div>
+                <div class="sub">静岡県 / トレカステーション領家店</div>
+                <div class="code">Fvfbkb-OaVwav-kfkkkF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fvfbkb-OaVwav-kfkkkF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fvfbkb-OaVwav-kfkkkF.png" alt="【メガスターミーex】 Fvfbkb-OaVwav-kfkkkF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fvfbkb-OaVwav-kfkkkF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fvfbkb-OaVwav-kfkkkF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
