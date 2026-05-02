@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【ダイゴのメタグロスex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【ダイゴのメタグロスex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">27</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">27</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">27</div></div>
+        </div>
+        <a class="back-link" href="../../season3_weekly_report_2026-04-30_styled.html">週次レポートへ戻る</a>
+        <a class="back-link" href="../deck_gallery_2026-04-30.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952674</div>
+                <div class="sub">北海道 / トーナメントセンターバトロコ　旭川駅前</div>
+                <div class="code">HnnPg9-Sea9p1-NHQggg</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HnnPg9-Sea9p1-NHQggg.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HnnPg9-Sea9p1-NHQggg.png" alt="【ダイゴのメタグロスex】 HnnPg9-Sea9p1-NHQggg">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HnnPg9-Sea9p1-NHQggg" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HnnPg9-Sea9p1-NHQggg/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952674</div>
+                <div class="sub">北海道 / トーナメントセンターバトロコ　旭川駅前</div>
+                <div class="code">RyS22p-k5hnOu-X2M2yS</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/RyS22p-k5hnOu-X2M2yS.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/RyS22p-k5hnOu-X2M2yS.png" alt="【ダイゴのメタグロスex】 RyS22p-k5hnOu-X2M2yS">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=RyS22p-k5hnOu-X2M2yS" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/RyS22p-k5hnOu-X2M2yS/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952694</div>
+                <div class="sub">福島県 / Wonder GOO　いわき鹿島店</div>
+                <div class="code">yy2yR2-10uvil-32ySyp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yy2yR2-10uvil-32ySyp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yy2yR2-10uvil-32ySyp.png" alt="【ダイゴのメタグロスex】 yy2yR2-10uvil-32ySyp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yy2yR2-10uvil-32ySyp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yy2yR2-10uvil-32ySyp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952826</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">MSp2yU-riGa2m-Ryy2Mp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MSp2yU-riGa2m-Ryy2Mp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MSp2yU-riGa2m-Ryy2Mp.png" alt="【ダイゴのメタグロスex】 MSp2yU-riGa2m-Ryy2Mp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MSp2yU-riGa2m-Ryy2Mp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MSp2yU-riGa2m-Ryy2Mp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952826</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">gQQHgn-HxGoxv-nnnig9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gQQHgn-HxGoxv-nnnig9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gQQHgn-HxGoxv-nnnig9.png" alt="【ダイゴのメタグロスex】 gQQHgn-HxGoxv-nnnig9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gQQHgn-HxGoxv-nnnig9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gQQHgn-HxGoxv-nnnig9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952828</div>
+                <div class="sub">東京都 / BOOKOFFSUPERBAZAAR町田中央通り店</div>
+                <div class="code">ppyX2y-0ltYE9-RyXRUy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ppyX2y-0ltYE9-RyXRUy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ppyX2y-0ltYE9-RyXRUy.png" alt="【ダイゴのメタグロスex】 ppyX2y-0ltYE9-RyXRUy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ppyX2y-0ltYE9-RyXRUy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ppyX2y-0ltYE9-RyXRUy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 953143</div>
+                <div class="sub">福岡県 / BOOKOFFイオンモール大牟田店</div>
+                <div class="code">Ffkkkb-bk0cu1-V5bv55</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ffkkkb-bk0cu1-V5bv55.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ffkkkb-bk0cu1-V5bv55.png" alt="【ダイゴのメタグロスex】 Ffkkkb-bk0cu1-V5bv55">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ffkkkb-bk0cu1-V5bv55" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ffkkkb-bk0cu1-V5bv55/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 953291</div>
+                <div class="sub">愛知県 / BOOKOFF SUPER BAZAAR 248号西友岡崎店</div>
+                <div class="code">p2p232-1FWS4O-y22yMR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/p2p232-1FWS4O-y22yMR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/p2p232-1FWS4O-y22yMR.png" alt="【ダイゴのメタグロスex】 p2p232-1FWS4O-y22yMR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=p2p232-1FWS4O-y22yMR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/p2p232-1FWS4O-y22yMR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952916</div>
+                <div class="sub">長野県 / タッチ松本店</div>
+                <div class="code">1kvVVF-YDpYne-vbw5Fk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/1kvVVF-YDpYne-vbw5Fk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/1kvVVF-YDpYne-vbw5Fk.png" alt="【ダイゴのメタグロスex】 1kvVVF-YDpYne-vbw5Fk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=1kvVVF-YDpYne-vbw5Fk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/1kvVVF-YDpYne-vbw5Fk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952916</div>
+                <div class="sub">長野県 / タッチ松本店</div>
+                <div class="code">ySpyRy-9EZgX9-yM22SM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ySpyRy-9EZgX9-yM22SM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ySpyRy-9EZgX9-yM22SM.png" alt="【ダイゴのメタグロスex】 ySpyRy-9EZgX9-yM22SM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ySpyRy-9EZgX9-yM22SM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ySpyRy-9EZgX9-yM22SM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952918</div>
+                <div class="sub">神奈川県 / BOOKOFFPLUS　アミューあつぎ店</div>
+                <div class="code">YJ8cG8-BjuOcI-8cac84</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/YJ8cG8-BjuOcI-8cac84.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/YJ8cG8-BjuOcI-8cac84.png" alt="【ダイゴのメタグロスex】 YJ8cG8-BjuOcI-8cac84">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=YJ8cG8-BjuOcI-8cac84" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/YJ8cG8-BjuOcI-8cac84/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952920</div>
+                <div class="sub">神奈川県 / トーナメントセンターバトロコ　横浜伊勢佐木町</div>
+                <div class="code">pS22yE-EllhEW-MRyMXR</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pS22yE-EllhEW-MRyMXR.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pS22yE-EllhEW-MRyMXR.png" alt="【ダイゴのメタグロスex】 pS22yE-EllhEW-MRyMXR">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pS22yE-EllhEW-MRyMXR" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pS22yE-EllhEW-MRyMXR/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953060</div>
+                <div class="sub">岐阜県 / 宝島　多治見店</div>
+                <div class="code">2RpMpy-C8DhTx-pyU3yp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2RpMpy-C8DhTx-pyU3yp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2RpMpy-C8DhTx-pyU3yp.png" alt="【ダイゴのメタグロスex】 2RpMpy-C8DhTx-pyU3yp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2RpMpy-C8DhTx-pyU3yp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2RpMpy-C8DhTx-pyU3yp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953060</div>
+                <div class="sub">岐阜県 / 宝島　多治見店</div>
+                <div class="code">D48xc8-hc2T3Q-YGc88Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/D48xc8-hc2T3Q-YGc88Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/D48xc8-hc2T3Q-YGc88Y.png" alt="【ダイゴのメタグロスex】 D48xc8-hc2T3Q-YGc88Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=D48xc8-hc2T3Q-YGc88Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/D48xc8-hc2T3Q-YGc88Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953060</div>
+                <div class="sub">岐阜県 / 宝島　多治見店</div>
+                <div class="code">MyRM2E-2j9KN4-p2XpSy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/MyRM2E-2j9KN4-p2XpSy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/MyRM2E-2j9KN4-p2XpSy.png" alt="【ダイゴのメタグロスex】 MyRM2E-2j9KN4-p2XpSy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=MyRM2E-2j9KN4-p2XpSy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/MyRM2E-2j9KN4-p2XpSy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953065</div>
+                <div class="sub">岡山県 / BOOKOFF 250号東岡山店</div>
+                <div class="code">kFbkFk-TTO1aT-fvf5v5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFbkFk-TTO1aT-fvf5v5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFbkFk-TTO1aT-fvf5v5.png" alt="【ダイゴのメタグロスex】 kFbkFk-TTO1aT-fvf5v5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFbkFk-TTO1aT-fvf5v5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFbkFk-TTO1aT-fvf5v5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953145</div>
+                <div class="sub">長崎県 / BOOKOFFSUPERBAZAARアクロスプラザ佐世保店</div>
+                <div class="code">pEySyp-wyXAWz-2yRR3p</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/pEySyp-wyXAWz-2yRR3p.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/pEySyp-wyXAWz-2yRR3p.png" alt="【ダイゴのメタグロスex】 pEySyp-wyXAWz-2yRR3p">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=pEySyp-wyXAWz-2yRR3p" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/pEySyp-wyXAWz-2yRR3p/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952699</div>
+                <div class="sub">宮城県 / シーガル　仙台駅前店</div>
+                <div class="code">L9H6Qn-xkMOjt-nNgHgn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/L9H6Qn-xkMOjt-nNgHgn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/L9H6Qn-xkMOjt-nNgHgn.png" alt="【ダイゴのメタグロスex】 L9H6Qn-xkMOjt-nNgHgn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=L9H6Qn-xkMOjt-nNgHgn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/L9H6Qn-xkMOjt-nNgHgn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953073</div>
+                <div class="sub">山口県 / ドラグーン周南</div>
+                <div class="code">cG88xx-7Vojtw-xcaK4Y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/cG88xx-7Vojtw-xcaK4Y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/cG88xx-7Vojtw-xcaK4Y.png" alt="【ダイゴのメタグロスex】 cG88xx-7Vojtw-xcaK4Y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=cG88xx-7Vojtw-xcaK4Y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/cG88xx-7Vojtw-xcaK4Y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953076</div>
+                <div class="sub">愛知県 / 三洋堂書店　新開橋店</div>
+                <div class="code">884xx8-XPlBkF-ac44xG</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/884xx8-XPlBkF-ac44xG.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/884xx8-XPlBkF-ac44xG.png" alt="【ダイゴのメタグロスex】 884xx8-XPlBkF-ac44xG">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=884xx8-XPlBkF-ac44xG" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/884xx8-XPlBkF-ac44xG/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953077</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">8axGxc-qSfnDj-4Y8J88</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8axGxc-qSfnDj-4Y8J88.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8axGxc-qSfnDj-4Y8J88.png" alt="【ダイゴのメタグロスex】 8axGxc-qSfnDj-4Y8J88">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8axGxc-qSfnDj-4Y8J88" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8axGxc-qSfnDj-4Y8J88/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953078</div>
+                <div class="sub">高知県 / カードショップ楓</div>
+                <div class="code">Fkwk1k-r26i9N-kb5dV5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fkwk1k-r26i9N-kb5dV5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fkwk1k-r26i9N-kb5dV5.png" alt="【ダイゴのメタグロスex】 Fkwk1k-r26i9N-kb5dV5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fkwk1k-r26i9N-kb5dV5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fkwk1k-r26i9N-kb5dV5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953079</div>
+                <div class="sub">広島県 / BOOKOFFSUPERBAZAAR54号広島八木店</div>
+                <div class="code">Fw5VbF-q6Ehem-Fkdvk5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Fw5VbF-q6Ehem-Fkdvk5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Fw5VbF-q6Ehem-Fkdvk5.png" alt="【ダイゴのメタグロスex】 Fw5VbF-q6Ehem-Fkdvk5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Fw5VbF-q6Ehem-Fkdvk5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Fw5VbF-q6Ehem-Fkdvk5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953146</div>
+                <div class="sub">沖縄県 / カードスタジアム小禄店</div>
+                <div class="code">nnHg9H-CtOeHB-nPQggL</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nnHg9H-CtOeHB-nPQggL.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nnHg9H-CtOeHB-nPQggL.png" alt="【ダイゴのメタグロスex】 nnHg9H-CtOeHB-nPQggL">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nnHg9H-CtOeHB-nPQggL" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nnHg9H-CtOeHB-nPQggL/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953148</div>
+                <div class="sub">熊本県 / 遊ING　熊本上通り店</div>
+                <div class="code">M2My2p-aGhwX0-yEUURp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/M2My2p-aGhwX0-yEUURp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/M2My2p-aGhwX0-yEUURp.png" alt="【ダイゴのメタグロスex】 M2My2p-aGhwX0-yEUURp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=M2My2p-aGhwX0-yEUURp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/M2My2p-aGhwX0-yEUURp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953250</div>
+                <div class="sub">東京都 / ブックオフ武蔵小金井</div>
+                <div class="code">9QgQ9H-imPBv5-nPgLHn</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/9QgQ9H-imPBv5-nPgLHn.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/9QgQ9H-imPBv5-nPgLHn.png" alt="【ダイゴのメタグロスex】 9QgQ9H-imPBv5-nPgLHn">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=9QgQ9H-imPBv5-nPgLHn" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/9QgQ9H-imPBv5-nPgLHn/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【ダイゴのメタグロスex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953251</div>
+                <div class="sub">埼玉県 / 竜星のPAO　大宮店</div>
+                <div class="code">HQnngi-DCRjNT-HHnN9i</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HQnngi-DCRjNT-HHnN9i.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HQnngi-DCRjNT-HHnN9i.png" alt="【ダイゴのメタグロスex】 HQnngi-DCRjNT-HHnN9i">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HQnngi-DCRjNT-HHnN9i" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HQnngi-DCRjNT-HHnN9i/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>

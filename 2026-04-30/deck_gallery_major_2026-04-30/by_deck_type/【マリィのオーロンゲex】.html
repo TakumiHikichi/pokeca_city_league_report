@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【マリィのオーロンゲex】 デッキリスト画像</title>
+  <style>:root {
+  --bg: #f6f3ea;
+  --panel: #fffdf8;
+  --line: #d6cfc1;
+  --text: #1f2328;
+  --muted: #67707a;
+  --accent: #a2402d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main {
+  width: min(1600px, calc(100% - 32px));
+  margin: 24px auto 48px;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--accent); }
+.header {
+  background: linear-gradient(135deg, #fff9ef, #f4ead6);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.header p { margin-top: 8px; color: var(--muted); }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi .label { font-size: 12px; color: var(--muted); }
+.kpi .value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.type-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.toolbar {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.filter-buttons button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-buttons button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 6px 14px rgba(162, 64, 45, 0.20);
+}
+.filter-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.section {
+  margin-top: 24px;
+  padding: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.section-header .count {
+  color: var(--muted);
+  font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(70, 55, 20, 0.08);
+}
+.card.hidden { display: none; }
+.card .meta {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.card .title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.card .rank {
+  font-weight: 800;
+  color: var(--accent);
+}
+.card .code {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.card .sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card .image-wrap {
+  background: #f3f0ea;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2dccf;
+}
+.card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+.card .links a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 24px;
+}
+@media (max-width: 720px) {
+  main { width: min(1600px, calc(100% - 20px)); }
+  .header, .section { padding: 14px; }
+  .grid { grid-template-columns: 1fr; }
+}</style>
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h1>【マリィのオーロンゲex】 デッキリスト画像</h1>
+      <p>対象デッキタイプのみをまとめた個別ページです。</p>
+      <div class="summary">
+          <div class="kpi"><div class="label">掲載件数</div><div class="value">34</div></div>
+          <div class="kpi"><div class="label">画像ファイル数</div><div class="value">34</div></div>
+          <div class="kpi"><div class="label">表示件数</div><div class="value" id="visible-count">34</div></div>
+        </div>
+        <a class="back-link" href="../../season3_weekly_report_2026-04-30_styled.html">週次レポートへ戻る</a>
+        <a class="back-link" href="../deck_gallery_2026-04-30.html">一覧へ戻る</a>
+    </section>
+    <section class="toolbar">
+  <div class="filter-buttons"><button type="button" data-filter-score="999">全表示</button><button type="button" data-filter-score="1">優勝のみ</button><button type="button" data-filter-score="2">準優勝以上</button><button type="button" data-filter-score="4">ベスト4以上</button><button type="button" data-filter-score="8">ベスト8以上</button><button type="button" data-filter-score="16">ベスト16以上</button></div>
+  <div class="filter-note">デフォルトは全表示。「ベスト4以上」は優勝・準優勝・ベスト4を表示します。</div>
+</section>
+<section class="section"><div class="grid"><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-24 / Event 953142</div>
+                <div class="sub">福岡県 / オレタン福岡天神店</div>
+                <div class="code">Xp2pRy-2EPMuP-2yp2yy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Xp2pRy-2EPMuP-2yp2yy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Xp2pRy-2EPMuP-2yp2yy.png" alt="【マリィのオーロンゲex】 Xp2pRy-2EPMuP-2yp2yy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Xp2pRy-2EPMuP-2yp2yy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Xp2pRy-2EPMuP-2yp2yy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952675</div>
+                <div class="sub">北海道 / ブックオフ　札幌南2条店</div>
+                <div class="code">HQinLg-WgQcuf-Hn9iLH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/HQinLg-WgQcuf-Hn9iLH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/HQinLg-WgQcuf-Hn9iLH.png" alt="【マリィのオーロンゲex】 HQinLg-WgQcuf-Hn9iLH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=HQinLg-WgQcuf-Hn9iLH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/HQinLg-WgQcuf-Hn9iLH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952826</div>
+                <div class="sub">東京都 / TSUTAYA西友町田店</div>
+                <div class="code">2y2yRp-U23KtS-pX3UMy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2y2yRp-U23KtS-pX3UMy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2y2yRp-U23KtS-pX3UMy.png" alt="【マリィのオーロンゲex】 2y2yRp-U23KtS-pX3UMy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2y2yRp-U23KtS-pX3UMy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2y2yRp-U23KtS-pX3UMy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 952915</div>
+                <div class="sub">山梨県 / ブックオフプラス　田富昭和通り店</div>
+                <div class="code">Uyy2Rp-v0UViV-XEy2Sp</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Uyy2Rp-v0UViV-XEy2Sp.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Uyy2Rp-v0UViV-XEy2Sp.png" alt="【マリィのオーロンゲex】 Uyy2Rp-v0UViV-XEy2Sp">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Uyy2Rp-v0UViV-XEy2Sp" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Uyy2Rp-v0UViV-XEy2Sp/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-25 / Event 953059</div>
+                <div class="sub">愛知県 / 三洋堂書店　乙川店</div>
+                <div class="code">kkFwk5-K5Rr0a-5fv5kb</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kkFwk5-K5Rr0a-5fv5kb.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kkFwk5-K5Rr0a-5fv5kb.png" alt="【マリィのオーロンゲex】 kkFwk5-K5Rr0a-5fv5kb">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kkFwk5-K5Rr0a-5fv5kb" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kkFwk5-K5Rr0a-5fv5kb/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="1">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">優勝</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952696</div>
+                <div class="sub">福島県 / カードゲームのシーガル郡山店</div>
+                <div class="code">yM2ypM-q3l6vd-2yMRR2</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yM2ypM-q3l6vd-2yMRR2.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yM2ypM-q3l6vd-2yMRR2.png" alt="【マリィのオーロンゲex】 yM2ypM-q3l6vd-2yMRR2">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yM2ypM-q3l6vd-2yMRR2" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yM2ypM-q3l6vd-2yMRR2/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952696</div>
+                <div class="sub">福島県 / カードゲームのシーガル郡山店</div>
+                <div class="code">FkVfkV-Pj2Gd0-dwFFb5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FkVfkV-Pj2Gd0-dwFFb5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FkVfkV-Pj2Gd0-dwFFb5.png" alt="【マリィのオーロンゲex】 FkVfkV-Pj2Gd0-dwFFb5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FkVfkV-Pj2Gd0-dwFFb5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FkVfkV-Pj2Gd0-dwFFb5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952696</div>
+                <div class="sub">福島県 / カードゲームのシーガル郡山店</div>
+                <div class="code">x88GY8-i68X0A-ccG48c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/x88GY8-i68X0A-ccG48c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/x88GY8-i68X0A-ccG48c.png" alt="【マリィのオーロンゲex】 x88GY8-i68X0A-ccG48c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=x88GY8-i68X0A-ccG48c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/x88GY8-i68X0A-ccG48c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 952830</div>
+                <div class="sub">東京都 / BOOKOFF SUPER BAZAAR 立川駅北口店</div>
+                <div class="code">5Fbkwk-O2zKbw-bVFkFF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/5Fbkwk-O2zKbw-bVFkFF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/5Fbkwk-O2zKbw-bVFkFF.png" alt="【マリィのオーロンゲex】 5Fbkwk-O2zKbw-bVFkFF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=5Fbkwk-O2zKbw-bVFkFF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/5Fbkwk-O2zKbw-bVFkFF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953063</div>
+                <div class="sub">三重県 / 三洋堂書店 星川店</div>
+                <div class="code">NnQn69-vKI8Fq-LHgnnN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/NnQn69-vKI8Fq-LHgnnN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/NnQn69-vKI8Fq-LHgnnN.png" alt="【マリィのオーロンゲex】 NnQn69-vKI8Fq-LHgnnN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=NnQn69-vKI8Fq-LHgnnN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/NnQn69-vKI8Fq-LHgnnN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953066</div>
+                <div class="sub">鳥取県 / カードボックスアリオン皆生店</div>
+                <div class="code">kv5bbk-7qck8d-FfVFkv</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kv5bbk-7qck8d-FfVFkv.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kv5bbk-7qck8d-FfVFkv.png" alt="【マリィのオーロンゲex】 kv5bbk-7qck8d-FfVFkv">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kv5bbk-7qck8d-FfVFkv" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kv5bbk-7qck8d-FfVFkv/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953067</div>
+                <div class="sub">大阪府 / GIRAFULLなんば店</div>
+                <div class="code">8Gxcc4-q8z8rS-8D4GGD</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8Gxcc4-q8z8rS-8D4GGD.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8Gxcc4-q8z8rS-8D4GGD.png" alt="【マリィのオーロンゲex】 8Gxcc4-q8z8rS-8D4GGD">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8Gxcc4-q8z8rS-8D4GGD" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8Gxcc4-q8z8rS-8D4GGD/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953145</div>
+                <div class="sub">長崎県 / BOOKOFFSUPERBAZAARアクロスプラザ佐世保店</div>
+                <div class="code">kFfvwb-HCNH4q-wvFk55</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kFfvwb-HCNH4q-wvFk55.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kFfvwb-HCNH4q-wvFk55.png" alt="【マリィのオーロンゲex】 kFfvwb-HCNH4q-wvFk55">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kFfvwb-HCNH4q-wvFk55" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kFfvwb-HCNH4q-wvFk55/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953249</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">gn9nQH-GEhJGE-nLngnH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gn9nQH-GEhJGE-nLngnH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gn9nQH-GEhJGE-nLngnH.png" alt="【マリィのオーロンゲex】 gn9nQH-GEhJGE-nLngnH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gn9nQH-GEhJGE-nLngnH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gn9nQH-GEhJGE-nLngnH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953249</div>
+                <div class="sub">北海道 / フルコンプPLAYERS CENTER札幌駅前店</div>
+                <div class="code">XSRp2X-m2oQkM-SRyyyM</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/XSRp2X-m2oQkM-SRyyyM.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/XSRp2X-m2oQkM-SRyyyM.png" alt="【マリィのオーロンゲex】 XSRp2X-m2oQkM-SRyyyM">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=XSRp2X-m2oQkM-SRyyyM" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/XSRp2X-m2oQkM-SRyyyM/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-26 / Event 953292</div>
+                <div class="sub">広島県 / 【CARDBOX】カードボックス　福山店</div>
+                <div class="code">8G4cx8-35j5oe-Gaaccx</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8G4cx8-35j5oe-Gaaccx.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8G4cx8-35j5oe-Gaaccx.png" alt="【マリィのオーロンゲex】 8G4cx8-35j5oe-Gaaccx">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8G4cx8-35j5oe-Gaaccx" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8G4cx8-35j5oe-Gaaccx/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952747</div>
+                <div class="sub">栃木県 / TSUTAYA Trading Card 宇都宮インターパークビレッジ店</div>
+                <div class="code">8K8GcY-wtKqVl-84c8Da</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/8K8GcY-wtKqVl-84c8Da.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/8K8GcY-wtKqVl-84c8Da.png" alt="【マリィのオーロンゲex】 8K8GcY-wtKqVl-84c8Da">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=8K8GcY-wtKqVl-84c8Da" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/8K8GcY-wtKqVl-84c8Da/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952747</div>
+                <div class="sub">栃木県 / TSUTAYA Trading Card 宇都宮インターパークビレッジ店</div>
+                <div class="code">2U2yXp-IaPDZe-y2RpyE</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2U2yXp-IaPDZe-y2RpyE.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2U2yXp-IaPDZe-y2RpyE.png" alt="【マリィのオーロンゲex】 2U2yXp-IaPDZe-y2RpyE">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2U2yXp-IaPDZe-y2RpyE" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2U2yXp-IaPDZe-y2RpyE/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952748</div>
+                <div class="sub">茨城県 / ブックエースTSUTAYA　勝田東石川店</div>
+                <div class="code">yRXRyy-XRHFti-p2UMyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/yRXRyy-XRHFti-p2UMyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/yRXRyy-XRHFti-p2UMyy.png" alt="【マリィのオーロンゲex】 yRXRyy-XRHFti-p2UMyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=yRXRyy-XRHFti-p2UMyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/yRXRyy-XRHFti-p2UMyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="2">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">準優勝</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952833</div>
+                <div class="sub">千葉県 / BOOKOFF SUPER BAZAAR イトーヨーカドー流山店</div>
+                <div class="code">LgHHnL-S5zoTf-QHn96g</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LgHHnL-S5zoTf-QHn96g.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LgHHnL-S5zoTf-QHn96g.png" alt="【マリィのオーロンゲex】 LgHHnL-S5zoTf-QHn96g">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LgHHnL-S5zoTf-QHn96g" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LgHHnL-S5zoTf-QHn96g/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952835</div>
+                <div class="sub">東京都 / ブックオフスーパーバザー　多摩永山</div>
+                <div class="code">kbFkkk-xbpSyK-k15vkf</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kbFkkk-xbpSyK-k15vkf.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kbFkkk-xbpSyK-k15vkf.png" alt="【マリィのオーロンゲex】 kbFkkk-xbpSyK-k15vkf">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kbFkkk-xbpSyK-k15vkf" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kbFkkk-xbpSyK-k15vkf/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952835</div>
+                <div class="sub">東京都 / ブックオフスーパーバザー　多摩永山</div>
+                <div class="code">Ryppp2-KR2bib-2Mpp3y</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Ryppp2-KR2bib-2Mpp3y.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Ryppp2-KR2bib-2Mpp3y.png" alt="【マリィのオーロンゲex】 Ryppp2-KR2bib-2Mpp3y">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Ryppp2-KR2bib-2Mpp3y" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Ryppp2-KR2bib-2Mpp3y/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 952923</div>
+                <div class="sub">福井県 / 【CARDBOX】Super KaBoS 二の宮本店</div>
+                <div class="code">LQniHL-8kuu3b-PnLgQ9</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/LQniHL-8kuu3b-PnLgQ9.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/LQniHL-8kuu3b-PnLgQ9.png" alt="【マリィのオーロンゲex】 LQniHL-8kuu3b-PnLgQ9">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=LQniHL-8kuu3b-PnLgQ9" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/LQniHL-8kuu3b-PnLgQ9/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953072</div>
+                <div class="sub">岐阜県 / 宝島　多治見店</div>
+                <div class="code">nnQg9Q-fmh3z1-6gLggH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/nnQg9Q-fmh3z1-6gLggH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/nnQg9Q-fmh3z1-6gLggH.png" alt="【マリィのオーロンゲex】 nnQg9Q-fmh3z1-6gLggH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=nnQg9Q-fmh3z1-6gLggH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/nnQg9Q-fmh3z1-6gLggH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953072</div>
+                <div class="sub">岐阜県 / 宝島　多治見店</div>
+                <div class="code">k1k1Fb-QDaItN-F5kfkk</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/k1k1Fb-QDaItN-F5kfkk.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/k1k1Fb-QDaItN-F5kfkk.png" alt="【マリィのオーロンゲex】 k1k1Fb-QDaItN-F5kfkk">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=k1k1Fb-QDaItN-F5kfkk" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/k1k1Fb-QDaItN-F5kfkk/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953075</div>
+                <div class="sub">愛媛県 / TCG桜華</div>
+                <div class="code">R22pU2-ND52DC-yyyUyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/R22pU2-ND52DC-yyyUyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/R22pU2-ND52DC-yyyUyy.png" alt="【マリィのオーロンゲex】 R22pU2-ND52DC-yyyUyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=R22pU2-ND52DC-yyyUyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/R22pU2-ND52DC-yyyUyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953077</div>
+                <div class="sub">大阪府 / BOOKOFF SUPER BAZAAR 307号枚方池之宮店</div>
+                <div class="code">kwkFkb-fnFgzc-wVvFf5</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/kwkFkb-fnFgzc-wVvFf5.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/kwkFkb-fnFgzc-wVvFf5.png" alt="【マリィのオーロンゲex】 kwkFkb-fnFgzc-wVvFf5">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=kwkFkb-fnFgzc-wVvFf5" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/kwkFkb-fnFgzc-wVvFf5/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953147</div>
+                <div class="sub">大分県 / TSUTAYA光吉店</div>
+                <div class="code">Li9Qnn-hUNOOO-9ngLnH</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Li9Qnn-hUNOOO-9ngLnH.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Li9Qnn-hUNOOO-9ngLnH.png" alt="【マリィのオーロンゲex】 Li9Qnn-hUNOOO-9ngLnH">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Li9Qnn-hUNOOO-9ngLnH" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Li9Qnn-hUNOOO-9ngLnH/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953147</div>
+                <div class="sub">大分県 / TSUTAYA光吉店</div>
+                <div class="code">FvvF5w-uBn7mU-F5bkkF</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/FvvF5w-uBn7mU-F5bkkF.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/FvvF5w-uBn7mU-F5bkkF.png" alt="【マリィのオーロンゲex】 FvvF5w-uBn7mU-F5bkkF">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=FvvF5w-uBn7mU-F5bkkF" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/FvvF5w-uBn7mU-F5bkkF/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="5">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト8</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953148</div>
+                <div class="sub">熊本県 / 遊ING　熊本上通り店</div>
+                <div class="code">Gax8cx-1XrjXr-8G84D4</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/Gax8cx-1XrjXr-8G84D4.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/Gax8cx-1XrjXr-8G84D4.png" alt="【マリィのオーロンゲex】 Gax8cx-1XrjXr-8G84D4">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=Gax8cx-1XrjXr-8G84D4" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/Gax8cx-1XrjXr-8G84D4/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953148</div>
+                <div class="sub">熊本県 / 遊ING　熊本上通り店</div>
+                <div class="code">ySXpR2-zDUn8D-pypUyy</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/ySXpR2-zDUn8D-pypUyy.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/ySXpR2-zDUn8D-pypUyy.png" alt="【マリィのオーロンゲex】 ySXpR2-zDUn8D-pypUyy">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=ySXpR2-zDUn8D-pypUyy" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/ySXpR2-zDUn8D-pypUyy/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="3">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト4</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953149</div>
+                <div class="sub">佐賀県 / ブックオフプラス佐賀南部バイパス店</div>
+                <div class="code">x488x8-KSCzLY-x8GJ8c</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/x488x8-KSCzLY-x8GJ8c.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/x488x8-KSCzLY-x8GJ8c.png" alt="【マリィのオーロンゲex】 x488x8-KSCzLY-x8GJ8c">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=x488x8-KSCzLY-x8GJ8c" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/x488x8-KSCzLY-x8GJ8c/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953149</div>
+                <div class="sub">佐賀県 / ブックオフプラス佐賀南部バイパス店</div>
+                <div class="code">2yyUyy-jaYPRw-XRSSpU</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/2yyUyy-jaYPRw-XRSSpU.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/2yyUyy-jaYPRw-XRSSpU.png" alt="【マリィのオーロンゲex】 2yyUyy-jaYPRw-XRSSpU">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=2yyUyy-jaYPRw-XRSSpU" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/2yyUyy-jaYPRw-XRSSpU/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article><article class="card" data-rank-score="9">
+              <div class="meta">
+                <div class="title-row">
+                  <h3>【マリィのオーロンゲex】</h3>
+                  <div class="rank">ベスト16</div>
+                </div>
+                <div class="sub">2026-04-29 / Event 953251</div>
+                <div class="sub">埼玉県 / 竜星のPAO　大宮店</div>
+                <div class="code">gQLNn9-QWKEAr-PnnHiN</div>
+              </div>
+              <div class="image-wrap">
+                <a href="../deck_gallery_images/gQLNn9-QWKEAr-PnnHiN.png" target="_blank" rel="noopener">
+                  <img src="../deck_gallery_images/gQLNn9-QWKEAr-PnnHiN.png" alt="【マリィのオーロンゲex】 gQLNn9-QWKEAr-PnnHiN">
+                </a>
+              </div>
+              <div class="links">
+                <a href="https://www.pokemon-card.com/deck/deck.html?deckID=gQLNn9-QWKEAr-PnnHiN" target="_blank" rel="noopener">公式デッキページ</a>
+                <a href="https://www.pokemon-card.com/deck/thumbs.html/deckID/gQLNn9-QWKEAr-PnnHiN/" target="_blank" rel="noopener">thumbs.html</a>
+              </div>
+            </article></div></section>
+    <div class="footer">画像は公式 deckView を元に保存したものです。分析・レビュー用のプロトタイプです。</div>
+  </main>
+  <script>const buttons = [...document.querySelectorAll('[data-filter-score]')];
+const cards = [...document.querySelectorAll('.card[data-rank-score]')];
+const visibleCount = document.getElementById('visible-count');
+function applyFilter(limit, button) {
+  let count = 0;
+  cards.forEach((card) => {
+    const score = Number(card.dataset.rankScore || "999");
+    const visible = limit >= 999 || score <= limit;
+    card.classList.toggle('hidden', !visible);
+    if (visible) count += 1;
+  });
+  if (visibleCount) visibleCount.textContent = String(count);
+  buttons.forEach((b) => b.classList.toggle('active', b === button));
+}
+buttons.forEach((button) => {
+  button.addEventListener('click', () => applyFilter(Number(button.dataset.filterScore), button));
+});
+const defaultButton = buttons.find((b) => b.dataset.filterScore === "999") || buttons[0];
+if (defaultButton) applyFilter(Number(defaultButton.dataset.filterScore), defaultButton);</script>
+</body>
+</html>
